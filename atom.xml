@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Blog</title>
-  <subtitle>123456</subtitle>
+  
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-25T07:57:19.198Z</updated>
+  <updated>2017-01-25T10:22:27.769Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,20 +16,50 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>new</title>
+    <title>Markdown</title>
     <link href="http://yoursite.com/2017/01/25/new/"/>
     <id>http://yoursite.com/2017/01/25/new/</id>
     <published>2017-01-25T07:55:33.000Z</published>
-    <updated>2017-01-25T07:57:19.198Z</updated>
+    <updated>2017-01-25T10:22:27.769Z</updated>
+    
+    <content type="html"><![CDATA[<p>阅读全文<a id="more"></a></p>
+<h1 id="这是H1"><a href="#这是H1" class="headerlink" title="这是H1"></a>这是H1</h1><h2 id="这是H2"><a href="#这是H2" class="headerlink" title="这是H2"></a>这是H2</h2><h3 id="这是H3"><a href="#这是H3" class="headerlink" title="这是H3"></a>这是H3</h3><blockquote>
+<p>标记区块1<br>标记区块1</p>
+<blockquote>
+<p>标记区块2</p>
+<h2 id="标题2"><a href="#标题2" class="headerlink" title="标题2"></a>标题2</h2></blockquote>
+<p>给出一些例子代码：</p>
+<p><pre><code><br>    var i=0;<br>    i++;<br></code></pre></p>
+<p><code>print() ;</code></p>
+</blockquote>
+<p>标记区块外</p>
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+</ul>
+<p><ol></ol></p>
+<p><li>Bird</li></p>
+<p><li>McHale</li></p>
+<p><li>Parish</li><br><br>分割线</p>
+<hr>
+<hr>
+<hr>
+<p>超链接<br><a href="http://www.baidu.com" target="_blank" rel="external">点击预览</a><br><a href="http://www.baidu.com" title="预览" target="_blank" rel="external">点击预览</a></p>
+<p>强调<br><em>强调(斜体)</em><br><strong>强调(加粗)</strong></p>
+<p><img src="/uploads/1.jpg" alt="Alt Text"></p>
+]]></content>
     
     <summary type="html">
+    
+      &lt;p&gt;阅读全文
     
     </summary>
     
     
-      <category term="hahaha" scheme="http://yoursite.com/tags/hahaha/"/>
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
     
-      <category term="tag" scheme="http://yoursite.com/tags/tag/"/>
+      <category term="language" scheme="http://yoursite.com/tags/language/"/>
     
   </entry>
   
