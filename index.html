@@ -388,43 +388,14 @@
 
       
         
-          
-            <p>ajax源码</p>
-<blockquote>
-<pre><code>
-if(window.XMLHttpRequest){
-    xmlHttp = new XMLHttpRequest();
-}else if(windoe.ActionXObject){
-    var actionName = ['MSXML2.XMLHTTP','Microsoft.XMLHTTP'];
-    for(var i=0;i&lt;actionName.length;i++){
-        try{
-            xmlHttp = new ActionXObject(actionName[i]);
-        }catch(e){}
-    }
-}
-if(!xmlHttp){
-    console.log('xmlHttp对象创建失败');
-}else{
-    xmlHttp.onreadystatechange=callback;
-    //xmlHttp.open('get','url',true);
-    xmlHttp.open('post','url',true);
-    xmlHttp.setHeadRequest('Content-type','appplication/x-www-form-urlencode');
-    xmlHttp.send();
-}
-function callback(){
-    if(xmlHttp.readyState){
-        if(xmlHttp.status){
-            var responseText = xmlHttp.responseText;
-            //返回XML时
-            //var responseXML = xmlHtpp.responseXML;
-            //返回json时
-            //responseText = eval('('+responseText+')');
-        }
-    }
-}
-</code></pre></blockquote>
-
-          
+          <p>ajax源码:<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/01/ajax/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -837,7 +808,7 @@ function callback(){
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>

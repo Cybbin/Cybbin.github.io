@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-01T09:03:02.962Z</updated>
+  <updated>2017-02-01T09:06:57.673Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,10 +20,9 @@
     <link href="http://yoursite.com/2017/02/01/ajax/"/>
     <id>http://yoursite.com/2017/02/01/ajax/</id>
     <published>2017-02-01T08:46:46.000Z</published>
-    <updated>2017-02-01T09:03:02.962Z</updated>
+    <updated>2017-02-01T09:06:57.673Z</updated>
     
-    <content type="html"><![CDATA[<p>ajax源码</p>
-<blockquote>
+    <content type="html"><![CDATA[<p>ajax源码:<br><a id="more"></a></p>
 <pre><code>
 if(window.XMLHttpRequest){
     xmlHttp = new XMLHttpRequest();
@@ -55,18 +54,11 @@ function callback(){
         }
     }
 }
-</code></pre></blockquote>
-]]></content>
+</code></pre>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;ajax源码&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;
-if(window.XMLHttpRequest){
-    xmlHttp = new XMLHttpRequest();
-}else if(windoe.ActionXObject){
-    va
+      &lt;p&gt;ajax源码:&lt;br&gt;
     
     </summary>
     
