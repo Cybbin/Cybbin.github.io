@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-25T14:05:10.451Z</updated>
+  <updated>2017-02-01T09:03:02.962Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,70 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ajax</title>
+    <link href="http://yoursite.com/2017/02/01/ajax/"/>
+    <id>http://yoursite.com/2017/02/01/ajax/</id>
+    <published>2017-02-01T08:46:46.000Z</published>
+    <updated>2017-02-01T09:03:02.962Z</updated>
+    
+    <content type="html"><![CDATA[<p>ajax源码</p>
+<blockquote>
+<pre><code>
+if(window.XMLHttpRequest){
+    xmlHttp = new XMLHttpRequest();
+}else if(windoe.ActionXObject){
+    var actionName = ['MSXML2.XMLHTTP','Microsoft.XMLHTTP'];
+    for(var i=0;i&lt;actionName.length;i++){
+        try{
+            xmlHttp = new ActionXObject(actionName[i]);
+        }catch(e){}
+    }
+}
+if(!xmlHttp){
+    console.log('xmlHttp对象创建失败');
+}else{
+    xmlHttp.onreadystatechange=callback;
+    //xmlHttp.open('get','url',true);
+    xmlHttp.open('post','url',true);
+    xmlHttp.setHeadRequest('Content-type','appplication/x-www-form-urlencode');
+    xmlHttp.send();
+}
+function callback(){
+    if(xmlHttp.readyState){
+        if(xmlHttp.status){
+            var responseText = xmlHttp.responseText;
+            //返回XML时
+            //var responseXML = xmlHtpp.responseXML;
+            //返回json时
+            //responseText = eval('('+responseText+')');
+        }
+    }
+}
+</code></pre></blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ajax源码&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;
+if(window.XMLHttpRequest){
+    xmlHttp = new XMLHttpRequest();
+}else if(windoe.ActionXObject){
+    va
+    
+    </summary>
+    
+      <category term="代码" scheme="http://yoursite.com/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+      <category term="ajax" scheme="http://yoursite.com/tags/ajax/"/>
+    
+  </entry>
   
   <entry>
     <title>css水平垂直居中</title>

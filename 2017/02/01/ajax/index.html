@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="css," />
+  <meta name="keywords" content="js,ajax," />
 
 
 
@@ -86,19 +86,37 @@
 
 
 
-<meta name="description" content="4种将一个绝对定位元素水平垂直居中的方法
-css代码:">
+<meta name="description" content="ajax源码
+
+
+if(window.XMLHttpRequest){
+    xmlHttp = new XMLHttpRequest();
+}else if(windoe.ActionXObject){
+    var actionName = [&apos;MSXML2.XMLHTTP&apos;,&apos;Microsoft.XMLHTTP&apos;];
+    for(var i=0;i&amp;lt;actionName.len">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css水平垂直居中">
-<meta property="og:url" content="http://yoursite.com/2017/01/25/css水平垂直居中/index.html">
+<meta property="og:title" content="ajax">
+<meta property="og:url" content="http://yoursite.com/2017/02/01/ajax/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="4种将一个绝对定位元素水平垂直居中的方法
-css代码:">
-<meta property="og:updated_time" content="2017-01-25T14:05:10.451Z">
+<meta property="og:description" content="ajax源码
+
+
+if(window.XMLHttpRequest){
+    xmlHttp = new XMLHttpRequest();
+}else if(windoe.ActionXObject){
+    var actionName = [&apos;MSXML2.XMLHTTP&apos;,&apos;Microsoft.XMLHTTP&apos;];
+    for(var i=0;i&amp;lt;actionName.len">
+<meta property="og:updated_time" content="2017-02-01T09:03:02.962Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css水平垂直居中">
-<meta name="twitter:description" content="4种将一个绝对定位元素水平垂直居中的方法
-css代码:">
+<meta name="twitter:title" content="ajax">
+<meta name="twitter:description" content="ajax源码
+
+
+if(window.XMLHttpRequest){
+    xmlHttp = new XMLHttpRequest();
+}else if(windoe.ActionXObject){
+    var actionName = [&apos;MSXML2.XMLHTTP&apos;,&apos;Microsoft.XMLHTTP&apos;];
+    for(var i=0;i&amp;lt;actionName.len">
 
 
 
@@ -126,13 +144,13 @@ css代码:">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/01/25/css水平垂直居中/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/01/ajax/"/>
 
 
 
 
 
-  <title> css水平垂直居中 | Blog </title>
+  <title> ajax | Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -268,7 +286,7 @@ css代码:">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/25/css水平垂直居中/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/01/ajax/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Cyb">
@@ -292,7 +310,7 @@ css代码:">
             
             
               
-                css水平垂直居中
+                ajax
               
             
           </h1>
@@ -307,8 +325,8 @@ css代码:">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-25T20:52:30+08:00">
-                2017-01-25
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-01T16:46:46+08:00">
+                2017-02-01
               </time>
             
 
@@ -348,8 +366,8 @@ css代码:">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/01/25/css水平垂直居中/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/25/css水平垂直居中/" itemprop="commentCount"></span>
+                <a href="/2017/02/01/ajax/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/01/ajax/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -359,7 +377,7 @@ css代码:">
 
           
           
-             <span id="/2017/01/25/css水平垂直居中/" class="leancloud_visitors" data-flag-title="css水平垂直居中">
+             <span id="/2017/02/01/ajax/" class="leancloud_visitors" data-flag-title="ajax">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -386,65 +404,41 @@ css代码:">
       
 
       
-        <p>4种将一个绝对定位元素水平垂直居中的方法</p>
-<p>css代码:<br><a id="more"></a></p>
+        <p>ajax源码</p>
+<blockquote>
 <pre><code>
-.wrapper {
-    height: 500px;
-    position: relative;
-    /*css3方法*/
-    /*
-     justify-content:center;/子元素水平居中/
-     align-items:center;/子元素垂直居中/
-     display:flex;
-     */
+if(window.XMLHttpRequest){
+    xmlHttp = new XMLHttpRequest();
+}else if(windoe.ActionXObject){
+    var actionName = ['MSXML2.XMLHTTP','Microsoft.XMLHTTP'];
+    for(var i=0;i&lt;actionName.length;i++){
+        try{
+            xmlHttp = new ActionXObject(actionName[i]);
+        }catch(e){}
+    }
 }
-/*Chrome,Firefox, Safari, Mobile Safari, IE8-10.*/
-.div1 {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    background: red;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    text-align: center;
+if(!xmlHttp){
+    console.log('xmlHttp对象创建失败');
+}else{
+    xmlHttp.onreadystatechange=callback;
+    //xmlHttp.open('get','url',true);
+    xmlHttp.open('post','url',true);
+    xmlHttp.setHeadRequest('Content-type','appplication/x-www-form-urlencode');
+    xmlHttp.send();
 }
-/*******兼容IE6,7,流行方法*******/
-.div2 {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    background: blue;
-    left: 50%;
-    top: 50%;
-    margin-left: -50px;
-    margin-top: -50px;
+function callback(){
+    if(xmlHttp.readyState){
+        if(xmlHttp.status){
+            var responseText = xmlHttp.responseText;
+            //返回XML时
+            //var responseXML = xmlHtpp.responseXML;
+            //返回json时
+            //responseText = eval('('+responseText+')');
+        }
+    }
 }
-/*不兼容IE8*/
-.div3 {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    background: red;
-    left: 50%;
-    top: 50%;
-    /*
-     -webkit-transform:translate(-50%,-50%);
-     -ms-transform:translate(-50%,-50%);
-     */
-    transform: translate(-50%, -50%);
-}
-/*水平方向居中*/
-.div3 {
-    width: 100px;
-    height: 100px;
-    background: red;
-    margin: 0 auto;
-}
-</code></pre>
+</code></pre></blockquote>
+
       
     </div>
 
@@ -488,7 +482,9 @@ css代码:">
       
         <div class="post-tags">
           
-            <a href="/tags/css/" rel="tag"># css</a>
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+            <a href="/tags/ajax/" rel="tag"># ajax</a>
           
         </div>
       
@@ -497,8 +493,8 @@ css代码:">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/25/new/" rel="next" title="Markdown">
-                <i class="fa fa-chevron-left"></i> Markdown
+              <a href="/2017/01/25/css水平垂直居中/" rel="next" title="css水平垂直居中">
+                <i class="fa fa-chevron-left"></i> css水平垂直居中
               </a>
             
           </div>
@@ -506,10 +502,6 @@ css代码:">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/01/ajax/" rel="prev" title="ajax">
-                ajax <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -524,10 +516,10 @@ css代码:">
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/01/25/css水平垂直居中/"
-     data-title="css水平垂直居中"
+        <div class="ds-share flat" data-thread-key="2017/02/01/ajax/"
+     data-title="ajax"
      data-content=""
-     data-url="http://yoursite.com/2017/01/25/css水平垂直居中/">
+     data-url="http://yoursite.com/2017/02/01/ajax/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -554,8 +546,8 @@ css代码:">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/01/25/css水平垂直居中/"
-           data-title="css水平垂直居中" data-url="http://yoursite.com/2017/01/25/css水平垂直居中/">
+      <div class="ds-thread" data-thread-key="2017/02/01/ajax/"
+           data-title="ajax" data-url="http://yoursite.com/2017/02/01/ajax/">
       </div>
     
   </div>
