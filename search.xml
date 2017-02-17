@@ -23,6 +23,13 @@
     </entry>
 
     
+    <entry>
+      <title><![CDATA[Github]]></title>
+      <url>%2F2017%2F01%2F25%2Fgithub%2F</url>
+      <content type="text"><![CDATA[windows安装git下载链接 建立远程仓库1.创建SSH Key $ ssh-keygen -t rsa -C “Cybbin@Cybbin.com”创建ssh,一路回车默认即可 创建.ssh目录,在该目录(我的是在C:\Users\Administrator目录下)下会有id_rsa,和id_rsa.pub文件id_rsa是私钥,不能泄露id_rsa.pub是公钥 2.登陆Github点击头像，打开Setting,点击左边的SSH and GPG keys,点击News SSH key填上任意Title,把id_rsa.pub的内容粘贴到Key文本框里然后点击Add SSH key git指令提交仓库 git initgit目录初始化 git add .添加该目录下所有文件到暂存区 git commit -m ‘m’把文件提交到仓库,引号为提交的说明 git status查看当前仓库的状态 git remote add origin git@github.com:Cybbin/jd.git将本地仓库与Github仓库关联 git push -u origin master将本地仓库推送到远程(Github)库上-u是第一次提交时,把本地的master分支与远程的master分支关联起来在以后的推送就可以简化命令git push origin master git clone git@github.com:Cybbin/jd.git克隆远程库到本地,克隆在gitskills文件夹中 版本回退 git log查看版本控制器的历史记录commit后面为版本id git log –pretty=online前面为版本id,后面的数字为在commit的时候后面引号内的内容 git reset –hard HEAD^回到上个版本上上个版本是 Head^^上100个版本是 Head~100回到第id个版本,id为git log出现的commit idgit reset –hard id git reflog记录每一次命令的id回退时找不到新版本的id时用(重返未来) 踩过的坑错误：git commit 后运行 git status出现 git commit On branch master nothing to commit, working tree clean办法:删除目录下的.git,重新执行以下代码git initgit add .git commit]]></content>
+    </entry>
+
+    
   
   
 </search>
