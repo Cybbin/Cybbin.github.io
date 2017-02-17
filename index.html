@@ -388,84 +388,14 @@
 
       
         
-          
-            <h1 id="一、windows安装git"><a href="#一、windows安装git" class="headerlink" title="一、windows安装git"></a>一、windows安装git</h1><p><a href="https://git-for-windows.github.io/" target="_blank" rel="external">下载链接</a></p>
-<h1 id="二、建立远程仓库"><a href="#二、建立远程仓库" class="headerlink" title="二、建立远程仓库"></a>二、建立远程仓库</h1><h2 id="1-创建SSH-Key"><a href="#1-创建SSH-Key" class="headerlink" title="1.创建SSH Key"></a>1.创建SSH Key</h2><blockquote>
-<p>$ ssh-keygen -t rsa -C “Cybbin@Cybbin.com”</p>
-</blockquote>
-<p>创建ssh,一路回车默认即可<br>创建.ssh目录,在该目录(我的是在C:\Users\Administrator目录下)下会有id_rsa,和id_rsa.pub文件<br>id_rsa是私钥,不能泄露<br>id_rsa.pub是公钥</p>
-<h2 id="2-登陆Github"><a href="#2-登陆Github" class="headerlink" title="2.登陆Github"></a>2.登陆Github</h2><p>点击头像，打开Setting,点击左边的SSH and GPG keys,点击News SSH key<br>填上任意Title,把id_rsa.pub的内容粘贴到Key文本框里<br>然后点击Add SSH key</p>
-<h1 id="三、git指令"><a href="#三、git指令" class="headerlink" title="三、git指令"></a>三、git指令</h1><h2 id="提交仓库"><a href="#提交仓库" class="headerlink" title="提交仓库"></a>提交仓库</h2><hr>
-<blockquote>
-<p>git init</p>
-</blockquote>
-<p>git目录初始化</p>
-<hr>
-<blockquote>
-<p>git add .</p>
-</blockquote>
-<p>添加该目录下所有文件到暂存区</p>
-<hr>
-<blockquote>
-<p>git commit -m ‘m’</p>
-</blockquote>
-<p>把文件提交到仓库,引号为提交的说明</p>
-<hr>
-<blockquote>
-<p>git remote add origin git@github.com:Cybbin/jd.git</p>
-</blockquote>
-<p>将本地仓库与Github仓库关联</p>
-<hr>
-<blockquote>
-<p>git push -u origin master</p>
-</blockquote>
-<p>将本地仓库推送到远程(Github)库上<br>-u是第一次提交时,把本地的master分支与远程的master分支关联起来<br>在以后的推送就可以简化命令</p>
-<blockquote>
-<p>git push origin master</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>git clone git@github.com:Cybbin/jd.git</p>
-</blockquote>
-<p>克隆远程库到本地,克隆在gitskills文件夹中</p>
-<hr>
-<h2 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h2><hr>
-<blockquote>
-<p>git log</p>
-</blockquote>
-<p>查看版本控制器的历史记录<br>commit后面为版本id</p>
-<hr>
-<blockquote>
-<p>git log –pretty=online</p>
-</blockquote>
-<p>前面为版本id,后面的数字为在commit的时候后面引号内的内容</p>
-<hr>
-<blockquote>
-<p>git reset –hard HEAD^</p>
-</blockquote>
-<p>回到上个版本<br>上上个版本是 Head^^<br>上100个版本是 Head~100<br>回到第id个版本,id为git log出现的commit id</p>
-<blockquote>
-<p>git reset –hard id</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>git reflog</p>
-</blockquote>
-<p>记录每一次命令的id<br>回退时找不到新版本的id时用(重返未来)</p>
-<hr>
-<blockquote>
-<p>git status</p>
-</blockquote>
-<p>查看当前仓库的状态</p>
-<hr>
-<h1 id="四、踩过的坑"><a href="#四、踩过的坑" class="headerlink" title="四、踩过的坑"></a>四、踩过的坑</h1><hr>
-<p>错误：<br>git commit 后运行 git status<br>出现  git commit On branch master nothing to commit, working tree clean<br>办法:<br>删除目录下的.git,重新执行以下代码</p>
-<blockquote>
-<p>git init<br>git add .<br>git commit</p>
-</blockquote>
-<hr>
-
-          
+          <p>阅读全文
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/17/github/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
