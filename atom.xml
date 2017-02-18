@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-17T14:55:12.033Z</updated>
+  <updated>2017-02-18T06:45:52.240Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/02/17/github/"/>
     <id>http://yoursite.com/2017/02/17/github/</id>
     <published>2017-02-17T09:24:33.000Z</published>
-    <updated>2017-02-17T14:55:12.033Z</updated>
+    <updated>2017-02-18T06:45:52.240Z</updated>
     
     <content type="html"><![CDATA[<p>阅读全文<a id="more"></a></p>
 <h1 id="一、windows安装git"><a href="#一、windows安装git" class="headerlink" title="一、windows安装git"></a>一、windows安装git</h1><p><a href="https://git-for-windows.github.io/" target="_blank" rel="external">下载链接</a></p>
@@ -70,9 +70,13 @@
 <p>查看版本控制器的历史记录<br>commit后面为版本id</p>
 <hr>
 <blockquote>
-<p>git log –pretty=online</p>
+<p>git log –pretty=oneline</p>
 </blockquote>
-<p>前面为版本id,后面的数字为在commit的时候后面引号内的内容</p>
+<p>前面为版本commit id,后面的数字为在commit的时候后面引号内的内容</p>
+<blockquote>
+<p>git log –pretty=oneline –abbrev-commit</p>
+</blockquote>
+<p>只显示前几位commit id</p>
 <hr>
 <blockquote>
 <p>git reset –hard HEAD^</p>
@@ -166,6 +170,45 @@
 </blockquote>
 <p>将最新的提交从origin抓下来</p>
 <hr>
+<h2 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h2><hr>
+<blockquote>
+<p>git tag v1.0</p>
+</blockquote>
+<p>设置当前标签为v1.0</p>
+<hr>
+<blockquote>
+<p>git tag</p>
+</blockquote>
+<p>查看当前分支的所有标签(不是按时间顺序排列,按字母顺序排列)</p>
+<hr>
+<blockquote>
+<p>git tab v1.0 id</p>
+</blockquote>
+<p>对当前分支的过去版本打标签,id为commit id(版本回退里有)</p>
+<hr>
+<blockquote>
+<p>git show v1.0</p>
+</blockquote>
+<p>查看v1.0标签信息</p>
+<hr>
+<blockquote>
+<p>git tag -d v1.0</p>
+</blockquote>
+<p>删除本地的标签</p>
+<blockquote>
+<p>git push origin :ref/tags/v1.0</p>
+</blockquote>
+<p>删除推送到远程的标签</p>
+<hr>
+<blockquote>
+<p>git push origin v1.0</p>
+</blockquote>
+<p>推送标签到远程</p>
+<blockquote>
+<p>git push origin –tags</p>
+</blockquote>
+<p>一次性推送全部未推送到远程的标签</p>
+<hr>
 <h2 id="其它小命令"><a href="#其它小命令" class="headerlink" title="其它小命令"></a>其它小命令</h2><hr>
 <blockquote>
 <p>git remote -v</p>
@@ -204,9 +247,9 @@
       <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="language" scheme="http://yoursite.com/tags/language/"/>
-    
       <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="language" scheme="http://yoursite.com/tags/language/"/>
     
   </entry>
   
@@ -392,9 +435,9 @@ function callback(){
       <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
-    
       <category term="language" scheme="http://yoursite.com/tags/language/"/>
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
     
   </entry>
   
