@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/02/01/ajax/index.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="ajax源码:">
-<meta property="og:updated_time" content="2017-02-01T09:07:43.712Z">
+<meta property="og:updated_time" content="2017-02-20T12:03:26.084Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ajax">
 <meta name="twitter:description" content="ajax源码:">
@@ -385,38 +385,7 @@
       
         <p>ajax源码:</p>
 <a id="more"></a>
-<pre><code>
-if(window.XMLHttpRequest){
-    xmlHttp = new XMLHttpRequest();
-}else if(windoe.ActionXObject){
-    var actionName = ['MSXML2.XMLHTTP','Microsoft.XMLHTTP'];
-    for(var i=0;i&lt;actionName.length;i++){
-        try{
-            xmlHttp = new ActionXObject(actionName[i]);
-        }catch(e){}
-    }
-}
-if(!xmlHttp){
-    console.log('xmlHttp对象创建失败');
-}else{
-    xmlHttp.onreadystatechange=callback;
-    //xmlHttp.open('get','url',true);
-    xmlHttp.open('post','url',true);
-    xmlHttp.setHeadRequest('Content-type','appplication/x-www-form-urlencode');
-    xmlHttp.send();
-}
-function callback(){
-    if(xmlHttp.readyState){
-        if(xmlHttp.status){
-            var responseText = xmlHttp.responseText;
-            //返回XML时
-            //var responseXML = xmlHtpp.responseXML;
-            //返回json时
-            //responseText = eval('('+responseText+')');
-        }
-    }
-}
-</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="built_in">window</span>.XMLHttpRequest)&#123;</div><div class="line">	xmlHttp = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(windoe.ActionXObject)&#123;</div><div class="line">	<span class="keyword">var</span> actionName = [<span class="string">'MSXML2.XMLHTTP'</span>,<span class="string">'Microsoft.XMLHTTP'</span>];</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&amp;lt;actionName.length;i++)&#123;</div><div class="line">		<span class="keyword">try</span>&#123;</div><div class="line">			xmlHttp = <span class="keyword">new</span> ActionXObject(actionName[i]);</div><div class="line">		&#125;<span class="keyword">catch</span>(e)&#123;&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span>(!xmlHttp)&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">'xmlHttp对象创建失败'</span>);</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">	xmlHttp.onreadystatechange=callback;</div><div class="line">	<span class="comment">//xmlHttp.open('get','url',true);</span></div><div class="line">	xmlHttp.open(<span class="string">'post'</span>,<span class="string">'url'</span>,<span class="literal">true</span>);</div><div class="line">	xmlHttp.setHeadRequest(<span class="string">'Content-type'</span>,<span class="string">'appplication/x-www-form-urlencode'</span>);</div><div class="line">	xmlHttp.send();</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">if</span>(xmlHttp.readyState)&#123;</div><div class="line">		<span class="keyword">if</span>(xmlHttp.status)&#123;</div><div class="line">			<span class="keyword">var</span> responseText = xmlHttp.responseText;</div><div class="line">			<span class="comment">//返回XML时</span></div><div class="line">			<span class="comment">//var responseXML = xmlHtpp.responseXML;</span></div><div class="line">			<span class="comment">//返回json时</span></div><div class="line">			<span class="comment">//responseText = eval('('+responseText+')');</span></div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 

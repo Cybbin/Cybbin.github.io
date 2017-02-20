@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="阅读全文">
+<meta name="description" content="参考《你不知道的JavaScript》">
 <meta property="og:type" content="article">
 <meta property="og:title" content="this用法">
 <meta property="og:url" content="http://yoursite.com/2017/02/19/this/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="阅读全文">
-<meta property="og:updated_time" content="2017-02-19T13:37:12.135Z">
+<meta property="og:description" content="参考《你不知道的JavaScript》">
+<meta property="og:updated_time" content="2017-02-20T13:28:26.703Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="this用法">
-<meta name="twitter:description" content="阅读全文">
+<meta name="twitter:description" content="参考《你不知道的JavaScript》">
 
 
 
@@ -383,56 +383,50 @@
       
 
       
-        <p>阅读全文<a id="more"></a></p>
+        <p>参考《你不知道的JavaScript》<a id="more"></a></p>
 <h1 id="绑定规则"><a href="#绑定规则" class="headerlink" title="绑定规则"></a>绑定规则</h1><hr>
-<h2 id="默认绑定"><a href="#默认绑定" class="headerlink" title="默认绑定"></a>默认绑定</h2><pre>
-function foo(){
-    console.log(this.a);
-}
-var a=2;
-foo(); // 2
-
-</pre>
-
-<p>默认绑定时,this指向全局对象。<br>但是在严格模式下,全局对象无法使用默认绑定。</p>
-<pre>function foo(){
-    "use strict";
-    console.log(this.a);
-}
-var a=2;
-foo(); // Type Error:this is undefined
-</pre>
-
+<h2 id="默认绑定"><a href="#默认绑定" class="headerlink" title="默认绑定"></a>默认绑定</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a=<span class="number">2</span>;</div><div class="line">foo(); <span class="comment">// 2</span></div></pre></td></tr></table></figure>
+<p>默认绑定时,this指向全局对象。<br>但是在严格模式下,全局对象无法使用默认绑定。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</div><div class="line"><span class="meta">	"use strict"</span>;</div><div class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a=<span class="number">2</span>;</div><div class="line">foo(); <span class="comment">// Type Error:this is undefined</span></div></pre></td></tr></table></figure></p>
 <hr>
-<h2 id="隐式绑定"><a href="#隐式绑定" class="headerlink" title="隐式绑定"></a>隐式绑定</h2><pre>
-function foo(){
-    console.log(this.a);
-}
-var obj ={
-    a:2,
-    f:foo
-}
-obj.f(); // 2
-</pre>
-
+<h2 id="隐式绑定"><a href="#隐式绑定" class="headerlink" title="隐式绑定"></a>隐式绑定</h2><p>在一个对象内部创建包含一个指向函数的属性，并通过这个对象间接引用函数，<br>从而把this隐式绑定到这个对象上。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> obj =&#123;</div><div class="line">	<span class="attr">a</span>:<span class="number">2</span>,</div><div class="line">	<span class="attr">f</span>:foo</div><div class="line">&#125;</div><div class="line">obj.f(); <span class="comment">// 2</span></div></pre></td></tr></table></figure></p>
 <p>this绑定到obj对象</p>
-<h3 id="隐式丢失"><a href="#隐式丢失" class="headerlink" title="隐式丢失"></a>隐式丢失</h3><pre>
-function foo(){
-    console.log(this.a);
-}
-var obj ={
-    a:2,
-    f:foo
-}
-var bar = obj.f;
-var a = "hello";
-bar(); // hello
-</pre>
-
+<h3 id="隐式丢失"><a href="#隐式丢失" class="headerlink" title="隐式丢失"></a>隐式丢失</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> obj =&#123;</div><div class="line">	<span class="attr">a</span>:<span class="number">2</span>,</div><div class="line">	<span class="attr">f</span>:foo</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> bar = obj.f;</div><div class="line"><span class="keyword">var</span> a = <span class="string">"hello"</span>;</div><div class="line">bar(); <span class="comment">// hello</span></div></pre></td></tr></table></figure>
 <p>隐式绑定的函数丢失绑定对象，应用默认绑定。</p>
 <hr>
-<h2 id="显式绑定"><a href="#显式绑定" class="headerlink" title="显式绑定"></a>显式绑定</h2><hr>
-<h2 id="new绑定"><a href="#new绑定" class="headerlink" title="new绑定"></a>new绑定</h2>
+<h2 id="显式绑定"><a href="#显式绑定" class="headerlink" title="显式绑定"></a>显式绑定</h2><p>使用 call() 和 apply() 方法，把this绑定到传进去的对象上<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> obj=&#123;</div><div class="line">	a=<span class="number">2</span>;</div><div class="line">&#125;</div><div class="line">foo.call(obj); <span class="comment">// 2</span></div></pre></td></tr></table></figure></p>
+<p>与隐式绑定相同，显示绑定同样有着绑定丢失的情况<br>但是显示绑定的一个变种可以解决这个问题</p>
+<h3 id="硬绑定"><a href="#硬绑定" class="headerlink" title="硬绑定"></a>硬绑定</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span> <span class="title">something</span>(<span class="params">something</span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.a,something);</div><div class="line">	<span class="keyword">return</span> <span class="keyword">this</span>.a + something;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> obj=&#123;</div><div class="line">	a=<span class="number">2</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> bar = foo.bind(obj);</div><div class="line"><span class="keyword">var</span> b = bar(<span class="number">3</span>); <span class="comment">// 2 3</span></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">//5</span></div></pre></td></tr></table></figure>
+<hr>
+<h2 id="new绑定"><a href="#new绑定" class="headerlink" title="new绑定"></a>new绑定</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">a</span>)</span>&#123;</div><div class="line">	<span class="keyword">this</span>.a=a;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> bar = <span class="keyword">new</span> foo(<span class="number">2</span>);</div><div class="line"><span class="built_in">console</span>.log(bar.a); <span class="comment">// 2</span></div></pre></td></tr></table></figure>
+<p>创建一个新对象并把它绑定到foo()调用的this上</p>
+<h1 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h1><hr>
+<h2 id="显示绑定和隐式绑定"><a href="#显示绑定和隐式绑定" class="headerlink" title="显示绑定和隐式绑定"></a>显示绑定和隐式绑定</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> obj1=&#123;</div><div class="line">	<span class="attr">a</span>:<span class="number">2</span>,</div><div class="line">	<span class="attr">foo</span>:foo</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> obj2=&#123;</div><div class="line">	a=<span class="number">3</span>,</div><div class="line">	<span class="attr">foo</span>:foo</div><div class="line">&#125;;</div><div class="line">obj1.foo(); <span class="comment">// 2</span></div><div class="line">obj2.foo(); <span class="comment">// 3</span></div><div class="line"></div><div class="line">obj1.foo.call(obj2); <span class="comment">// 3</span></div><div class="line">obj2.foo.call(obj1); <span class="comment">// 2</span></div></pre></td></tr></table></figure>
+<p>可以看到，显示绑定优先级更高，在判断时应当先考虑是否可以应用显示绑定</p>
+<hr>
+<h2 id="new绑定和隐式绑定"><a href="#new绑定和隐式绑定" class="headerlink" title="new绑定和隐式绑定"></a>new绑定和隐式绑定</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">something</span>)</span>&#123;</div><div class="line">	<span class="keyword">this</span>.a=something;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> obj1=&#123;</div><div class="line">	<span class="attr">foo</span>:foo</div><div class="line">&#125;;</div><div class="line"></div><div class="line">obj1.foo(<span class="number">2</span>);</div><div class="line"><span class="built_in">console</span>.log(obj1.a); <span class="comment">// 2</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> bar = <span class="keyword">new</span> obj1.foo(<span class="number">4</span>);</div><div class="line"><span class="built_in">console</span>.log(obj1.a); <span class="comment">// 2</span></div><div class="line"><span class="built_in">console</span>.log(bar.a); <span class="comment">// 4</span></div></pre></td></tr></table></figure>
+<p>可以看到，new绑定比隐式绑定优先级更高</p>
+<hr>
+<h2 id="new绑定和显示绑定"><a href="#new绑定和显示绑定" class="headerlink" title="new绑定和显示绑定"></a>new绑定和显示绑定</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">something</span>)</span>&#123;</div><div class="line">	<span class="keyword">this</span>.a=something;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> obj1 = &#123;&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> bar = foo.bind(obj1);</div><div class="line">bar(<span class="number">2</span>);</div><div class="line">consolo.log(obj1.a); <span class="comment">// 2</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> baz = <span class="keyword">new</span> bar(<span class="number">3</span>);</div><div class="line"><span class="built_in">console</span>.log(obj1.a); <span class="comment">// 2</span></div><div class="line"><span class="built_in">console</span>.log(baz.a); <span class="comment">// 3</span></div></pre></td></tr></table></figure>
+<p>可以看到，new绑定比显示绑定优先级更高</p>
+<hr>
+<h2 id="判断this顺序"><a href="#判断this顺序" class="headerlink" title="判断this顺序"></a>判断this顺序</h2><p>按照下面的顺序来判断this所应用的规则<br>1.函数是否在用new中调用(new绑定)</p>
+<blockquote>
+<p>var bar = new foo();</p>
+</blockquote>
+<p>2.函数是否通过call、apply或者bind(硬绑定)调用(显示绑定)</p>
+<blockquote>
+<p>var bar = foo.call(obj);</p>
+</blockquote>
+<p>3.函数是否在某个上下文对象中调用(隐式绑定)</p>
+<blockquote>
+<p>var bar = obj.foo();</p>
+</blockquote>
+<p>4.如果都不是的话,就使用默认绑定</p>
+<blockquote>
+<p>var bar = foo();</p>
+</blockquote>
+<hr>
+
       
     </div>
 
@@ -657,7 +651,7 @@ bar(); // hello
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#绑定规则"><span class="nav-number">1.</span> <span class="nav-text">绑定规则</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#默认绑定"><span class="nav-number">1.1.</span> <span class="nav-text">默认绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#隐式绑定"><span class="nav-number">1.2.</span> <span class="nav-text">隐式绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#隐式丢失"><span class="nav-number">1.2.1.</span> <span class="nav-text">隐式丢失</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显式绑定"><span class="nav-number">1.3.</span> <span class="nav-text">显式绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#new绑定"><span class="nav-number">1.4.</span> <span class="nav-text">new绑定</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#绑定规则"><span class="nav-number">1.</span> <span class="nav-text">绑定规则</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#默认绑定"><span class="nav-number">1.1.</span> <span class="nav-text">默认绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#隐式绑定"><span class="nav-number">1.2.</span> <span class="nav-text">隐式绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#隐式丢失"><span class="nav-number">1.2.1.</span> <span class="nav-text">隐式丢失</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显式绑定"><span class="nav-number">1.3.</span> <span class="nav-text">显式绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#硬绑定"><span class="nav-number">1.3.1.</span> <span class="nav-text">硬绑定</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#new绑定"><span class="nav-number">1.4.</span> <span class="nav-text">new绑定</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#优先级"><span class="nav-number">2.</span> <span class="nav-text">优先级</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#显示绑定和隐式绑定"><span class="nav-number">2.1.</span> <span class="nav-text">显示绑定和隐式绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#new绑定和隐式绑定"><span class="nav-number">2.2.</span> <span class="nav-text">new绑定和隐式绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#new绑定和显示绑定"><span class="nav-number">2.3.</span> <span class="nav-text">new绑定和显示绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断this顺序"><span class="nav-number">2.4.</span> <span class="nav-text">判断this顺序</span></a></li></ol></li></ol></div>
             
 
           </div>
