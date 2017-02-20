@@ -91,7 +91,7 @@ bar(); // hello
     <link href="http://yoursite.com/2017/02/17/github/"/>
     <id>http://yoursite.com/2017/02/17/github/</id>
     <published>2017-02-17T09:24:33.000Z</published>
-    <updated>2017-02-19T14:02:23.909Z</updated>
+    <updated>2017-02-20T07:59:03.221Z</updated>
     
     <content type="html"><![CDATA[<p>阅读全文<a id="more"></a></p>
 <h1 id="一、windows安装git"><a href="#一、windows安装git" class="headerlink" title="一、windows安装git"></a>一、windows安装git</h1><p><a href="https://git-for-windows.github.io/" target="_blank" rel="external">下载链接</a></p>
@@ -302,11 +302,20 @@ bar(); // hello
 <p>删除 README.md 文件</p>
 <hr>
 <h1 id="四、踩过的坑"><a href="#四、踩过的坑" class="headerlink" title="四、踩过的坑"></a>四、踩过的坑</h1><hr>
-<p>错误：<br>git commit 后运行 git status<br>出现  git commit On branch master nothing to commit, working tree clean<br>办法:<br>当前分支没有修改内容,可能是切换错分支了<br>查看分支</p>
+<p>错误：<br>git commit 后运行 git status<br>出现  git commit On branch master nothing to commit, working tree clean<br>解决办法:<br>当前分支没有修改内容,可能是切换错分支了<br>查看分支</p>
 <blockquote>
 <p>git branch</p>
 </blockquote>
 <hr>
+<p>错误：</p>
+<blockquote>
+<p>$ git push origin master<br>To git@github.com:Cybbin/jd.git<br> ! [rejected]        master -&gt; master (non-fast-forward)<br>error: failed to push some refs to ‘git@github.com:Cybbin/jd.git’<br>hint: Updates were rejected because the tip of your current branch is behind<br>hint: its remote counterpart. Integrate the remote changes (e.g.<br>hint: ‘git pull …’) before pushing again.<br>hint: See the ‘Note about fast-forwards’ in ‘git push –help’ for details.</p>
+</blockquote>
+<p>解决办法：</p>
+<blockquote>
+<p>$ git push -f origin master</p>
+<hr>
+</blockquote>
 ]]></content>
     
     <summary type="html">
@@ -318,9 +327,9 @@ bar(); // hello
       <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="git" scheme="http://yoursite.com/tags/git/"/>
-    
       <category term="language" scheme="http://yoursite.com/tags/language/"/>
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
     
   </entry>
   
@@ -506,9 +515,9 @@ function callback(){
       <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="language" scheme="http://yoursite.com/tags/language/"/>
-    
       <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+      <category term="language" scheme="http://yoursite.com/tags/language/"/>
     
   </entry>
   

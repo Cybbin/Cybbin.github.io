@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="git,language," />
+  <meta name="keywords" content="language,git," />
 
 
 
@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/02/17/github/index.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="阅读全文">
-<meta property="og:updated_time" content="2017-02-19T14:02:23.909Z">
+<meta property="og:updated_time" content="2017-02-20T07:59:03.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github">
 <meta name="twitter:description" content="阅读全文">
@@ -592,11 +592,20 @@
 <p>删除 README.md 文件</p>
 <hr>
 <h1 id="四、踩过的坑"><a href="#四、踩过的坑" class="headerlink" title="四、踩过的坑"></a>四、踩过的坑</h1><hr>
-<p>错误：<br>git commit 后运行 git status<br>出现  git commit On branch master nothing to commit, working tree clean<br>办法:<br>当前分支没有修改内容,可能是切换错分支了<br>查看分支</p>
+<p>错误：<br>git commit 后运行 git status<br>出现  git commit On branch master nothing to commit, working tree clean<br>解决办法:<br>当前分支没有修改内容,可能是切换错分支了<br>查看分支</p>
 <blockquote>
 <p>git branch</p>
 </blockquote>
 <hr>
+<p>错误：</p>
+<blockquote>
+<p>$ git push origin master<br>To git@github.com:Cybbin/jd.git<br> ! [rejected]        master -&gt; master (non-fast-forward)<br>error: failed to push some refs to ‘git@github.com:Cybbin/jd.git’<br>hint: Updates were rejected because the tip of your current branch is behind<br>hint: its remote counterpart. Integrate the remote changes (e.g.<br>hint: ‘git pull …’) before pushing again.<br>hint: See the ‘Note about fast-forwards’ in ‘git push –help’ for details.</p>
+</blockquote>
+<p>解决办法：</p>
+<blockquote>
+<p>$ git push -f origin master</p>
+<hr>
+</blockquote>
 
       
     </div>
@@ -641,9 +650,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag"># git</a>
-          
             <a href="/tags/language/" rel="tag"># language</a>
+          
+            <a href="/tags/git/" rel="tag"># git</a>
           
         </div>
       
