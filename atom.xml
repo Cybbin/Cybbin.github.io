@@ -91,7 +91,7 @@ bar(); // hello
     <link href="http://yoursite.com/2017/02/17/github/"/>
     <id>http://yoursite.com/2017/02/17/github/</id>
     <published>2017-02-17T09:24:33.000Z</published>
-    <updated>2017-02-20T11:42:05.325Z</updated>
+    <updated>2017-02-20T11:44:10.446Z</updated>
     
     <content type="html"><![CDATA[<p>阅读全文<a id="more"></a></p>
 <h1 id="一、windows安装git"><a href="#一、windows安装git" class="headerlink" title="一、windows安装git"></a>一、windows安装git</h1><p><a href="https://git-for-windows.github.io/" target="_blank" rel="external">下载链接</a></p>
@@ -309,7 +309,11 @@ bar(); // hello
 <hr>
 <p>错误：</p>
 <blockquote>
-<p>$ git push origin master<br>To git@github.com:Cybbin/jd.git<br> ! [rejected]        master -&gt; master (non-fast-forward)<br>error: failed to push some refs to ‘git@github.com:Cybbin/jd.git’<br>hint: Updates were rejected because the tip of your current branch is behind<br>hint: its remote counterpart. Integrate the remote changes (e.g.<br>hint: ‘git pull …’) before pushing again.<br>hint: See the ‘Note about fast-forwards’ in ‘git push –help’ for details.<br>解决办法：<br>$ git push -f origin master</p>
+<p>git push origin master<br>To git@github.com:Cybbin/jd.git<br> ! [rejected]        master -&gt; master (non-fast-forward)<br>error: failed to push some refs to ‘git@github.com:Cybbin/jd.git’<br>hint: Updates were rejected because the tip of your current branch is behind<br>hint: its remote counterpart. Integrate the remote changes (e.g.<br>hint: ‘git pull …’) before pushing again.<br>hint: See the ‘Note about fast-forwards’ in ‘git push –help’ for details.</p>
+</blockquote>
+<p>解决办法：</p>
+<blockquote>
+<p>git push -f origin master</p>
 </blockquote>
 <hr>
 ]]></content>
