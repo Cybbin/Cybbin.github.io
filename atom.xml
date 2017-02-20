@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-18T06:45:52.240Z</updated>
+  <updated>2017-02-19T13:37:12.135Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,82 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>this用法</title>
+    <link href="http://yoursite.com/2017/02/19/this/"/>
+    <id>http://yoursite.com/2017/02/19/this/</id>
+    <published>2017-02-19T13:12:43.000Z</published>
+    <updated>2017-02-19T13:37:12.135Z</updated>
+    
+    <content type="html"><![CDATA[<p>阅读全文<a id="more"></a></p>
+<h1 id="绑定规则"><a href="#绑定规则" class="headerlink" title="绑定规则"></a>绑定规则</h1><hr>
+<h2 id="默认绑定"><a href="#默认绑定" class="headerlink" title="默认绑定"></a>默认绑定</h2><pre>
+function foo(){
+    console.log(this.a);
+}
+var a=2;
+foo(); // 2
+
+</pre>
+
+<p>默认绑定时,this指向全局对象。<br>但是在严格模式下,全局对象无法使用默认绑定。</p>
+<pre>function foo(){
+    "use strict";
+    console.log(this.a);
+}
+var a=2;
+foo(); // Type Error:this is undefined
+</pre>
+
+<hr>
+<h2 id="隐式绑定"><a href="#隐式绑定" class="headerlink" title="隐式绑定"></a>隐式绑定</h2><pre>
+function foo(){
+    console.log(this.a);
+}
+var obj ={
+    a:2,
+    f:foo
+}
+obj.f(); // 2
+</pre>
+
+<p>this绑定到obj对象</p>
+<h3 id="隐式丢失"><a href="#隐式丢失" class="headerlink" title="隐式丢失"></a>隐式丢失</h3><pre>
+function foo(){
+    console.log(this.a);
+}
+var obj ={
+    a:2,
+    f:foo
+}
+var bar = obj.f;
+var a = "hello";
+bar(); // hello
+</pre>
+
+<p>隐式绑定的函数丢失绑定对象，应用默认绑定。</p>
+<hr>
+<h2 id="显式绑定"><a href="#显式绑定" class="headerlink" title="显式绑定"></a>显式绑定</h2><hr>
+<h2 id="new绑定"><a href="#new绑定" class="headerlink" title="new绑定"></a>new绑定</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;阅读全文
+    
+    </summary>
+    
+      <category term="代码" scheme="http://yoursite.com/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Github</title>
     <link href="http://yoursite.com/2017/02/17/github/"/>
     <id>http://yoursite.com/2017/02/17/github/</id>
     <published>2017-02-17T09:24:33.000Z</published>
-    <updated>2017-02-18T06:45:52.240Z</updated>
+    <updated>2017-02-19T14:02:23.909Z</updated>
     
     <content type="html"><![CDATA[<p>阅读全文<a id="more"></a></p>
 <h1 id="一、windows安装git"><a href="#一、windows安装git" class="headerlink" title="一、windows安装git"></a>一、windows安装git</h1><p><a href="https://git-for-windows.github.io/" target="_blank" rel="external">下载链接</a></p>
@@ -70,7 +141,7 @@
 <p>查看版本控制器的历史记录<br>commit后面为版本id</p>
 <hr>
 <blockquote>
-<p>git log –pretty=oneline</p>
+<p>git log —pretty=oneline</p>
 </blockquote>
 <p>前面为版本commit id,后面的数字为在commit的时候后面引号内的内容</p>
 <blockquote>
