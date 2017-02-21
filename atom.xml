@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-20T14:57:47.205Z</updated>
+  <updated>2017-02-21T07:44:22.324Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/02/20/object/"/>
     <id>http://yoursite.com/2017/02/20/object/</id>
     <published>2017-02-20T14:21:49.000Z</published>
-    <updated>2017-02-20T14:57:47.205Z</updated>
+    <updated>2017-02-21T07:44:22.324Z</updated>
     
     <content type="html"><![CDATA[<p>对象及其用法<a id="more"></a></p>
 <h1 id="对象的定义"><a href="#对象的定义" class="headerlink" title="对象的定义"></a>对象的定义</h1><hr>
@@ -37,8 +37,22 @@
 <hr>
 <h1 id="对象的内容"><a href="#对象的内容" class="headerlink" title="对象的内容"></a>对象的内容</h1><hr>
 <h2 id="访问对象的值"><a href="#访问对象的值" class="headerlink" title="访问对象的值"></a>访问对象的值</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj&#123;</div><div class="line">	<span class="attr">a</span> : <span class="number">2</span></div><div class="line">&#125;;</div><div class="line"><span class="built_in">console</span>.log(obj.a); <span class="comment">// 2</span></div><div class="line"><span class="built_in">console</span>.log(obj[<span class="string">"a"</span>]); <span class="comment">// 2</span></div></pre></td></tr></table></figure>
-<p>访问对象的值，需要使用 .操作符和[]操作符。</p>
-<h2 id="语法通常被成为属性访问，-语法通常被成为键访问。"><a href="#语法通常被成为属性访问，-语法通常被成为键访问。" class="headerlink" title=".语法通常被成为属性访问，[]语法通常被成为键访问。"></a>.语法通常被成为属性访问，[]语法通常被成为键访问。</h2>]]></content>
+<p>访问对象的值，需要使用 .操作符和[]操作符。<br>.语法通常被成为属性访问，[]语法通常被成为键访问。</p>
+<hr>
+<h2 id="属性描述符"><a href="#属性描述符" class="headerlink" title="属性描述符"></a>属性描述符</h2><p>ECMAScript5中定义了一个叫”属性描述符”的对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj=&#123;&#125;;</div><div class="line"><span class="built_in">Object</span>.defineProperty(obj,<span class="string">"a"</span>&#123;</div><div class="line">	<span class="attr">value</span>:<span class="number">2</span>, <span class="comment">// 值</span></div><div class="line">	writable:<span class="literal">true</span>, <span class="comment">// 是否可写</span></div><div class="line">	configurable:<span class="literal">true</span>, <span class="comment">// 是否可配置</span></div><div class="line">	enumerable:<span class="literal">true</span>, <span class="comment">// 是否可枚举</span></div><div class="line">	setter:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;, <span class="comment">// 设置值</span></div><div class="line">	getter:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125; <span class="comment">// 获取值</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="Writable"><a href="#Writable" class="headerlink" title="Writable"></a>Writable</h3><p>writable 决定是否可以修改属性的值。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line"><span class="built_in">Object</span>.defineProperty(obj,<span class="string">"a"</span>,&#123;</div><div class="line">	<span class="attr">value</span>:<span class="number">2</span>,</div><div class="line">	<span class="attr">writable</span>:<span class="literal">false</span>,</div><div class="line">	<span class="attr">configurable</span>:<span class="literal">true</span>,</div><div class="line">	<span class="attr">enumerable</span>:<span class="literal">true</span></div><div class="line">&#125;);</div><div class="line">obj.a = <span class="number">3</span>;</div><div class="line"><span class="built_in">console</span>.log(obj.a); <span class="comment">// 2,无法修改值,在严格模式下会报TypeError错误</span></div></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="Configurable"><a href="#Configurable" class="headerlink" title="Configurable"></a>Configurable</h3><p>只要属性是可配置的，就可以使用defineProperty()方法来修改属性描述符<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line">obj.a = <span class="number">3</span>;</div><div class="line"><span class="built_in">console</span>.log(obj.a);</div><div class="line"><span class="built_in">Object</span>.defineProperty(obj,<span class="string">"a"</span>,&#123;</div><div class="line">	<span class="attr">value</span>:<span class="number">4</span>,</div><div class="line">	<span class="attr">writable</span>:<span class="literal">true</span>,</div><div class="line">	<span class="attr">configurable</span>:<span class="literal">false</span>,</div><div class="line">	<span class="attr">writable</span>:<span class="literal">true</span></div><div class="line">&#125;);</div><div class="line"><span class="built_in">console</span>.log(obj.a); <span class="comment">// 4</span></div><div class="line">obj.a = <span class="number">5</span>;</div><div class="line"><span class="built_in">console</span>.log(obj.a); <span class="comment">// 5</span></div><div class="line"></div><div class="line"><span class="keyword">delete</span> obj.a;</div><div class="line"><span class="built_in">console</span>.log(obj.a); <span class="comment">// 5，禁止删除这个属性</span></div><div class="line"></div><div class="line"><span class="built_in">Object</span>.defineProperty(obj,<span class="string">"a"</span>,&#123;</div><div class="line">	<span class="attr">value</span>:<span class="number">6</span>,</div><div class="line">	<span class="attr">writable</span>:<span class="literal">true</span>,</div><div class="line">	<span class="attr">configurable</span>:<span class="literal">true</span>,</div><div class="line">	<span class="attr">writable</span>:<span class="literal">true</span></div><div class="line">&#125;); <span class="comment">// TypeError,无法修改属性描述符</span></div></pre></td></tr></table></figure></p>
+<p>由此可见，把configurable修改为false是单向操作，无法撤销！</p>
+<hr>
+<h3 id="Enumerable"><a href="#Enumerable" class="headerlink" title="Enumerable"></a>Enumerable</h3><p>控制对象的属性能否出现在属性枚举中，比如说for..in循环。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj=&#123;</div><div class="line">	<span class="attr">a</span>:<span class="number">2</span>,</div><div class="line">	<span class="attr">b</span>:<span class="number">3</span></div><div class="line">&#125;;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i <span class="keyword">in</span> obj)&#123;</div><div class="line">	<span class="built_in">console</span>.log(i);</div><div class="line">&#125; <span class="comment">// a b</span></div><div class="line"><span class="built_in">Object</span>.defineProperty(obj,<span class="string">"a"</span>,&#123;</div><div class="line">	<span class="attr">value</span>:<span class="number">2</span>,</div><div class="line">	<span class="attr">writable</span>:<span class="literal">true</span>,</div><div class="line">	<span class="attr">configurable</span>:<span class="literal">true</span>,</div><div class="line">	<span class="attr">enumerable</span>:<span class="literal">false</span></div><div class="line">&#125;);</div><div class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i <span class="keyword">in</span> obj)&#123;</div><div class="line">	<span class="built_in">console</span>.log(i);</div><div class="line">&#125; <span class="comment">// b</span></div></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="Setter和Getter"><a href="#Setter和Getter" class="headerlink" title="Setter和Getter"></a>Setter和Getter</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj=&#123;</div><div class="line">	get a()&#123;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">this</span>._a_;</div><div class="line">	&#125;</div><div class="line">	set a(value)&#123;</div><div class="line">		<span class="keyword">this</span>._a_ = value*<span class="number">2</span>;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="built_in">Object</span>.defineProperty(obj,<span class="string">"b"</span>,&#123;</div><div class="line">	<span class="attr">get</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> <span class="keyword">this</span>.a*<span class="number">2</span>&#125;,</div><div class="line">&#125;);</div><div class="line">obj.a=<span class="number">2</span>;</div><div class="line"><span class="built_in">console</span>.log(obj.a); <span class="comment">// 4</span></div><div class="line"><span class="built_in">console</span>.log(obj.b); <span class="comment">// 8</span></div></pre></td></tr></table></figure>
+<hr>
+<h2 id="禁止拓展"><a href="#禁止拓展" class="headerlink" title="禁止拓展"></a>禁止拓展</h2><p>禁止一个对象添属性并保留已有属性。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj=&#123;</div><div class="line">	a=<span class="number">2</span></div><div class="line">&#125;;</div><div class="line"><span class="built_in">Object</span>.preventExtensions(obj); <span class="comment">//禁止拓展</span></div><div class="line">obj.b=<span class="number">3</span>;</div><div class="line"><span class="built_in">console</span>.log(obj.b); <span class="comment">// undefined</span></div></pre></td></tr></table></figure></p>
+<hr>
+]]></content>
     
     <summary type="html">
     
@@ -359,9 +373,9 @@
       <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="language" scheme="http://yoursite.com/tags/language/"/>
-    
       <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="language" scheme="http://yoursite.com/tags/language/"/>
     
   </entry>
   
@@ -460,9 +474,9 @@
       <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
-    
       <category term="language" scheme="http://yoursite.com/tags/language/"/>
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
     
   </entry>
   
