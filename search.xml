@@ -39,8 +39,8 @@
     
     <entry>
       <title><![CDATA[Markdown]]></title>
-      <url>%2F2017%2F01%2F25%2Fnew%2F</url>
-      <content type="text"><![CDATA[md语法 这是H1这是H2这是H3 标记区块1标记区块1 标记区块2 标题2 给出一些例子代码： var i=0; i++; print() ; 1var a=2; 标记区块外 1 2 3 Bird McHale Parish分割线 超链接点击预览点击预览 强调强调(斜体)强调(加粗)]]></content>
+      <url>%2F2017%2F01%2F25%2Fmarkdown%2F</url>
+      <content type="text"><![CDATA[md语法 1# 这是H1 效果： 这是H1 1## 这是H2 ## 效果： 这是H2 标记区块123&gt; 标记区块1标记区块1&gt; &gt; 标记区块2 效果： 标记区块1标记区块1 标记区块2 代码12345&lt;pre&gt;&lt;code&gt; var i=0; i++;&lt;/pre&gt;&lt;/code&gt;`print() ;` 效果： var i=0; i++;print() ; 列表无序列表123456789* Bird* McHale* Parish&lt;ul&gt;&lt;li&gt;Bird&lt;/li&gt;&lt;li&gt;McHale&lt;/li&gt;&lt;li&gt;Parish&lt;/li&gt;&lt;/ul&gt; 效果： Bird McHale Parish BirdMcHaleParish 有序列表12345&lt;ol&gt;&lt;li&gt;Bird&lt;/li&gt;&lt;li&gt;McHale&lt;/li&gt;&lt;li&gt;Parish&lt;/li&gt;&lt;/ol&gt; 效果： BirdMcHaleParish 分割线123***___--- 效果： 超链接12[点击预览](http://www.baidu.com)[点击预览](http://www.baidu.com "预览") 效果：点击预览点击预览 强调12*强调(斜体)***强调(加粗)** 效果：强调(斜体)强调(加粗) 图片1![Alt Text](/uploads/1.jpg) 效果： 代码高亮1var a=2; 表格12345678910111213141516171819|language |language_key||:--------:|:----------:||css |css ||C++ |cpp ||C# C |cpp ||Go |go ||HTTP |http ||Java |java ||Javascript|javascript ||JSON |json ||Less |less ||Markdown |markdown ||Matlab |matlab ||PHP |php ||Python |python ||Ruby |ruby ||SCSS |SCSS ||SQL |sql ||XML |xml | 效果： language language_key css css C++ cpp C# C cpp Go go HTTP http Java java Javascript javascript JSON json Less less Markdown markdown Matlab matlab PHP php Python python Ruby ruby SCSS SCSS SQL sql XML xml]]></content>
     </entry>
 
     

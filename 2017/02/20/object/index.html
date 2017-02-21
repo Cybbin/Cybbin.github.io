@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/02/20/object/index.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="对象及其用法">
-<meta property="og:updated_time" content="2017-02-21T07:44:22.324Z">
+<meta property="og:updated_time" content="2017-02-21T12:11:53.896Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对象">
 <meta name="twitter:description" content="对象及其用法">
@@ -391,10 +391,28 @@
 <hr>
 <h1 id="对象的类型"><a href="#对象的类型" class="headerlink" title="对象的类型"></a>对象的类型</h1><hr>
 <h2 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h2><p>对象是JavaScript的基础，在JavaScrpit中一共有六种主要类型。</p>
-<p><ul><br>    <li><strong>string</strong></li><br>    <li><strong>boolean</strong></li><br>    <li><strong>number</strong></li><br>    <li><strong>null</strong></li><br>    <li><strong>undefined</strong></li><br>    <li><strong>object</strong></li><br></ul></p>
+<ul>
+<li><strong>string</strong></li>
+<li><strong>boolean</strong></li>
+<li><strong>number</strong></li>
+<li><strong>null</strong></li>
+<li><strong>undefined</strong></li>
+<li><strong>object</strong></li>
+</ul>
 <hr>
 <h2 id="内置对象"><a href="#内置对象" class="headerlink" title="内置对象"></a>内置对象</h2><p>一些基本类型对象的子类型，通常被成为内置对象。</p>
-<p><ul><br>    <li>String</li><br>    <li>Number</li><br>    <li>Boolean</li><br>    <li>Object</li><br>    <li>Function</li><br>    <li>Array</li><br>    <li>Date</li><br>    <li>RegExp</li><br>    <li>Error</li><br></ul><br>!!!在JavaScript中，它们只是一些内置函数，而不是类似于Java当中的类。!!!<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str1 = <span class="string">"I am a string"</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> str1); <span class="comment">// string</span></div><div class="line"><span class="built_in">console</span>.log(str1 <span class="keyword">instanceof</span> <span class="built_in">String</span>); <span class="comment">// false</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> str2 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"I am a String"</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> str2); <span class="comment">// object</span></div><div class="line"><span class="built_in">console</span>.log(str2 <span class="keyword">instanceof</span> <span class="built_in">String</span>); <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="comment">//检查str2对象</span></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(str2); <span class="comment">// [Object String]</span></div></pre></td></tr></table></figure></p>
+<ul>
+<li>String</li>
+<li>Number</li>
+<li>Boolean</li>
+<li>Object</li>
+<li>Function</li>
+<li>Array</li>
+<li>Date</li>
+<li>RegExp</li>
+<li>Error<br>!!!在JavaScript中，它们只是一些内置函数，而不是类似于Java当中的类。!!!<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str1 = <span class="string">"I am a string"</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> str1); <span class="comment">// string</span></div><div class="line"><span class="built_in">console</span>.log(str1 <span class="keyword">instanceof</span> <span class="built_in">String</span>); <span class="comment">// false</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> str2 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"I am a String"</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> str2); <span class="comment">// object</span></div><div class="line"><span class="built_in">console</span>.log(str2 <span class="keyword">instanceof</span> <span class="built_in">String</span>); <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="comment">//检查str2对象</span></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(str2); <span class="comment">// [Object String]</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
 <hr>
 <h1 id="对象的内容"><a href="#对象的内容" class="headerlink" title="对象的内容"></a>对象的内容</h1><hr>
 <h2 id="访问对象的值"><a href="#访问对象的值" class="headerlink" title="访问对象的值"></a>访问对象的值</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj&#123;</div><div class="line">	<span class="attr">a</span> : <span class="number">2</span></div><div class="line">&#125;;</div><div class="line"><span class="built_in">console</span>.log(obj.a); <span class="comment">// 2</span></div><div class="line"><span class="built_in">console</span>.log(obj[<span class="string">"a"</span>]); <span class="comment">// 2</span></div></pre></td></tr></table></figure>

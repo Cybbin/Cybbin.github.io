@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-21T07:44:22.324Z</updated>
+  <updated>2017-02-21T12:11:53.896Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/02/20/object/"/>
     <id>http://yoursite.com/2017/02/20/object/</id>
     <published>2017-02-20T14:21:49.000Z</published>
-    <updated>2017-02-21T07:44:22.324Z</updated>
+    <updated>2017-02-21T12:11:53.896Z</updated>
     
     <content type="html"><![CDATA[<p>对象及其用法<a id="more"></a></p>
 <h1 id="对象的定义"><a href="#对象的定义" class="headerlink" title="对象的定义"></a>对象的定义</h1><hr>
@@ -30,10 +30,28 @@
 <hr>
 <h1 id="对象的类型"><a href="#对象的类型" class="headerlink" title="对象的类型"></a>对象的类型</h1><hr>
 <h2 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h2><p>对象是JavaScript的基础，在JavaScrpit中一共有六种主要类型。</p>
-<p><ul><br>    <li><strong>string</strong></li><br>    <li><strong>boolean</strong></li><br>    <li><strong>number</strong></li><br>    <li><strong>null</strong></li><br>    <li><strong>undefined</strong></li><br>    <li><strong>object</strong></li><br></ul></p>
+<ul>
+<li><strong>string</strong></li>
+<li><strong>boolean</strong></li>
+<li><strong>number</strong></li>
+<li><strong>null</strong></li>
+<li><strong>undefined</strong></li>
+<li><strong>object</strong></li>
+</ul>
 <hr>
 <h2 id="内置对象"><a href="#内置对象" class="headerlink" title="内置对象"></a>内置对象</h2><p>一些基本类型对象的子类型，通常被成为内置对象。</p>
-<p><ul><br>    <li>String</li><br>    <li>Number</li><br>    <li>Boolean</li><br>    <li>Object</li><br>    <li>Function</li><br>    <li>Array</li><br>    <li>Date</li><br>    <li>RegExp</li><br>    <li>Error</li><br></ul><br>!!!在JavaScript中，它们只是一些内置函数，而不是类似于Java当中的类。!!!<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str1 = <span class="string">"I am a string"</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> str1); <span class="comment">// string</span></div><div class="line"><span class="built_in">console</span>.log(str1 <span class="keyword">instanceof</span> <span class="built_in">String</span>); <span class="comment">// false</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> str2 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"I am a String"</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> str2); <span class="comment">// object</span></div><div class="line"><span class="built_in">console</span>.log(str2 <span class="keyword">instanceof</span> <span class="built_in">String</span>); <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="comment">//检查str2对象</span></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(str2); <span class="comment">// [Object String]</span></div></pre></td></tr></table></figure></p>
+<ul>
+<li>String</li>
+<li>Number</li>
+<li>Boolean</li>
+<li>Object</li>
+<li>Function</li>
+<li>Array</li>
+<li>Date</li>
+<li>RegExp</li>
+<li>Error<br>!!!在JavaScript中，它们只是一些内置函数，而不是类似于Java当中的类。!!!<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str1 = <span class="string">"I am a string"</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> str1); <span class="comment">// string</span></div><div class="line"><span class="built_in">console</span>.log(str1 <span class="keyword">instanceof</span> <span class="built_in">String</span>); <span class="comment">// false</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> str2 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"I am a String"</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> str2); <span class="comment">// object</span></div><div class="line"><span class="built_in">console</span>.log(str2 <span class="keyword">instanceof</span> <span class="built_in">String</span>); <span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="comment">//检查str2对象</span></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(str2); <span class="comment">// [Object String]</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
 <hr>
 <h1 id="对象的内容"><a href="#对象的内容" class="headerlink" title="对象的内容"></a>对象的内容</h1><hr>
 <h2 id="访问对象的值"><a href="#访问对象的值" class="headerlink" title="访问对象的值"></a>访问对象的值</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj&#123;</div><div class="line">	<span class="attr">a</span> : <span class="number">2</span></div><div class="line">&#125;;</div><div class="line"><span class="built_in">console</span>.log(obj.a); <span class="comment">// 2</span></div><div class="line"><span class="built_in">console</span>.log(obj[<span class="string">"a"</span>]); <span class="comment">// 2</span></div></pre></td></tr></table></figure>
@@ -373,9 +391,9 @@
       <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="language" scheme="http://yoursite.com/tags/language/"/>
-    
       <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="language" scheme="http://yoursite.com/tags/language/"/>
     
   </entry>
   
@@ -410,10 +428,10 @@
     <link href="http://yoursite.com/2017/01/25/css%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD/"/>
     <id>http://yoursite.com/2017/01/25/css水平垂直居中/</id>
     <published>2017-01-25T12:52:30.000Z</published>
-    <updated>2017-02-20T13:29:34.951Z</updated>
+    <updated>2017-02-21T11:41:39.330Z</updated>
     
     <content type="html"><![CDATA[<p>4种将一个绝对定位元素水平垂直居中的方法<br><a id="more"></a></p>
-<p>css代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line">.wrapper &#123;</div><div class="line">	height: 500px;</div><div class="line">	position: relative;</div><div class="line">	/*css3方法*/</div><div class="line">	/*</div><div class="line">	 justify-content:center;/子元素水平居中/</div><div class="line">	 align-items:center;/子元素垂直居中/</div><div class="line">	 display:flex;</div><div class="line">	 */</div><div class="line">&#125;</div><div class="line">/*Chrome,Firefox, Safari, Mobile Safari, IE8-10.*/</div><div class="line">.div1 &#123;</div><div class="line">	width: 100px;</div><div class="line">	height: 100px;</div><div class="line">	position: absolute;</div><div class="line">	background: red;</div><div class="line">	left: 0;</div><div class="line">	right: 0;</div><div class="line">	top: 0;</div><div class="line">	bottom: 0;</div><div class="line">	margin: auto;</div><div class="line">	text-align: center;</div><div class="line">&#125;</div><div class="line">/*******兼容IE6,7,流行方法*******/</div><div class="line">.div2 &#123;</div><div class="line">	width: 100px;</div><div class="line">	height: 100px;</div><div class="line">	position: absolute;</div><div class="line">	background: blue;</div><div class="line">	left: 50%;</div><div class="line">	top: 50%;</div><div class="line">	margin-left: -50px;</div><div class="line">	margin-top: -50px;</div><div class="line">&#125;</div><div class="line">/*不兼容IE8*/</div><div class="line">.div3 &#123;</div><div class="line">	width: 100px;</div><div class="line">	height: 100px;</div><div class="line">	position: absolute;</div><div class="line">	background: red;</div><div class="line">	left: 50%;</div><div class="line">	top: 50%;</div><div class="line">	/*</div><div class="line">	 -webkit-transform:translate(-50%,-50%);</div><div class="line">	 -ms-transform:translate(-50%,-50%);</div><div class="line">	 */</div><div class="line">	transform: translate(-50%, -50%);</div><div class="line">&#125;</div><div class="line">/*水平方向居中*/</div><div class="line">.div3 &#123;</div><div class="line">	width: 100px;</div><div class="line">	height: 100px;</div><div class="line">	background: red;</div><div class="line">	margin: 0 auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>css代码:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.wrapper</span> &#123;</div><div class="line">	<span class="attribute">height</span>: <span class="number">500px</span>;</div><div class="line">	<span class="attribute">position</span>: relative;</div><div class="line">	<span class="comment">/*css3方法*/</span></div><div class="line">	<span class="comment">/*</span></div><div class="line">	 justify-content:center;/子元素水平居中/</div><div class="line">	 align-items:center;/子元素垂直居中/</div><div class="line">	 display:flex;</div><div class="line">	 */</div><div class="line">&#125;</div><div class="line"><span class="comment">/*Chrome,Firefox, Safari, Mobile Safari, IE8-10.*/</span></div><div class="line"><span class="selector-class">.div1</span> &#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">background</span>: red;</div><div class="line">	<span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">right</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">bottom</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">margin</span>: auto;</div><div class="line">	<span class="attribute">text-align</span>: center;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*******兼容IE6,7,流行方法*******/</span></div><div class="line"><span class="selector-class">.div2</span> &#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">background</span>: blue;</div><div class="line">	<span class="attribute">left</span>: <span class="number">50%</span>;</div><div class="line">	<span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">	<span class="attribute">margin-left</span>: -<span class="number">50px</span>;</div><div class="line">	<span class="attribute">margin-top</span>: -<span class="number">50px</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*不兼容IE8*/</span></div><div class="line"><span class="selector-class">.div3</span> &#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">background</span>: red;</div><div class="line">	<span class="attribute">left</span>: <span class="number">50%</span>;</div><div class="line">	<span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">	<span class="comment">/*</span></div><div class="line">	 -webkit-transform:translate(-50%,-50%);</div><div class="line">	 -ms-transform:translate(-50%,-50%);</div><div class="line">	 */</div><div class="line">	<span class="attribute">transform</span>: <span class="built_in">translate</span>(-50%, -50%);</div><div class="line">&#125;</div><div class="line"><span class="comment">/*水平方向居中*/</span></div><div class="line"><span class="selector-class">.div3</span> &#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">	<span class="attribute">background</span>: red;</div><div class="line">	<span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 ]]></content>
     
     <summary type="html">
@@ -431,38 +449,142 @@
   
   <entry>
     <title>Markdown</title>
-    <link href="http://yoursite.com/2017/01/25/new/"/>
-    <id>http://yoursite.com/2017/01/25/new/</id>
+    <link href="http://yoursite.com/2017/01/25/markdown/"/>
+    <id>http://yoursite.com/2017/01/25/markdown/</id>
     <published>2017-01-25T07:55:33.000Z</published>
-    <updated>2017-02-20T13:30:05.476Z</updated>
+    <updated>2017-02-21T12:15:29.625Z</updated>
     
     <content type="html"><![CDATA[<p>md语法<a id="more"></a></p>
-<h1 id="这是H1"><a href="#这是H1" class="headerlink" title="这是H1"></a>这是H1</h1><h2 id="这是H2"><a href="#这是H2" class="headerlink" title="这是H2"></a>这是H2</h2><h3 id="这是H3"><a href="#这是H3" class="headerlink" title="这是H3"></a>这是H3</h3><blockquote>
+<hr>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="section"># 这是H1</span></div></pre></td></tr></table></figure>
+<p>效果：</p>
+<h1 id="这是H1"><a href="#这是H1" class="headerlink" title="这是H1"></a>这是H1</h1><hr>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="section">## 这是H2 ##</span></div></pre></td></tr></table></figure>
+<p>效果：</p>
+<h2 id="这是H2"><a href="#这是H2" class="headerlink" title="这是H2"></a>这是H2</h2><hr>
+<h1 id="标记区块"><a href="#标记区块" class="headerlink" title="标记区块"></a>标记区块</h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="quote">&gt; 标记区块1</span></div><div class="line">标记区块1</div><div class="line"><span class="quote">&gt; &gt; 标记区块2</span></div></pre></td></tr></table></figure>
+<p>效果：</p>
+<blockquote>
 <p>标记区块1<br>标记区块1</p>
 <blockquote>
 <p>标记区块2</p>
-<h2 id="标题2"><a href="#标题2" class="headerlink" title="标题2"></a>标题2</h2></blockquote>
-<p>给出一些例子代码：</p>
-<p><pre><code><br>    var i=0;<br>    i++;<br></code></pre></p>
-<p><code>print() ;</code></p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a=<span class="number">2</span>;</div></pre></td></tr></table></figure>
-<p>标记区块外</p>
+</blockquote>
+<hr>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;pre&gt;&lt;code&gt;</div><div class="line"><span class="code">     var i=0;</span></div><div class="line"><span class="code">     i++;</span></div><div class="line">&lt;/pre&gt;&lt;/code&gt;</div><div class="line"><span class="code">`print() ;`</span></div></pre></td></tr></table></figure>
+<p>效果：</p>
+<p><pre><code><br>     var i=0;<br>     i++;<br></code></pre><br><code>print() ;</code></p>
+<hr>
+<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">* </span>Bird</div><div class="line"><span class="bullet">* </span>McHale</div><div class="line"><span class="bullet">* </span>Parish</div><div class="line"></div><div class="line">&lt;ul&gt;</div><div class="line">&lt;li&gt;Bird&lt;/li&gt;</div><div class="line">&lt;li&gt;McHale&lt;/li&gt;</div><div class="line">&lt;li&gt;Parish&lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div></pre></td></tr></table></figure>
+<p>效果：</p>
 <ul>
-<li>1</li>
-<li>2</li>
-<li>3</li>
+<li>Bird</li>
+<li>McHale</li>
+<li>Parish</li>
 </ul>
-<p><ol></ol></p>
-<p><li>Bird</li></p>
-<p><li>McHale</li></p>
-<p><li>Parish</li><br><br>分割线</p>
+<ul><br><li>Bird</li><br><li>McHale</li><br><li>Parish</li><br></ul>
+
+<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;ol&gt;</div><div class="line">&lt;li&gt;Bird&lt;/li&gt;</div><div class="line">&lt;li&gt;McHale&lt;/li&gt;</div><div class="line">&lt;li&gt;Parish&lt;/li&gt;</div><div class="line">&lt;/ol&gt;</div></pre></td></tr></table></figure>
+<p>效果：</p>
+<ol><br><li>Bird</li><br><li>McHale</li><br><li>Parish</li><br></ol>
+
+<hr>
+<h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="emphasis">***</span></div><div class="line"><span class="section">___</span></div><div class="line">---</div></pre></td></tr></table></figure>
+<p>效果：</p>
 <hr>
 <hr>
+<h1 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[<span class="string">点击预览</span>](<span class="link">http://www.baidu.com</span>)</div><div class="line">[<span class="string">点击预览</span>](<span class="link">http://www.baidu.com "预览"</span>)</div></pre></td></tr></table></figure>
+<p>效果：<br><a href="http://www.baidu.com" target="_blank" rel="external">点击预览</a><br><a href="http://www.baidu.com" title="预览" target="_blank" rel="external">点击预览</a></p>
 <hr>
-<p>超链接<br><a href="http://www.baidu.com" target="_blank" rel="external">点击预览</a><br><a href="http://www.baidu.com" title="预览" target="_blank" rel="external">点击预览</a></p>
-<p>强调<br><em>强调(斜体)</em><br><strong>强调(加粗)</strong></p>
-<p><img src="/uploads/1.jpg" alt="Alt Text"></p>
+<h1 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="emphasis">*强调(斜体)*</span></div><div class="line"><span class="strong">**强调(加粗)**</span></div></pre></td></tr></table></figure>
+<p>效果：<br><em>强调(斜体)</em><br><strong>强调(加粗)</strong></p>
+<hr>
+<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![<span class="string">Alt Text</span>](<span class="link">/uploads/1.jpg</span>)</div></pre></td></tr></table></figure>
+<p>效果：<br><img src="/uploads/1.jpg" alt="Alt Text"></p>
+<hr>
+<h1 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a=<span class="number">2</span>;</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">|language  |language_key|</div><div class="line">|:--------:|:----------:|</div><div class="line">|css       |css         |</div><div class="line">|C++       |cpp         |</div><div class="line">|C# C      |cpp         |</div><div class="line">|Go        |go          |</div><div class="line">|HTTP      |http        |</div><div class="line">|Java      |java        |</div><div class="line">|Javascript|javascript  |</div><div class="line">|JSON      |json        |</div><div class="line">|Less      |less        |</div><div class="line">|Markdown  |markdown    |</div><div class="line">|Matlab    |matlab      |</div><div class="line">|PHP       |php         |</div><div class="line">|Python    |python      |</div><div class="line">|Ruby      |ruby        |</div><div class="line">|SCSS      |SCSS        |</div><div class="line">|SQL       |sql         |</div><div class="line">|XML       |xml         |</div></pre></td></tr></table></figure>
+<p>效果：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">language</th>
+<th style="text-align:center">language_key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">css</td>
+<td style="text-align:center">css</td>
+</tr>
+<tr>
+<td style="text-align:center">C++</td>
+<td style="text-align:center">cpp</td>
+</tr>
+<tr>
+<td style="text-align:center">C# C</td>
+<td style="text-align:center">cpp</td>
+</tr>
+<tr>
+<td style="text-align:center">Go</td>
+<td style="text-align:center">go</td>
+</tr>
+<tr>
+<td style="text-align:center">HTTP</td>
+<td style="text-align:center">http</td>
+</tr>
+<tr>
+<td style="text-align:center">Java</td>
+<td style="text-align:center">java</td>
+</tr>
+<tr>
+<td style="text-align:center">Javascript</td>
+<td style="text-align:center">javascript</td>
+</tr>
+<tr>
+<td style="text-align:center">JSON</td>
+<td style="text-align:center">json</td>
+</tr>
+<tr>
+<td style="text-align:center">Less</td>
+<td style="text-align:center">less</td>
+</tr>
+<tr>
+<td style="text-align:center">Markdown</td>
+<td style="text-align:center">markdown</td>
+</tr>
+<tr>
+<td style="text-align:center">Matlab</td>
+<td style="text-align:center">matlab</td>
+</tr>
+<tr>
+<td style="text-align:center">PHP</td>
+<td style="text-align:center">php</td>
+</tr>
+<tr>
+<td style="text-align:center">Python</td>
+<td style="text-align:center">python</td>
+</tr>
+<tr>
+<td style="text-align:center">Ruby</td>
+<td style="text-align:center">ruby</td>
+</tr>
+<tr>
+<td style="text-align:center">SCSS</td>
+<td style="text-align:center">SCSS</td>
+</tr>
+<tr>
+<td style="text-align:center">SQL</td>
+<td style="text-align:center">sql</td>
+</tr>
+<tr>
+<td style="text-align:center">XML</td>
+<td style="text-align:center">xml</td>
+</tr>
+</tbody>
+</table>
+<hr>
 ]]></content>
     
     <summary type="html">
@@ -474,9 +596,9 @@
       <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
-    
       <category term="language" scheme="http://yoursite.com/tags/language/"/>
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
     
   </entry>
   
