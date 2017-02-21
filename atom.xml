@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-21T12:11:53.896Z</updated>
+  <updated>2017-02-21T14:48:31.249Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>对象</title>
+    <title>js学习之(原型)继承</title>
+    <link href="http://yoursite.com/2017/02/21/entend/"/>
+    <id>http://yoursite.com/2017/02/21/entend/</id>
+    <published>2017-02-21T13:11:35.000Z</published>
+    <updated>2017-02-21T14:48:31.249Z</updated>
+    
+    <content type="html"><![CDATA[<p>继承<br><a id="more"></a><br>继承意味着复制操作，JavaScript(默认)不会复制对象属性。<br>JavaScript会在两个对象之间创建一个关联，这样一个对象就可以通过委托访问另一个对象的属性和函数。<br>函数不是构造函数，但是当且仅当使用 new 时，函数调用会变成“构造函数调用”。</p>
+<p>创建一个关联对象<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Bar</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"></div><div class="line"><span class="comment">//ES6之前</span></div><div class="line">Bar.prototype = <span class="built_in">Object</span>.prototype(Foo.prototype);</div><div class="line"></div><div class="line"><span class="comment">//ES6</span></div><div class="line"><span class="built_in">Object</span>.setPrototypeOf(Bar.prototype,Foo.prototype);</div></pre></td></tr></table></figure></p>
+<p>Object.create()会创建一个新对象(这里指Bar.prototype)并把新对象内部的[[Prototype]]关联到指定的对象中(这里指Foo)。</p>
+<p>171</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;继承&lt;br&gt;
+    
+    </summary>
+    
+      <category term="代码" scheme="http://yoursite.com/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js学习之对象</title>
     <link href="http://yoursite.com/2017/02/20/object/"/>
     <id>http://yoursite.com/2017/02/20/object/</id>
     <published>2017-02-20T14:21:49.000Z</published>
-    <updated>2017-02-21T12:11:53.896Z</updated>
+    <updated>2017-02-21T13:12:28.745Z</updated>
     
     <content type="html"><![CDATA[<p>对象及其用法<a id="more"></a></p>
 <h1 id="对象的定义"><a href="#对象的定义" class="headerlink" title="对象的定义"></a>对象的定义</h1><hr>
@@ -86,11 +112,11 @@
   </entry>
   
   <entry>
-    <title>this用法</title>
+    <title>js学习之this</title>
     <link href="http://yoursite.com/2017/02/19/this/"/>
     <id>http://yoursite.com/2017/02/19/this/</id>
     <published>2017-02-19T13:12:43.000Z</published>
-    <updated>2017-02-20T13:28:26.703Z</updated>
+    <updated>2017-02-21T13:13:02.803Z</updated>
     
     <content type="html"><![CDATA[<p>参考《你不知道的JavaScript》<a id="more"></a></p>
 <h1 id="绑定规则"><a href="#绑定规则" class="headerlink" title="绑定规则"></a>绑定规则</h1><hr>
@@ -398,11 +424,11 @@
   </entry>
   
   <entry>
-    <title>ajax</title>
+    <title>js学习之ajax</title>
     <link href="http://yoursite.com/2017/02/01/ajax/"/>
     <id>http://yoursite.com/2017/02/01/ajax/</id>
     <published>2017-02-01T08:46:46.000Z</published>
-    <updated>2017-02-20T12:03:26.084Z</updated>
+    <updated>2017-02-21T13:13:13.148Z</updated>
     
     <content type="html"><![CDATA[<p>ajax源码:</p>
 <a id="more"></a>
