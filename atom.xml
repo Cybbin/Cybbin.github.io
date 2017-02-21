@@ -373,9 +373,9 @@
       <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="git" scheme="http://yoursite.com/tags/git/"/>
-    
       <category term="language" scheme="http://yoursite.com/tags/language/"/>
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
     
   </entry>
   
@@ -474,9 +474,9 @@
       <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="language" scheme="http://yoursite.com/tags/language/"/>
-    
       <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+      <category term="language" scheme="http://yoursite.com/tags/language/"/>
     
   </entry>
   
