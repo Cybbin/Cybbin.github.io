@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-21T14:48:31.249Z</updated>
+  <updated>2017-02-21T14:51:48.553Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://yoursite.com/2017/02/21/entend/"/>
     <id>http://yoursite.com/2017/02/21/entend/</id>
     <published>2017-02-21T13:11:35.000Z</published>
-    <updated>2017-02-21T14:48:31.249Z</updated>
+    <updated>2017-02-21T14:51:48.553Z</updated>
     
-    <content type="html"><![CDATA[<p>继承<br><a id="more"></a><br>继承意味着复制操作，JavaScript(默认)不会复制对象属性。<br>JavaScript会在两个对象之间创建一个关联，这样一个对象就可以通过委托访问另一个对象的属性和函数。<br>函数不是构造函数，但是当且仅当使用 new 时，函数调用会变成“构造函数调用”。</p>
+    <content type="html"><![CDATA[<p>参考《你不知道的JavaScript》<a id="more"></a><br>继承意味着复制操作，JavaScript(默认)不会复制对象属性。<br>JavaScript会在两个对象之间创建一个关联，这样一个对象就可以通过委托访问另一个对象的属性和函数。<br>函数不是构造函数，但是当且仅当使用 new 时，函数调用会变成“构造函数调用”。</p>
 <p>创建一个关联对象<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Bar</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"></div><div class="line"><span class="comment">//ES6之前</span></div><div class="line">Bar.prototype = <span class="built_in">Object</span>.prototype(Foo.prototype);</div><div class="line"></div><div class="line"><span class="comment">//ES6</span></div><div class="line"><span class="built_in">Object</span>.setPrototypeOf(Bar.prototype,Foo.prototype);</div></pre></td></tr></table></figure></p>
 <p>Object.create()会创建一个新对象(这里指Bar.prototype)并把新对象内部的[[Prototype]]关联到指定的对象中(这里指Foo)。</p>
 <p>171</p>
@@ -30,7 +30,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;继承&lt;br&gt;
+      &lt;p&gt;参考《你不知道的JavaScript》
     
     </summary>
     
@@ -46,9 +46,9 @@
     <link href="http://yoursite.com/2017/02/20/object/"/>
     <id>http://yoursite.com/2017/02/20/object/</id>
     <published>2017-02-20T14:21:49.000Z</published>
-    <updated>2017-02-21T13:12:28.745Z</updated>
+    <updated>2017-02-21T14:52:03.814Z</updated>
     
-    <content type="html"><![CDATA[<p>对象及其用法<a id="more"></a></p>
+    <content type="html"><![CDATA[<p>参考《你不知道的JavaScript》<a id="more"></a></p>
 <h1 id="对象的定义"><a href="#对象的定义" class="headerlink" title="对象的定义"></a>对象的定义</h1><hr>
 <h2 id="声明形式"><a href="#声明形式" class="headerlink" title="声明形式"></a>声明形式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj=&#123;</div><div class="line">	<span class="attr">key1</span>:value1,</div><div class="line">	<span class="attr">key2</span>:value2</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <hr>
@@ -100,7 +100,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;对象及其用法
+      &lt;p&gt;参考《你不知道的JavaScript》
     
     </summary>
     
