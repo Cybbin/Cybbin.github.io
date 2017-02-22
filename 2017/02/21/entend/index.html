@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/02/21/entend/index.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="参考《你不知道的JavaScript》">
-<meta property="og:updated_time" content="2017-02-21T14:51:48.553Z">
+<meta property="og:updated_time" content="2017-02-22T08:45:42.308Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js学习之(原型)继承">
 <meta name="twitter:description" content="参考《你不知道的JavaScript》">
@@ -384,9 +384,10 @@
 
       
         <p>参考《你不知道的JavaScript》<a id="more"></a><br>继承意味着复制操作，JavaScript(默认)不会复制对象属性。<br>JavaScript会在两个对象之间创建一个关联，这样一个对象就可以通过委托访问另一个对象的属性和函数。<br>函数不是构造函数，但是当且仅当使用 new 时，函数调用会变成“构造函数调用”。</p>
-<p>创建一个关联对象<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Bar</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"></div><div class="line"><span class="comment">//ES6之前</span></div><div class="line">Bar.prototype = <span class="built_in">Object</span>.prototype(Foo.prototype);</div><div class="line"></div><div class="line"><span class="comment">//ES6</span></div><div class="line"><span class="built_in">Object</span>.setPrototypeOf(Bar.prototype,Foo.prototype);</div></pre></td></tr></table></figure></p>
+<p>创建一个关联对象<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Bar</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"></div><div class="line"><span class="comment">//ES6之前</span></div><div class="line">Bar.prototype = <span class="built_in">Object</span>.create(Foo.prototype);</div><div class="line"></div><div class="line"><span class="comment">//ES6</span></div><div class="line"><span class="built_in">Object</span>.setPrototypeOf(Bar.prototype,Foo.prototype);</div></pre></td></tr></table></figure></p>
 <p>Object.create()会创建一个新对象(这里指Bar.prototype)并把新对象内部的[[Prototype]]关联到指定的对象中(这里指Foo)。</p>
-<p>171</p>
+<hr>
+<p>[[Prototype]]机制就是存在于对象中的一个内部链接，它会引用其它对象。</p>
 
       
     </div>

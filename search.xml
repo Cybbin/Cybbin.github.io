@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[js学习之(原型)继承]]></title>
       <url>%2F2017%2F02%2F21%2Fentend%2F</url>
-      <content type="text"><![CDATA[参考《你不知道的JavaScript》继承意味着复制操作，JavaScript(默认)不会复制对象属性。JavaScript会在两个对象之间创建一个关联，这样一个对象就可以通过委托访问另一个对象的属性和函数。函数不是构造函数，但是当且仅当使用 new 时，函数调用会变成“构造函数调用”。 创建一个关联对象12345678function Foo()&#123;&#125;function Bar()&#123;&#125;//ES6之前Bar.prototype = Object.prototype(Foo.prototype);//ES6Object.setPrototypeOf(Bar.prototype,Foo.prototype); Object.create()会创建一个新对象(这里指Bar.prototype)并把新对象内部的[[Prototype]]关联到指定的对象中(这里指Foo)。 171]]></content>
+      <content type="text"><![CDATA[参考《你不知道的JavaScript》继承意味着复制操作，JavaScript(默认)不会复制对象属性。JavaScript会在两个对象之间创建一个关联，这样一个对象就可以通过委托访问另一个对象的属性和函数。函数不是构造函数，但是当且仅当使用 new 时，函数调用会变成“构造函数调用”。 创建一个关联对象12345678function Foo()&#123;&#125;function Bar()&#123;&#125;//ES6之前Bar.prototype = Object.create(Foo.prototype);//ES6Object.setPrototypeOf(Bar.prototype,Foo.prototype); Object.create()会创建一个新对象(这里指Bar.prototype)并把新对象内部的[[Prototype]]关联到指定的对象中(这里指Foo)。 [[Prototype]]机制就是存在于对象中的一个内部链接，它会引用其它对象。]]></content>
     </entry>
 
     
