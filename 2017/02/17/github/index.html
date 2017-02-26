@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/02/17/github/index.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="学习Git">
-<meta property="og:updated_time" content="2017-02-26T12:35:40.453Z">
+<meta property="og:updated_time" content="2017-02-26T12:48:22.416Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github">
 <meta name="twitter:description" content="学习Git">
@@ -388,7 +388,7 @@
 <h1 id="二、建立远程仓库"><a href="#二、建立远程仓库" class="headerlink" title="二、建立远程仓库"></a>二、建立远程仓库</h1><h2 id="1-创建SSH-Key"><a href="#1-创建SSH-Key" class="headerlink" title="1.创建SSH Key"></a>1.创建SSH Key</h2><blockquote>
 <p>$ ssh-keygen -t rsa -C “Cybbin@Cybbin.com”</p>
 </blockquote>
-<p>创建<code>ssh key</code>,一路回车默认即可<br>创建<code>.ssh</code>目<code>录,在该目录(我的是在C:\Users\Administrator目录下)下会有</code>id_rsa<code>,和</code>id_rsa.pub`文件<br><code>id_rsa</code>是私钥,不能泄露<br><code>id_rsa.pub</code>是公钥</p>
+<p>创建ssh key,一路回车默认即可<br>创建.ssh目录,在该目录(我的是在C:\Users\Administrator目录下)下会有id_rsa,和id_rsa.pub文件<br>id_rsa是私钥,不能泄露<br>id_rsa.pub是公钥</p>
 <h2 id="2-登陆Github"><a href="#2-登陆Github" class="headerlink" title="2.登陆Github"></a>2.登陆Github</h2><p>点击头像，打开Setting,点击左边的SSH and GPG keys,点击News SSH key<br>填上任意Title,把id_rsa.pub的内容粘贴到Key文本框里<br>然后点击Add SSH key</p>
 <h1 id="三、git指令"><a href="#三、git指令" class="headerlink" title="三、git指令"></a>三、git指令</h1><h2 id="提交仓库"><a href="#提交仓库" class="headerlink" title="提交仓库"></a>提交仓库</h2><hr>
 <blockquote>
@@ -431,20 +431,20 @@
 <p>查看版本控制器的历史记录<br>commit后面为版本id</p>
 <hr>
 <blockquote>
-<p>git log —pretty=oneline</p>
+<p>git log --pretty=oneline</p>
 </blockquote>
 <p>前面为版本commit id,后面的数字为在commit的时候后面引号内的内容</p>
 <blockquote>
-<p>git log –pretty=oneline –abbrev-commit</p>
+<p>git log --pretty=oneline --abbrev-commit</p>
 </blockquote>
 <p>只显示前几位commit id</p>
 <hr>
 <blockquote>
-<p>git reset –hard HEAD^</p>
+<p>git reset --hard HEAD^</p>
 </blockquote>
 <p>回到上个版本<br>上上个版本是 Head^^<br>上100个版本是 Head~100<br>回到第id个版本,id为git log出现的commit id</p>
 <blockquote>
-<p>git reset –hard id</p>
+<p>git reset --hard id</p>
 </blockquote>
 <hr>
 <blockquote>
@@ -487,7 +487,7 @@
 <p>将dev分支合并到master主分支上,Fast forward模式</p>
 <hr>
 <blockquote>
-<p>git merge dev –no-ff -m ‘’ dev</p>
+<p>git merge dev --no-ff -m ‘’ dev</p>
 </blockquote>
 <p>禁用Fast forward模式，并提交备注信息</p>
 <hr>
@@ -502,7 +502,7 @@
 <p>强力删除dev分支</p>
 <hr>
 <blockquote>
-<p>git log –graph</p>
+<p>git log --graph</p>
 </blockquote>
 <p>列出分支合并图</p>
 <hr>
@@ -566,7 +566,7 @@
 </blockquote>
 <p>推送标签到远程</p>
 <blockquote>
-<p>git push origin –tags</p>
+<p>git push origin --tags</p>
 </blockquote>
 <p>一次性推送全部未推送到远程的标签</p>
 <hr>
@@ -599,11 +599,20 @@
 <hr>
 <p>错误：</p>
 <blockquote>
-<p>git push origin master<br>To git@github.com:Cybbin/jd.git<br> ! [rejected]        master -&gt; master (non-fast-forward)<br>error: failed to push some refs to ‘git@github.com:Cybbin/jd.git’<br>hint: Updates were rejected because the tip of your current branch is behind<br>hint: its remote counterpart. Integrate the remote changes (e.g.<br>hint: ‘git pull …’) before pushing again.<br>hint: See the ‘Note about fast-forwards’ in ‘git push –help’ for details.</p>
+<p>git push origin master<br>To git@github.com:Cybbin/jd.git<br> ! [rejected]        master -&gt; master (non-fast-forward)<br>error: failed to push some refs to ‘git@github.com:Cybbin/jd.git’<br>hint: Updates were rejected because the tip of your current branch is behind<br>hint: its remote counterpart. Integrate the remote changes (e.g.<br>hint: ‘git pull …’) before pushing again.<br>hint: See the ‘Note about fast-forwards’ in ‘git push --help’ for details.</p>
 </blockquote>
 <p>解决办法：</p>
 <blockquote>
 <p>git push -f origin master</p>
+</blockquote>
+<hr>
+<p>错误：</p>
+<blockquote>
+<p>$ git push -u origin master<br>To git@github.com:yangchao0718/cocos2d.git<br> ! [rejected]        master -&gt; master (non-fast-forward)<br>error: failed to push some refs to ‘git@github.com:yangchao0718/cocos2d.git<br>hint: Updates were rejected because the tip of your current branch is behin<br>hint: its remote counterpart. Integrate the remote changes (e.g.<br>hint: ‘git pull …’) before pushing again.<br>hint: See the ‘Note about fast-forwards’ in ‘git push --help’ for details.</p>
+</blockquote>
+<p>解决办法：<br>github上的README.md文件不在本地代码目录中</p>
+<blockquote>
+<p>git pull --rebase origin master</p>
 </blockquote>
 <hr>
 
