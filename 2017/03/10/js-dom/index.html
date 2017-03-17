@@ -396,7 +396,7 @@
 <hr>
 <h1 id="事件句柄和事件监听器"><a href="#事件句柄和事件监听器" class="headerlink" title="事件句柄和事件监听器"></a>事件句柄和事件监听器</h1><h2 id="事件句柄"><a href="#事件句柄" class="headerlink" title="事件句柄"></a>事件句柄</h2><p>事件句柄（又称事件处理函数，DOM称之为事件监听函数），用于响应某个事件而调用的函数称为事件处理函数。<br>每一个事件对应一个句柄，响应点击事件的函数是onclick事件处理函数，可以分配在HTML和JavaScript中。</p>
 <blockquote>
-<p><strong>HTML</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;a href=<span class="string">"#"</span> onclick=<span class="string">"click"</span>&gt;click me!<span class="xml"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></div></pre></td></tr></table></figure></p>
+<p><strong>HTML</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;a href=<span class="string">"#"</span> onclick=<span class="string">"click"</span>&gt;click me!&lt;/a&gt;</div></pre></td></tr></table></figure></p>
 <p><strong>JavaSript</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> link = <span class="built_in">document</span>.getElementById(<span class="string">"mylink"</span>);</div><div class="line">link.onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	dosomething();</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
 </blockquote>
 <h2 id="事件监听器"><a href="#事件监听器" class="headerlink" title="事件监听器"></a>事件监听器</h2><p>现在大多数浏览器都内置了一些更高级的事件处理方式，即事件监听器，这种处理方式就不受一个元素只能绑定一个事件句柄的限制。<br>事件句柄和事件监听器最大的不同就是在使用事件句柄时一次只能插接一个事件句柄，但对于事件监听器，一次可以插接多个。</p>
@@ -586,7 +586,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -604,7 +604,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
