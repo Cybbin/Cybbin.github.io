@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="language,git," />
+  <meta name="keywords" content="linux,nodejs," />
 
 
 
@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="学习Git">
+<meta name="description" content="服务器从Windows换到Linux， = =！！！，所有环境全部重装。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Github">
-<meta property="og:url" content="http://yoursite.com/2017/02/17/github/index.html">
+<meta property="og:title" content="Linux安装Nodejs">
+<meta property="og:url" content="http://yoursite.com/2017/03/28/linux-nodejs/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="学习Git">
-<meta property="og:updated_time" content="2017-02-26T12:48:22.416Z">
+<meta property="og:description" content="服务器从Windows换到Linux， = =！！！，所有环境全部重装。">
+<meta property="og:updated_time" content="2017-03-28T14:10:28.603Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Github">
-<meta name="twitter:description" content="学习Git">
+<meta name="twitter:title" content="Linux安装Nodejs">
+<meta name="twitter:description" content="服务器从Windows换到Linux， = =！！！，所有环境全部重装。">
 
 
 
@@ -123,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/17/github/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/28/linux-nodejs/"/>
 
 
 
 
 
-  <title> Github | Blog </title>
+  <title> Linux安装Nodejs | Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -265,7 +265,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/17/github/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/28/linux-nodejs/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Cyb">
@@ -289,7 +289,7 @@
             
             
               
-                Github
+                Linux安装Nodejs
               
             
           </h1>
@@ -304,8 +304,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-17T17:24:33+08:00">
-                2017-02-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-28T22:00:07+08:00">
+                2017-03-28
               </time>
             
 
@@ -345,8 +345,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/17/github/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/17/github/" itemprop="commentCount"></span>
+                <a href="/2017/03/28/linux-nodejs/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/28/linux-nodejs/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -356,7 +356,7 @@
 
           
           
-             <span id="/2017/02/17/github/" class="leancloud_visitors" data-flag-title="Github">
+             <span id="/2017/03/28/linux-nodejs/" class="leancloud_visitors" data-flag-title="Linux安装Nodejs">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -383,238 +383,10 @@
       
 
       
-        <p>学习Git<a id="more"></a></p>
-<h1 id="一、windows安装git"><a href="#一、windows安装git" class="headerlink" title="一、windows安装git"></a>一、windows安装git</h1><p><a href="https://git-for-windows.github.io/" target="_blank" rel="external">下载链接</a></p>
-<h1 id="二、建立远程仓库"><a href="#二、建立远程仓库" class="headerlink" title="二、建立远程仓库"></a>二、建立远程仓库</h1><h2 id="1-创建SSH-Key"><a href="#1-创建SSH-Key" class="headerlink" title="1.创建SSH Key"></a>1.创建SSH Key</h2><blockquote>
-<p>$ ssh-keygen -t rsa -C “Cybbin@Cybbin.com”</p>
-</blockquote>
-<p>创建ssh key,一路回车默认即可<br>创建.ssh目录,在该目录(我的是在C:\Users\Administrator目录下)下会有id_rsa,和id_rsa.pub文件<br>id_rsa是私钥,不能泄露<br>id_rsa.pub是公钥</p>
-<h2 id="2-登陆Github"><a href="#2-登陆Github" class="headerlink" title="2.登陆Github"></a>2.登陆Github</h2><p>点击头像，打开Setting,点击左边的SSH and GPG keys,点击News SSH key<br>填上任意Title,把id_rsa.pub的内容粘贴到Key文本框里<br>然后点击Add SSH key</p>
-<h1 id="三、git指令"><a href="#三、git指令" class="headerlink" title="三、git指令"></a>三、git指令</h1><h2 id="提交仓库"><a href="#提交仓库" class="headerlink" title="提交仓库"></a>提交仓库</h2><hr>
-<blockquote>
-<p>git init</p>
-</blockquote>
-<p>git目录初始化</p>
-<hr>
-<blockquote>
-<p>git add .</p>
-</blockquote>
-<p>添加该目录下所有文件到暂存区</p>
-<hr>
-<blockquote>
-<p>git commit -m ‘m’</p>
-</blockquote>
-<p>把文件提交到仓库,引号为提交的说明</p>
-<hr>
-<blockquote>
-<p>git remote add origin git@github.com:Cybbin/jd.git</p>
-</blockquote>
-<p>将本地仓库与Github仓库关联</p>
-<hr>
-<blockquote>
-<p>git push -u origin master</p>
-</blockquote>
-<p>将本地仓库推送到远程(Github)库的master主分支上<br>-u是第一次提交时,把本地的master分支与远程的master分支关联起来<br>在以后的推送就可以简化命令</p>
-<blockquote>
-<p>git push origin master</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>git clone git@github.com:Cybbin/jd.git</p>
-</blockquote>
-<p>克隆远程库到本地,克隆在gitskills文件夹中</p>
-<hr>
-<h2 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h2><hr>
-<blockquote>
-<p>git log</p>
-</blockquote>
-<p>查看版本控制器的历史记录<br>commit后面为版本id</p>
-<hr>
-<blockquote>
-<p>git log --pretty=oneline</p>
-</blockquote>
-<p>前面为版本commit id,后面的数字为在commit的时候后面引号内的内容</p>
-<blockquote>
-<p>git log --pretty=oneline --abbrev-commit</p>
-</blockquote>
-<p>只显示前几位commit id</p>
-<hr>
-<blockquote>
-<p>git reset --hard HEAD^</p>
-</blockquote>
-<p>回到上个版本<br>上上个版本是 Head^^<br>上100个版本是 Head~100<br>回到第id个版本,id为git log出现的commit id</p>
-<blockquote>
-<p>git reset --hard id</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>git reflog</p>
-</blockquote>
-<p>记录每一次命令的id<br>回退时找不到新版本的id时用(重返未来)</p>
-<hr>
-<blockquote>
-<p>git status</p>
-</blockquote>
-<p>查看当前仓库的状态</p>
-<hr>
-<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><hr>
-<blockquote>
-<p>git branch dev</p>
-</blockquote>
-<p>创建dev分支</p>
-<hr>
-<blockquote>
-<p>git checkout dev</p>
-</blockquote>
-<p>切换到dev分支上</p>
-<hr>
-<blockquote>
-<p>git checkout -b dev</p>
-</blockquote>
-<p>相当于这两句</p>
-<blockquote>
-<p>git branch dev<br>git checkout dev</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>git branch</p>
-</blockquote>
-<p>列出所有分支,当前分支前有*号</p>
-<hr>
-<blockquote>
-<p>git merge dev</p>
-</blockquote>
-<p>将dev分支合并到master主分支上,Fast forward模式</p>
-<hr>
-<blockquote>
-<p>git merge dev --no-ff -m ‘’ dev</p>
-</blockquote>
-<p>禁用Fast forward模式，并提交备注信息</p>
-<hr>
-<blockquote>
-<p>git branch -d dev</p>
-</blockquote>
-<p>删除dev分支,没有被合并时,如果有修改,无法删除</p>
-<hr>
-<blockquote>
-<p>git branch -D dev</p>
-</blockquote>
-<p>强力删除dev分支</p>
-<hr>
-<blockquote>
-<p>git log --graph</p>
-</blockquote>
-<p>列出分支合并图</p>
-<hr>
-<blockquote>
-<p>git stash</p>
-</blockquote>
-<p>将当前工作现场隐藏</p>
-<hr>
-<blockquote>
-<p>git stash list</p>
-</blockquote>
-<p>列出当前分支所有被隐藏的工作区</p>
-<hr>
-<blockquote>
-<p>git stash pop</p>
-</blockquote>
-<p>恢复工作区,并删除stash内容</p>
-<hr>
-<blockquote>
-<p>git stash apply stash@{0}</p>
-</blockquote>
-<p>恢复工作区,但没有删除stash内容<br>需要再用 git stash drop 来删除</p>
-<hr>
-<blockquote>
-<p>git pull</p>
-</blockquote>
-<p>将最新的提交从origin抓下来</p>
-<hr>
-<h2 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h2><hr>
-<blockquote>
-<p>git tag v1.0</p>
-</blockquote>
-<p>设置当前标签为v1.0</p>
-<hr>
-<blockquote>
-<p>git tag</p>
-</blockquote>
-<p>查看当前分支的所有标签(不是按时间顺序排列,按字母顺序排列)</p>
-<hr>
-<blockquote>
-<p>git tab v1.0 id</p>
-</blockquote>
-<p>对当前分支的过去版本打标签,id为commit id(版本回退里有)</p>
-<hr>
-<blockquote>
-<p>git show v1.0</p>
-</blockquote>
-<p>查看v1.0标签信息</p>
-<hr>
-<blockquote>
-<p>git tag -d v1.0</p>
-</blockquote>
-<p>删除本地的标签</p>
-<blockquote>
-<p>git push origin :ref/tags/v1.0</p>
-</blockquote>
-<p>删除推送到远程的标签</p>
-<hr>
-<blockquote>
-<p>git push origin v1.0</p>
-</blockquote>
-<p>推送标签到远程</p>
-<blockquote>
-<p>git push origin --tags</p>
-</blockquote>
-<p>一次性推送全部未推送到远程的标签</p>
-<hr>
-<h2 id="其它小命令"><a href="#其它小命令" class="headerlink" title="其它小命令"></a>其它小命令</h2><hr>
-<blockquote>
-<p>git remote -v</p>
-</blockquote>
-<p>查看远程库的信息</p>
-<hr>
-<blockquote>
-<p>ls</p>
-</blockquote>
-<p>查看当前目录所有文件</p>
-<hr>
-<blockquote>
-<p>touch README.md</p>
-</blockquote>
-<p>创建 README.md 文件</p>
-<hr>
-<blockquote>
-<p>rm README.md</p>
-</blockquote>
-<p>删除 README.md 文件</p>
-<hr>
-<h1 id="四、踩过的坑"><a href="#四、踩过的坑" class="headerlink" title="四、踩过的坑"></a>四、踩过的坑</h1><hr>
-<p>错误：<br>git commit 后运行 git status<br>出现  git commit On branch master nothing to commit, working tree clean<br>解决办法:<br>当前分支没有修改内容,可能是切换错分支了<br>查看分支</p>
-<blockquote>
-<p>git branch</p>
-</blockquote>
-<hr>
-<p>错误：</p>
-<blockquote>
-<p>git push origin master<br>To git@github.com:Cybbin/jd.git<br> ! [rejected]        master -&gt; master (non-fast-forward)<br>error: failed to push some refs to ‘git@github.com:Cybbin/jd.git’<br>hint: Updates were rejected because the tip of your current branch is behind<br>hint: its remote counterpart. Integrate the remote changes (e.g.<br>hint: ‘git pull …’) before pushing again.<br>hint: See the ‘Note about fast-forwards’ in ‘git push --help’ for details.</p>
-</blockquote>
-<p>解决办法：</p>
-<blockquote>
-<p>git push -f origin master</p>
-</blockquote>
-<hr>
-<p>错误：</p>
-<blockquote>
-<p>$ git push -u origin master<br>To git@github.com:yangchao0718/cocos2d.git<br> ! [rejected]        master -&gt; master (non-fast-forward)<br>error: failed to push some refs to ‘git@github.com:yangchao0718/cocos2d.git<br>hint: Updates were rejected because the tip of your current branch is behin<br>hint: its remote counterpart. Integrate the remote changes (e.g.<br>hint: ‘git pull …’) before pushing again.<br>hint: See the ‘Note about fast-forwards’ in ‘git push --help’ for details.</p>
-</blockquote>
-<p>解决办法：<br>github上的README.md文件不在本地代码目录中</p>
-<blockquote>
-<p>git pull --rebase origin master</p>
-</blockquote>
-<hr>
+        <p>服务器从Windows换到Linux， = =！！！，所有环境全部重装。<br><a id="more"></a></p>
+<p>先在本机到<a href="http://nodejs.cn/download/" target="_blank" rel="external">Node.js官网</a>下载Linux版的Node.js，32位、64位看清楚下载。</p>
+<p>这里借助<a href="https://filezilla-project.org/" target="_blank" rel="external">FileZilla</a>工具，把下载好的压缩包上传到Linux服务器上。<br>（PS：具体怎么传自行百度哈）</p>
+<p>Linux服务器上，在命令行输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">tar -xvf nodejs.tar.gz // 解压。</div><div class="line">cd nodejs // 进入nodejs文件夹</div><div class="line">node -v // 查看版本</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -659,9 +431,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/language/" rel="tag"># language</a>
+            <a href="/tags/linux/" rel="tag"># linux</a>
           
-            <a href="/tags/git/" rel="tag"># git</a>
+            <a href="/tags/nodejs/" rel="tag"># nodejs</a>
           
         </div>
       
@@ -670,8 +442,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/01/ajax/" rel="next" title="js学习之ajax">
-                <i class="fa fa-chevron-left"></i> js学习之ajax
+              <a href="/2017/03/17/spider/" rel="next" title="Node.js 爬虫小程序">
+                <i class="fa fa-chevron-left"></i> Node.js 爬虫小程序
               </a>
             
           </div>
@@ -679,10 +451,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/19/this/" rel="prev" title="js学习之this">
-                js学习之this <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -697,10 +465,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/02/17/github/"
-     data-title="Github"
+        <div class="ds-share flat" data-thread-key="2017/03/28/linux-nodejs/"
+     data-title="Linux安装Nodejs"
      data-content=""
-     data-url="http://yoursite.com/2017/02/17/github/">
+     data-url="http://yoursite.com/2017/03/28/linux-nodejs/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -727,8 +495,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/17/github/"
-           data-title="Github" data-url="http://yoursite.com/2017/02/17/github/">
+      <div class="ds-thread" data-thread-key="2017/03/28/linux-nodejs/"
+           data-title="Linux安装Nodejs" data-url="http://yoursite.com/2017/03/28/linux-nodejs/">
       </div>
     
   </div>
@@ -752,17 +520,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/1.jpg"
@@ -836,22 +595,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、windows安装git"><span class="nav-number">1.</span> <span class="nav-text">一、windows安装git</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、建立远程仓库"><span class="nav-number">2.</span> <span class="nav-text">二、建立远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-创建SSH-Key"><span class="nav-number">2.1.</span> <span class="nav-text">1.创建SSH Key</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-登陆Github"><span class="nav-number">2.2.</span> <span class="nav-text">2.登陆Github</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、git指令"><span class="nav-number">3.</span> <span class="nav-text">三、git指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#提交仓库"><span class="nav-number">3.1.</span> <span class="nav-text">提交仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本回退"><span class="nav-number">3.2.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支管理"><span class="nav-number">3.3.</span> <span class="nav-text">分支管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标签管理"><span class="nav-number">3.4.</span> <span class="nav-text">标签管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其它小命令"><span class="nav-number">3.5.</span> <span class="nav-text">其它小命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、踩过的坑"><span class="nav-number">4.</span> <span class="nav-text">四、踩过的坑</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
