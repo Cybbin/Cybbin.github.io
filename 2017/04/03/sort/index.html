@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="js,ajax," />
+  <meta name="keywords" content="sort," />
 
 
 
@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="ajax源码:">
+<meta name="description" content="记录几种排序算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js学习之ajax">
-<meta property="og:url" content="http://yoursite.com/2017/02/01/ajax/index.html">
+<meta property="og:title" content="sort">
+<meta property="og:url" content="http://yoursite.com/2017/04/03/sort/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="ajax源码:">
-<meta property="og:updated_time" content="2017-02-21T13:13:13.148Z">
+<meta property="og:description" content="记录几种排序算法">
+<meta property="og:updated_time" content="2017-04-03T15:16:23.187Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js学习之ajax">
-<meta name="twitter:description" content="ajax源码:">
+<meta name="twitter:title" content="sort">
+<meta name="twitter:description" content="记录几种排序算法">
 
 
 
@@ -123,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/01/ajax/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/03/sort/"/>
 
 
 
 
 
-  <title> js学习之ajax | Blog </title>
+  <title> sort | Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -265,7 +265,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/01/ajax/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/03/sort/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Cyb">
@@ -289,7 +289,7 @@
             
             
               
-                js学习之ajax
+                sort
               
             
           </h1>
@@ -304,8 +304,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-01T16:46:46+08:00">
-                2017-02-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-03T21:55:07+08:00">
+                2017-04-03
               </time>
             
 
@@ -327,8 +327,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/代码/" itemprop="url" rel="index">
-                    <span itemprop="name">代码</span>
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
                   </a>
                 </span>
 
@@ -345,8 +345,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/01/ajax/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/01/ajax/" itemprop="commentCount"></span>
+                <a href="/2017/04/03/sort/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/03/sort/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -356,7 +356,7 @@
 
           
           
-             <span id="/2017/02/01/ajax/" class="leancloud_visitors" data-flag-title="js学习之ajax">
+             <span id="/2017/04/03/sort/" class="leancloud_visitors" data-flag-title="sort">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -383,9 +383,23 @@
       
 
       
-        <p>ajax源码:</p>
-<a id="more"></a>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="built_in">window</span>.XMLHttpRequest)&#123;</div><div class="line">	xmlHttp = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(windoe.ActionXObject)&#123;</div><div class="line">	<span class="keyword">var</span> actionName = [<span class="string">'MSXML2.XMLHTTP'</span>,<span class="string">'Microsoft.XMLHTTP'</span>];</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&amp;lt;actionName.length;i++)&#123;</div><div class="line">		<span class="keyword">try</span>&#123;</div><div class="line">			xmlHttp = <span class="keyword">new</span> ActionXObject(actionName[i]);</div><div class="line">		&#125;<span class="keyword">catch</span>(e)&#123;&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span>(!xmlHttp)&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">'xmlHttp对象创建失败'</span>);</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">	xmlHttp.onreadystatechange=callback;</div><div class="line">	<span class="comment">//xmlHttp.open('get','url',true);</span></div><div class="line">	xmlHttp.open(<span class="string">'post'</span>,<span class="string">'url'</span>,<span class="literal">true</span>);</div><div class="line">	xmlHttp.setHeadRequest(<span class="string">'Content-type'</span>,<span class="string">'appplication/x-www-form-urlencode'</span>);</div><div class="line">	xmlHttp.send();</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">if</span>(xmlHttp.readyState)&#123;</div><div class="line">		<span class="keyword">if</span>(xmlHttp.status)&#123;</div><div class="line">			<span class="keyword">var</span> responseText = xmlHttp.responseText;</div><div class="line">			<span class="comment">//返回XML时</span></div><div class="line">			<span class="comment">//var responseXML = xmlHtpp.responseXML;</span></div><div class="line">			<span class="comment">//返回json时</span></div><div class="line">			<span class="comment">//responseText = eval('('+responseText+')');</span></div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <p>记录几种排序算法<br><a id="more"></a></p>
+<h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><p>思路：重复遍历数组，每次比较两个数字，如果位置错误就互相交换，每一次遍历将最小的数放到前面。<br>平均时间复杂度：<strong>O(N^2)</strong>。<br>最好情况：元素本来就是顺序的，仅需一趟冒泡排序就可以完成排序工作，时间复杂度为 <strong>O(N)</strong>。<br>最差情况: 元素本来就是逆序的，则需进行<strong>n-1</strong>趟冒泡排序，时间复杂度为 <strong>O(N^2)</strong>。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">BubbleSort</span>(<span class="params">A</span>) </span>&#123;</div><div class="line">	<span class="comment">// 判断是否在最好的情况下</span></div><div class="line">	boolean flag = <span class="literal">false</span>;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; A.length - <span class="number">1</span>; i++) &#123;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> j = i + <span class="number">1</span>; j &lt; A.length; j++) &#123;</div><div class="line">			<span class="keyword">if</span>(A[i] &gt; A[j]) &#123;</div><div class="line">				<span class="keyword">var</span> temp = A[i];</div><div class="line">				A[i] = A[j];</div><div class="line">				A[j] = temp;</div><div class="line">				flag = <span class="literal">true</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="comment">// 如果在最好的情况下则循环一次即可跳出循环</span></div><div class="line">		<span class="keyword">if</span>(flag == <span class="literal">false</span>)&#123;</div><div class="line">			<span class="keyword">break</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> A;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> array = [<span class="number">5</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">1</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">7</span>, <span class="number">2</span>];</div><div class="line"><span class="keyword">var</span> result = BubbleSort(array);</div><div class="line"><span class="built_in">console</span>.log(result);</div></pre></td></tr></table></figure></p>
+<h1 id="选择排序-直接选择"><a href="#选择排序-直接选择" class="headerlink" title="选择排序-直接选择"></a>选择排序-直接选择</h1><p>思路：每次寻找数组中最小的值，然后放在前面。<br>平均时间复杂度：<strong>O(N^2)</strong>。<br>最好情况：元素本来就是顺序的，交换次数为<strong>0</strong>，时间复杂度为 <strong>O(N^2)</strong>。<br>最坏情况：元素本来就是逆序的，交换次数为<strong>n-1</strong>，时间复杂度为 <strong>O(N^2)</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SelectSort</span>(<span class="params">A</span>) </span>&#123;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; A.length - <span class="number">1</span>; i++) &#123;</div><div class="line">		<span class="keyword">var</span> k = i;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> j = i + <span class="number">1</span>; j &lt; A.length; j++) &#123;</div><div class="line">			<span class="keyword">if</span>(A[k] &gt; A[j]) &#123;</div><div class="line">				k = j;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">var</span> temp = A[i];</div><div class="line">		A[i] = A[k];</div><div class="line">		A[k] = temp;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> A;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> array = [<span class="number">5</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">1</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">7</span>, <span class="number">2</span>];</div><div class="line"><span class="keyword">var</span> result = SelectSort(array);</div><div class="line"><span class="built_in">console</span>.log(result);</div></pre></td></tr></table></figure></p>
+<h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><p>思路：找一个基准数，将整个数组比基准数小的放到基准数前面，比基准数大的放到基准数后面，然后将前面的数和后面的数递归调用。<br>时间复杂度：<strong>O(N*logN)</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">QuickSort</span>(<span class="params">A, l, r</span>) </span>&#123;</div><div class="line">	<span class="keyword">if</span>(l &lt; r) &#123;</div><div class="line">		<span class="keyword">var</span> i = l,</div><div class="line">			j = r,</div><div class="line">			jizhun = A[l]; <span class="comment">// 设置基准数为第一个数字</span></div><div class="line">		<span class="keyword">while</span>(i &lt; j) &#123;</div><div class="line">			<span class="comment">// 从右向左找第一个小于基准数的数</span></div><div class="line">			<span class="keyword">while</span>(i &lt; j &amp;&amp; A[j] &gt;= jizhun) &#123;</div><div class="line">				j--;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">if</span>(i &lt; j) &#123;</div><div class="line">				A[i] = A[j];</div><div class="line">				i++;</div><div class="line">			&#125;</div><div class="line">			<span class="comment">// 从左向右找第一个大于基准数的数</span></div><div class="line">			<span class="keyword">while</span>(i &lt; j &amp;&amp; A[i] &lt; jizhun) &#123;</div><div class="line">				i++;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">if</span>(i &lt; j) &#123;</div><div class="line">				A[j]=A[i];</div><div class="line">				j--;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="comment">// 此时i=j</span></div><div class="line">		A[i]=jizhun;</div><div class="line">		QuickSort(A,l,i<span class="number">-1</span>);</div><div class="line">		QuickSort(A,i+<span class="number">1</span>,r);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> A;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> array = [<span class="number">5</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">1</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">7</span>, <span class="number">2</span>];</div><div class="line"><span class="keyword">var</span> result = QuickSort(array, <span class="number">0</span>, array.length - <span class="number">1</span>);</div><div class="line"><span class="built_in">console</span>.log(result);</div></pre></td></tr></table></figure></p>
+<h1 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h1><blockquote>
+<p>表示两个值相同的元素在排序前后是否有位置变化，如果前后位置变化，则排列算法是不稳定的，否则是稳定的。两个值相同的元素无需再次交换位置，交换位置相当于做了一次无用功。</p>
+</blockquote>
+<p>(1)冒泡排序<br>冒泡排序就是把小的元素往前调或者把大的元素往后调。比较是相邻的两个元素比较，交换也发生在这两个元素之间。所以，如果两个元素相等，我想你是不会再无聊地把他们俩交换一下的；如果两个相等的元素没有相邻，那么即使通过前面的两两交换把两个相邻起来，这时候也不会交换，所以相同元素的前后顺序并没有改变，所以冒泡排序是一种稳定排序算法。</p>
+<p>(2)选择排序<br>选择排序是给每个位置选择当前元素最小的，比如给第一个位置选择最小的，在剩余元素里面给第二个元素选择第二小的，依次类推，直到第n - 1个元素，第n个元素不用选择了，因为只剩下它一个最大的元素了。那么，在一趟选择，如果当前元素比一个元素小，而该小的元素又出现在一个和当前元素相等的元素后面，那么交换后稳定性就被破坏了。比较拗口，举个例子，序列5 8 5 2 9，我们知道第一遍选择第1个元素5会和2交换，那么原序列中2个5的相对前后顺序就被破坏了，所以选择排序不是一个稳定的排序算法。</p>
+<p>(3)插入排序<br>插入排序是在一个已经有序的小序列的基础上，一次插入一个元素。当然，刚开始这个有序的小序列只有1个元素，就是第一个元素。比较是从有序序列的末尾开始，也就是想要插入的元素和已经有序的最大者开始比起，如果比它大则直接插入在其后面，否则一直往前找直到找到它该插入的位置。如果碰见一个和插入元素相等的，那么插入元素把想插入的元素放在相等元素的后面。所以，相等元素的前后顺序没有改变，从原无序序列出去的顺序就是排好序后的顺序，所以插入排序是稳定的。</p>
+<p>(4)快速排序<br>快速排序有两个方向，左边的i下标一直往右走，当a[i] &lt;= a[center_index]，其中center_index是中枢元素的数组下标，一般取为数组第0个元素。而右边的j下标一直往左走，当a[j] &gt; a[center_index]。如果i和j都走不动了，i &lt;= j，交换a[i]和a[j],重复上面的过程，直到i &gt; j。 交换a[j]和a[center_index]，完成一趟快速排序。在中枢元素和a[j]交换的时候，很有可能把前面的元素的稳定性打乱，比如序列为5 3 3 4 3 8 9 10 11，现在中枢元素5和3（第5个元素，下标从1开始计）交换就会把元素3的稳定性打乱，所以快速排序是一个不稳定的排序算法，不稳定发生在中枢元素和a[j] 交换的时刻。</p>
+<p>(5)归并排序<br>归并排序是把序列递归地分成短序列，递归出口是短序列只有1个元素（认为直接有序）或者2个序列（1次比较和交换），然后把各个有序的段序列合并成一个有序的长序列，不断合并直到原序列全部排好序。可以发现，在1个或2个元素时，1个元素不会交换，2个元素如果大小相等也没有人故意交换，这不会破坏稳定性。那么，在短的有序序列合并的过程中，稳定是是否受到破坏？没有，合并过程中我们可以保证如果两个当前元素相等时，我们把处在前面的序列的元素保存在结果序列的前面，这样就保证了稳定性。所以，归并排序也是稳定的排序算法。</p>
+<p>(6)基数排序<br>基数排序是按照低位先排序，然后收集；再按照高位排序，然后再收集；依次类推，直到最高位。有时候有些属性是有优先级顺序的，先按低优先级排序，再按高优先级排序，最后的次序就是高优先级高的在前，高优先级相同的低优先级高的在前。基数排序基于分别排序，分别收集，所以其是稳定的排序算法。</p>
+<p>(7)希尔排序(shell)<br>希尔排序是按照不同步长对元素进行插入排序，当刚开始元素很无序的时候，步长最大，所以插入排序的元素个数很少，速度很快；当元素基本有序了，步长很小， 插入排序对于有序的序列效率很高。所以，希尔排序的时间复杂度会比O(n^2)好一些。由于多次插入排序，我们知道一次插入排序是稳定的，不会改变相同元素的相对顺序，但在不同的插入排序过程中，相同的元素可能在各自的插入排序中移动，最后其稳定性就会被打乱，所以shell排序是不稳定的。</p>
+<p>(8)堆排序<br>我们知道堆的结构是节点i的孩子为2 <em> i和2 </em> i + 1节点，大顶堆要求父节点大于等于其2个子节点，小顶堆要求父节点小于等于其2个子节点。在一个长为n 的序列，堆排序的过程是从第n / 2开始和其子节点共3个值选择最大（大顶堆）或者最小（小顶堆），这3个元素之间的选择当然不会破坏稳定性。但当为n / 2 - 1， n / 2 - 2， … 1这些个父节点选择元素时，就会破坏稳定性。有可能第n / 2个父节点交换把后面一个元素交换过去了，而第n / 2 - 1个父节点把后面一个相同的元素没 有交换，那么这2个相同的元素之间的稳定性就被破坏了。所以，堆排序不是稳定的排序算法。</p>
+<p>综上，得出结论: 选择排序、快速排序、希尔排序、堆排序不是稳定的排序算法，而冒泡排序、插入排序、归并排序和基数排序是稳定的排序算法</p>
+
       
     </div>
 
@@ -429,9 +443,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/js/" rel="tag"># js</a>
-          
-            <a href="/tags/ajax/" rel="tag"># ajax</a>
+            <a href="/tags/sort/" rel="tag"># sort</a>
           
         </div>
       
@@ -440,8 +452,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/25/css水平垂直居中/" rel="next" title="css水平垂直居中">
-                <i class="fa fa-chevron-left"></i> css水平垂直居中
+              <a href="/2017/03/28/linux-nodejs/" rel="next" title="Linux安装Nodejs">
+                <i class="fa fa-chevron-left"></i> Linux安装Nodejs
               </a>
             
           </div>
@@ -449,10 +461,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/17/github/" rel="prev" title="Github">
-                Github <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -467,10 +475,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/02/01/ajax/"
-     data-title="js学习之ajax"
+        <div class="ds-share flat" data-thread-key="2017/04/03/sort/"
+     data-title="sort"
      data-content=""
-     data-url="http://yoursite.com/2017/02/01/ajax/">
+     data-url="http://yoursite.com/2017/04/03/sort/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -497,8 +505,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/01/ajax/"
-           data-title="js学习之ajax" data-url="http://yoursite.com/2017/02/01/ajax/">
+      <div class="ds-thread" data-thread-key="2017/04/03/sort/"
+           data-title="sort" data-url="http://yoursite.com/2017/04/03/sort/">
       </div>
     
   </div>
@@ -522,8 +530,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/1.jpg"
@@ -597,6 +614,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#冒泡排序"><span class="nav-number">1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#选择排序-直接选择"><span class="nav-number">2.</span> <span class="nav-text">选择排序-直接选择</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#快速排序"><span class="nav-number">3.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#稳定性"><span class="nav-number">4.</span> <span class="nav-text">稳定性</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
