@@ -264,7 +264,7 @@
     <link href="http://yoursite.com/2017/03/12/interview/"/>
     <id>http://yoursite.com/2017/03/12/interview/</id>
     <published>2017-03-12T02:56:42.000Z</published>
-    <updated>2017-04-16T08:03:54.837Z</updated>
+    <updated>2017-04-18T13:07:55.431Z</updated>
     
     <content type="html"><![CDATA[<p><em>记录面试题</em><br><a id="more"></a></p>
 <h1 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h1><p>1.http是无状态的，<br>2.request头 response<br>3.状态码<br>304表示 如果客户端发送了一个带GET请求且该请求已被允许，而文档的内容并没有改变（自上次访问以来或者根据请求的条件），则服务器应当返回这个状态码。<br>307表示 临时重定向</p>
@@ -281,7 +281,7 @@
 <h1 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h1><h2 id="HTML5-新特性"><a href="#HTML5-新特性" class="headerlink" title="HTML5 新特性"></a>HTML5 新特性</h2><h3 id="1-语义特性"><a href="#1-语义特性" class="headerlink" title="1.语义特性"></a>1.语义特性</h3><p>HTML5 赋予网页更好的意义和结构</p>
 <h3 id="2-本地存储特性"><a href="#2-本地存储特性" class="headerlink" title="2.本地存储特性"></a>2.本地存储特性</h3><p>基于HTML5开发的网页APP拥有更短的启动时间，更快的联网速度，这些得益于HTML5 APP Cache，以及本地存储功能。</p>
 <h3 id="3-设备访问特性"><a href="#3-设备访问特性" class="headerlink" title="3.设备访问特性"></a>3.设备访问特性</h3><p>从Geolocation功能的API文档公开以来，HTML5为网页应用开发者们提供了更多功能上的优化选择，带来了更多体验功能的优势。<br>HTML5提供了前所未有的数据与应用接入开放接口。使外部应用可以直接与浏览器内部的数据直接相连，例如视频影音可直接与microphones及摄像头相连。</p>
-<h3 id="4-连接特性"><a href="#4-连接特性" class="headerlink" title="4.连接特性"></a>4.连接特性</h3><p>更有效的连接工作效率，使得基于页面的实时聊天，更快速的网页游戏体验，更优化的在线交流得到了实现。<br>HTML5拥有更有效的服务器推送技术，Server-Sent Event和WebSockets就是其中的两个特性，这两个特效那个能够帮助我omen实现服务器将数据“推送”到客户端的功能。</p>
+<h3 id="4-连接特性"><a href="#4-连接特性" class="headerlink" title="4.连接特性"></a>4.连接特性</h3><p>更有效的连接工作效率，使得基于页面的实时聊天，更快速的网页游戏体验，更优化的在线交流得到了实现。<br>HTML5拥有更有效的服务器推送技术，Server-Sent Event和WebSockets就是其中的两个特性，这两个特效那个能够帮助我们实现服务器将数据“推送”到客户端的功能。</p>
 <h3 id="5-网页多媒体特性"><a href="#5-网页多媒体特性" class="headerlink" title="5.网页多媒体特性"></a>5.网页多媒体特性</h3><p>支持网页端的Audio、Video等多媒体功能，与网站自带的APPS、摄像头、影音功能相得益彰。</p>
 <h3 id="6-三维、图像及特效特性"><a href="#6-三维、图像及特效特性" class="headerlink" title="6.三维、图像及特效特性"></a>6.三维、图像及特效特性</h3><p>基于SVG、Canvas、WebGL及CSS3的3D功能，用户会惊叹于在浏览器中，所呈现的惊人视觉效果。</p>
 <h3 id="7-性能与集成特性"><a href="#7-性能与集成特性" class="headerlink" title="7.性能与集成特性"></a>7.性能与集成特性</h3><p>HTML5通过XMLHttpRequest2等技术，解决以前的跨域等问题，帮助Web应用和网站在多样化的环境中更快速地工作。</p>
@@ -500,6 +500,15 @@
 <li>Cookie和Session的共同之处在于：Cookie和Session都是用来跟踪浏览器用户身份的会话方式。</li>
 <li>Cookie和Session的区别是：Cookie数据保存在客户端，Session数据保存在服务器端。<br>简单的说，当你登录一个网站的时候，如果web服务器端使用的是Session，那么所有的数据都保存在服务器上，客户端每次请求服务器的时候会发送当前会话的sessionid，服务器根据当前sessionid判断相应的用户数据标志，以确定用户是否登录或具有某种权限。由于数据是存储在服务器上面，所以你不能伪造，但是如果你能够获取某个登录用户的 sessionid，用特殊的浏览器伪造该用户的请求也是能够成功的。sessionid是服务器和客户端链接时候随机分配的，一般来说是不会有重复，但如果有大量的并发请求，也不是没有重复的可能性。<br>如果浏览器使用的是cookie，那么所有的数据都保存在浏览器端，比如你登录以后，服务器设置了cookie用户名，那么当你再次请求服务器的时候，浏览器会将用户名一块发送给服务器，这些变量有一定的特殊标记。服务器会解释为cookie变量，所以只要不关闭浏览器，那么cookie变量一直是有效的，所以能够保证长时间不掉线。如果你能够截获某个用户的 cookie变量，然后伪造一个数据包发送过去，那么服务器还是认为你是合法的。<br>所以，使用 cookie被攻击的可能性比较大。如果设置了的有效时间，那么它会将 cookie保存在客户端的硬盘上，下次再访问该网站的时候，浏览器先检查有没有 cookie，如果有的话，就读取该 cookie，然后发送给服务器。如果你在机器上面保存了某个论坛 cookie，有效期是一年，如果有人入侵你的机器，将你的  cookie拷走，然后放在他的浏览器的目录下面，那么他登录该网站的时候就是用你的的身份登录的。所以 cookie是可以伪造的。当然，伪造的时候需要主意，直接copy cookie文件到 cookie目录，浏览器是不认的，他有一个index.dat文件，存储了 cookie文件的建立时间，以及是否有修改，所以你必须先要有该网站的 cookie文件，并且要从保证时间上骗过浏览器。</li>
 <li>两个都可以用来存私密的东西，同样也都有有效期的说法,区别在于session是放在服务器上的，过期与否取决于服务期的设定，cookie是存在客户端的，过去与否可以在cookie生成的时候设置进去。<br>(1) cookie数据存放在客户的浏览器上，session数据放在服务器上<br>(2) cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗,如果主要考虑到安全应当使用session<br>(3) session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能，如果主要考虑到减轻服务器性能方面，应当使用COOKIE<br>(4) 单个cookie在客户端的限制是3K，就是说一个站点在客户端存放的COOKIE不能3K。<br>(5) 所以：将登陆信息等重要信息存放为SESSION;其他信息如果需要保留，可以放在COOKIE中</li>
+</ol>
+<h1 id="Localstorage-、-Sessionstorage-和-Cookies"><a href="#Localstorage-、-Sessionstorage-和-Cookies" class="headerlink" title="Localstorage 、 Sessionstorage 和 Cookies"></a>Localstorage 、 Sessionstorage 和 Cookies</h1><p>共同点：都是保存在浏览器端，且同源。<br>区别:</p>
+<ol>
+<li>cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递。而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下。</li>
+<li>存储大小限制也不同，cookie数据不能超过4k，同时因为每次http请求都会携带cookie，所以cookie只适合保存很小的数据，如会话标识。sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。</li>
+<li>数据有效期不同，sessionStorage：仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；localStorage：始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据；cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。</li>
+<li>作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的。</li>
+<li>Web Storage 支持事件通知机制，可以将数据更新的通知发送给监听者。</li>
+<li>Web Storage 的 api 接口使用更方便。</li>
 </ol>
 <h1 id="浏览器内多个标签页之间的通信"><a href="#浏览器内多个标签页之间的通信" class="headerlink" title="浏览器内多个标签页之间的通信"></a>浏览器内多个标签页之间的通信</h1><h2 id="方法一：localstorage"><a href="#方法一：localstorage" class="headerlink" title="方法一：localstorage"></a>方法一：localstorage</h2><p>localstorage在一个标签页里被添加、修改或删除时，都会触发一个storage事件，通过在另一个标签页里监听storage事件，即可得到localstorage存储的值，实现不同标签页之间的通信。</p>
 <p>标签页1<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"inp"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">	(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">		<span class="keyword">var</span> inp = <span class="built_in">document</span>.getElementById(<span class="string">"inp"</span>);</div><div class="line">		btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">			<span class="keyword">var</span> value = inp.value;</div><div class="line">			localStorage.setItem(<span class="string">"name"</span>, value);</div><div class="line">		&#125;;</div><div class="line">	&#125;)();</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
@@ -791,6 +800,17 @@
 </tr>
 </tbody>
 </table>
+<h1 id="页面加载过程"><a href="#页面加载过程" class="headerlink" title="页面加载过程"></a>页面加载过程</h1><h2 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h2><ol>
+<li>主机向服务器发送一个建立连接的请求（ 您好，我想认识您 ）；</li>
+<li>服务器接到请求后发送同意连接的信号（ 好的，很高兴认识您 ）；</li>
+<li>主机接到同意连接的信号后，再次向服务器发送了确认信号（ 我也很高兴认识您），自此，主机与服务器两者建立了连接。</li>
+</ol>
+<h2 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h2><ol>
+<li>主机向服务器发送一个断开连接的请求（ 不早了，我该走了 ）；</li>
+<li>服务器接到请求后发送确认收到请求的信号（ 知道了 ）；</li>
+<li>服务器向主机发送断开通知（ 我也该走了 ）；</li>
+<li>主机接到断开通知后断开连接并反馈一个确认信号（ 嗯，好的 ），服务器收到确认信号后断开连接；</li>
+</ol>
 ]]></content>
     
     <summary type="html">
@@ -1291,9 +1311,9 @@
       <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="git" scheme="http://yoursite.com/tags/git/"/>
-    
       <category term="language" scheme="http://yoursite.com/tags/language/"/>
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
     
   </entry>
   
@@ -1538,9 +1558,9 @@
       <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="language" scheme="http://yoursite.com/tags/language/"/>
-    
       <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+      <category term="language" scheme="http://yoursite.com/tags/language/"/>
     
   </entry>
   
