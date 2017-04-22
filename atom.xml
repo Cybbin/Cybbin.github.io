@@ -82,9 +82,9 @@
       <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="nodejs" scheme="http://yoursite.com/tags/nodejs/"/>
-    
       <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+      <category term="nodejs" scheme="http://yoursite.com/tags/nodejs/"/>
     
   </entry>
   
@@ -264,9 +264,55 @@
     <link href="http://yoursite.com/2017/03/12/interview/"/>
     <id>http://yoursite.com/2017/03/12/interview/</id>
     <published>2017-03-12T02:56:42.000Z</published>
-    <updated>2017-04-22T08:29:51.173Z</updated>
+    <updated>2017-04-22T16:40:55.492Z</updated>
     
     <content type="html"><![CDATA[<p><em>记录面试题</em><br><a id="more"></a></p>
+<h1 id="XHTML和HTML的区别"><a href="#XHTML和HTML的区别" class="headerlink" title="XHTML和HTML的区别"></a>XHTML和HTML的区别</h1><ol>
+<li>HTML是一种基本的WEB网页设计语言，XHTML是一个基于XML的置标语言；</li>
+<li>XHTML元素必须被正确的嵌套；</li>
+<li>XHTML元素必须被关闭；</li>
+<li>标签名必须用小写；</li>
+<li>XHTML文档必须拥有根元素。</li>
+</ol>
+<hr>
+<h1 id="浏览器内核"><a href="#浏览器内核" class="headerlink" title="浏览器内核"></a>浏览器内核</h1><p>IE（Trident）、火狐（Gecko）、谷歌（Webkit）、Opera（Presto）、Safari（Webkit）。</p>
+<h1 id="语义话的HTML"><a href="#语义话的HTML" class="headerlink" title="语义话的HTML"></a>语义话的HTML</h1><ol>
+<li>直观地认识标签，对于搜索引擎的抓去有好处，用正确的标签做正确的事；</li>
+<li>HTML与异化就是让页面的内容结构化，便于浏览器、搜索引擎解析（利于SEO）；</li>
+<li>使阅读源代码的人更容易将网站分块，便于阅读维护理解。</li>
+</ol>
+<hr>
+<h1 id="Doctype的作用"><a href="#Doctype的作用" class="headerlink" title="Doctype的作用"></a>Doctype的作用</h1><p>!Doctype声明位于HTML文档的第一行，处于html标签之前，告知浏览器的解析器用什么文档标准解析该文档。</p>
+<p>严格模式：又称标准模式，指浏览器按照 W3C 标准解析文档</p>
+<p>混杂模式：又称怪异模式或兼容模式，指浏览器用自己的方式解析代码</p>
+<p>如何区分：浏览器解析时使用严格模式还是混杂模式，取决于网页中的DTD。</p>
+<ol>
+<li>如果文档包含严格的DOCTYPE，那么它一般以严格模式呈现</li>
+<li>如果过渡DTD和URI的DOCTYPE，也以严格模式呈现，但有过渡DTD而没有URI会导致页面以混杂模式呈现。</li>
+<li>DOCTYPE不存在或形式不正确会导致混杂模式呈现</li>
+<li>HTML5没有DTD，因此也就没有严格模式和混杂模式的区别，HTML5有相对宽松的语法，实现时，已经尽可能大的实现向后兼容。</li>
+</ol>
+<p>意义：严格模式与混杂模式存在的意义与其来源密切相关，如果只存在严格模式，那么许多旧网站必然受影响，如果只存在混杂模式，那么会回到当时浏览器大战时的混乱，每个浏览器都有自己的解析模式。</p>
+<hr>
+<h1 id="CSS元素分类"><a href="#CSS元素分类" class="headerlink" title="CSS元素分类"></a>CSS元素分类</h1><ol>
+<li>块状元素：div,p,form,ul,li,h1,h2…</li>
+<li>行内元素：span,a,label,input,img,strong,em…</li>
+</ol>
+<hr>
+<h1 id="CSS隐藏元素的方法"><a href="#CSS隐藏元素的方法" class="headerlink" title="CSS隐藏元素的方法"></a>CSS隐藏元素的方法</h1><ol>
+<li>opacity:0<br>不会改变页面布局，如果绑定事件如click事件，那么点击该区域，也能触发点击事件</li>
+<li>display:none<br>不会改变页面布局，但是不会触发该元素已经绑定的事件</li>
+<li>visibility:hidden<br>会改变页面布局，可以理解成在页面中把该元素删除掉一样</li>
+<li>position:absolute;top:-9999px;left:-9999px<br>将元素移除可使区域</li>
+<li>clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px)<br>裁剪元素</li>
+</ol>
+<hr>
+<h1 id="link和-import的区别"><a href="#link和-import的区别" class="headerlink" title="link和@import的区别"></a>link和@import的区别</h1><ol>
+<li>link属于XHTML标签，除了加载css外，还成用于定义RSS,定义rel连接属性等作用；而@import是CSS提供的，只能用于加载CSS；</li>
+<li>页面被加载时，link会同时加载，而@import引用的CSS会等到页面被加载完毕后再加载；</li>
+<li>link无兼容问题，@import是CSS2.1提出的，只在IE5以上才能被识别。</li>
+</ol>
+<hr>
 <h1 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h1><p>1.http是无状态的，<br>2.request头 response<br>3.状态码<br>304表示 如果客户端发送了一个带GET请求且该请求已被允许，而文档的内容并没有改变（自上次访问以来或者根据请求的条件），则服务器应当返回这个状态码。<br>307表示 临时重定向</p>
 <h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><p>HTTP协议（Hyper Text Transfer Protocol，超文本传输协议）,<br>是用于从万维网（WWW:World Wide Web ）服务器传输超文本到本地浏览器的传送协议。<br>HTTP基于TCP/IP通信协议来传递数据。HTTP基于客户端/服务端（C/S）架构模型，通过一个可靠的链接来交换信息，是一个<strong>无状态</strong>的请求/响应协议。</p>
 <h2 id="2-特点"><a href="#2-特点" class="headerlink" title="2.特点"></a>2.特点</h2><p>（1）HTTP是无连接：无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。<br>（2）HTTP是媒体独立的：只要客户端和服务器知道如何处理的数据内容，任何类型的数据都可以通过HTTP发送。客户端以及服务器指定使用适合的MIME-type内容类型。<br>（3）HTTP是无状态：无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。</p>
@@ -278,6 +324,7 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">HTTP/1.1 200 OK         </div><div class="line">Date: Mon, 27 Jul 2009 12:28:53 GMT         </div><div class="line">Server: Apache</div><div class="line">Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT         </div><div class="line">ETag: "34aa387-d-1568eb00"         </div><div class="line">Accept-Ranges: bytes         </div><div class="line">Content-Length: 51         </div><div class="line">Vary: Accept-Encoding         </div><div class="line">Content-Type: text/plain</div></pre></td></tr></table></figure>
 <h2 id="5-请求方法"><a href="#5-请求方法" class="headerlink" title="5.请求方法"></a>5.请求方法</h2><p>GET 请求指定的页面信息，并返回实体主体。<br>HEAD    类似于get请求，只不过返回的响应中没有具体的内容，用于获取报头<br>POST  向指定资源提交数据进行处理请求（例如提交表单或者上传文件）。数据被包含在请求体中。POST请求可能会导致新的资源的建立和/或已有资源的修改。<br>PUT 从客户端向服务器传送的数据取代指定的文档的内容。<br>DELETE  请求服务器删除指定的页面。<br>CONNECT HTTP/1.1协议中预留给能够将连接改为管道方式的代理服务器。<br>OPTIONS 允许客户端查看服务器的性能。<br>TRACE   回显服务器收到的请求，主要用于测试或诊断。</p>
 <h2 id="6-状态码"><a href="#6-状态码" class="headerlink" title="6.状态码"></a>6.状态码</h2><p>HTTP状态码分类<br>1** 信息，服务器收到请求，需要请求者继续执行操作<br>2** 成功，操作被成功接收并处理<br>3** 重定向，需要进一步的操作以完成请求<br>4** 客户端错误，请求包含语法错误或无法完成请求<br>5** 服务器错误，服务器在处理请求的过程中发生了错<br>HTTP状态码列表<br>100 Continue    继续。客户端应继续其请求<br>101 Switching Protocols 切换协议。服务器根据客户端的请求切换协议。只能切换到更高级的协议，例如，切换到HTTP的新版本协议<br>200 OK  请求成功。一般用于GET与POST请求<br>201 Created 已创建。成功请求并创建了新的资源<br>202 Accepted    已接受。已经接受请求，但未处理完成<br>203 Non-Authoritative Information   非授权信息。请求成功。但返回的meta信息不在原始的服务器，而是一个副本<br>204 No Content  无内容。服务器成功处理，但未返回内容。在未更新网页的情况下，可确保浏览器继续显示当前文档<br>205 Reset Content   重置内容。服务器处理成功，用户终端（例如：浏览器）应重置文档视图。可通过此返回码清除浏览器的表单域<br>206 Partial Content 部分内容。服务器成功处理了部分GET请求<br>300 Multiple Choices    多种选择。请求的资源可包括多个位置，相应可返回一个资源特征与地址的列表用于用户终端（例如：浏览器）选择<br>301 Moved Permanently   永久移动。请求的资源已被永久的移动到新URI，返回信息会包括新的URI，浏览器会自动定向到新URI。今后任何新的请求都应使用新的URI代替<br>302 Found   临时移动。与301类似。但资源只是临时被移动。客户端应继续使用原有URI<br>303 See Other   查看其它地址。与301类似。使用GET和POST请求查看<br>304 Not Modified    未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在指定日期之后修改的资源<br>305 Use Proxy   使用代理。所请求的资源必须通过代理访问<br>306 Unused  已经被废弃的HTTP状态码<br>307 Temporary Redirect  临时重定向。与302类似。使用GET请求重定向<br>400 Bad Request 客户端请求的语法错误，服务器无法理解<br>401 Unauthorized    请求要求用户的身份认证<br>402 Payment Required    保留，将来使用<br>403 Forbidden   服务器理解请求客户端的请求，但是拒绝执行此请求<br>404 Not Found   服务器无法根据客户端的请求找到资源（网页）。通过此代码，网站设计人员可设置”您所请求的资源无法找到”的个性页面<br>405 Method Not Allowed  客户端请求中的方法被禁止<br>406 Not Acceptable  服务器无法根据客户端请求的内容特性完成请求<br>407 Proxy Authentication Required   请求要求代理的身份认证，与401类似，但请求者应当使用代理进行授权<br>408 Request Time-out    服务器等待客户端发送的请求时间过长，超时<br>409 Conflict    服务器完成客户端的PUT请求是可能返回此代码，服务器处理请求时发生了冲突<br>410 Gone    客户端请求的资源已经不存在。410不同于404，如果资源以前有现在被永久删除了可使用410代码，网站设计人员可通过301代码指定资源的新位置<br>411 Length Required 服务器无法处理客户端发送的不带Content-Length的请求信息<br>412 Precondition Failed 客户端请求信息的先决条件错误<br>413 Request Entity Too Large    由于请求的实体过大，服务器无法处理，因此拒绝请求。为防止客户端的连续请求，服务器可能会关闭连接。如果只是服务器暂时无法处理，则会包含一个Retry-After的响应信息<br>414 Request-URI Too Large   请求的URI过长（URI通常为网址），服务器无法处理<br>415 Unsupported Media Type  服务器无法处理请求附带的媒体格式<br>416 Requested range not satisfiable 客户端请求的范围无效<br>417 Expectation Failed  服务器无法满足Expect的请求头信息<br>500 Internal Server Error   服务器内部错误，无法完成请求<br>501 Not Implemented 服务器不支持请求的功能，无法完成请求<br>502 Bad Gateway 充当网关或代理的服务器，从远端服务器接收到了一个无效的请求<br>503 Service Unavailable 由于超载或系统维护，服务器暂时的无法处理客户端的请求。延时的长度可包含在服务器的Retry-After头信息中<br>504 Gateway Time-out    充当网关或代理的服务器，未及时从远端服务器获取请求<br>505 HTTP Version not supported  服务器不支持请求的HTTP协议的版本，无法完成处理</p>
+<hr>
 <h1 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h1><h2 id="HTML5-新特性"><a href="#HTML5-新特性" class="headerlink" title="HTML5 新特性"></a>HTML5 新特性</h2><h3 id="1-语义特性"><a href="#1-语义特性" class="headerlink" title="1.语义特性"></a>1.语义特性</h3><p>HTML5 赋予网页更好的意义和结构</p>
 <h3 id="2-本地存储特性"><a href="#2-本地存储特性" class="headerlink" title="2.本地存储特性"></a>2.本地存储特性</h3><p>基于HTML5开发的网页APP拥有更短的启动时间，更快的联网速度，这些得益于HTML5 APP Cache，以及本地存储功能。</p>
 <h3 id="3-设备访问特性"><a href="#3-设备访问特性" class="headerlink" title="3.设备访问特性"></a>3.设备访问特性</h3><p>从Geolocation功能的API文档公开以来，HTML5为网页应用开发者们提供了更多功能上的优化选择，带来了更多体验功能的优势。<br>HTML5提供了前所未有的数据与应用接入开放接口。使外部应用可以直接与浏览器内部的数据直接相连，例如视频影音可直接与microphones及摄像头相连。</p>
@@ -501,6 +548,7 @@
 <li>Cookie和Session的区别是：Cookie数据保存在客户端，Session数据保存在服务器端。<br>简单的说，当你登录一个网站的时候，如果web服务器端使用的是Session，那么所有的数据都保存在服务器上，客户端每次请求服务器的时候会发送当前会话的sessionid，服务器根据当前sessionid判断相应的用户数据标志，以确定用户是否登录或具有某种权限。由于数据是存储在服务器上面，所以你不能伪造，但是如果你能够获取某个登录用户的 sessionid，用特殊的浏览器伪造该用户的请求也是能够成功的。sessionid是服务器和客户端链接时候随机分配的，一般来说是不会有重复，但如果有大量的并发请求，也不是没有重复的可能性。<br>如果浏览器使用的是cookie，那么所有的数据都保存在浏览器端，比如你登录以后，服务器设置了cookie用户名，那么当你再次请求服务器的时候，浏览器会将用户名一块发送给服务器，这些变量有一定的特殊标记。服务器会解释为cookie变量，所以只要不关闭浏览器，那么cookie变量一直是有效的，所以能够保证长时间不掉线。如果你能够截获某个用户的 cookie变量，然后伪造一个数据包发送过去，那么服务器还是认为你是合法的。<br>所以，使用 cookie被攻击的可能性比较大。如果设置了的有效时间，那么它会将 cookie保存在客户端的硬盘上，下次再访问该网站的时候，浏览器先检查有没有 cookie，如果有的话，就读取该 cookie，然后发送给服务器。如果你在机器上面保存了某个论坛 cookie，有效期是一年，如果有人入侵你的机器，将你的  cookie拷走，然后放在他的浏览器的目录下面，那么他登录该网站的时候就是用你的的身份登录的。所以 cookie是可以伪造的。当然，伪造的时候需要主意，直接copy cookie文件到 cookie目录，浏览器是不认的，他有一个index.dat文件，存储了 cookie文件的建立时间，以及是否有修改，所以你必须先要有该网站的 cookie文件，并且要从保证时间上骗过浏览器。</li>
 <li>两个都可以用来存私密的东西，同样也都有有效期的说法,区别在于session是放在服务器上的，过期与否取决于服务期的设定，cookie是存在客户端的，过去与否可以在cookie生成的时候设置进去。<br>(1) cookie数据存放在客户的浏览器上，session数据放在服务器上<br>(2) cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗,如果主要考虑到安全应当使用session<br>(3) session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能，如果主要考虑到减轻服务器性能方面，应当使用COOKIE<br>(4) 单个cookie在客户端的限制是3K，就是说一个站点在客户端存放的COOKIE不能3K。<br>(5) 所以：将登陆信息等重要信息存放为SESSION;其他信息如果需要保留，可以放在COOKIE中</li>
 </ol>
+<hr>
 <h1 id="Localstorage-、-Sessionstorage-和-Cookies"><a href="#Localstorage-、-Sessionstorage-和-Cookies" class="headerlink" title="Localstorage 、 Sessionstorage 和 Cookies"></a>Localstorage 、 Sessionstorage 和 Cookies</h1><p>共同点：都是保存在浏览器端，且同源。<br>区别:</p>
 <ol>
 <li>cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递。而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下。</li>
@@ -510,6 +558,7 @@
 <li>Web Storage 支持事件通知机制，可以将数据更新的通知发送给监听者。</li>
 <li>Web Storage 的 api 接口使用更方便。</li>
 </ol>
+<hr>
 <h1 id="浏览器内多个标签页之间的通信"><a href="#浏览器内多个标签页之间的通信" class="headerlink" title="浏览器内多个标签页之间的通信"></a>浏览器内多个标签页之间的通信</h1><h2 id="方法一：localstorage"><a href="#方法一：localstorage" class="headerlink" title="方法一：localstorage"></a>方法一：localstorage</h2><p>localstorage在一个标签页里被添加、修改或删除时，都会触发一个storage事件，通过在另一个标签页里监听storage事件，即可得到localstorage存储的值，实现不同标签页之间的通信。</p>
 <p>标签页1<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"inp"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">	(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">		<span class="keyword">var</span> inp = <span class="built_in">document</span>.getElementById(<span class="string">"inp"</span>);</div><div class="line">		btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">			<span class="keyword">var</span> value = inp.value;</div><div class="line">			localStorage.setItem(<span class="string">"name"</span>, value);</div><div class="line">		&#125;;</div><div class="line">	&#125;)();</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>标签页2<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">	(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="built_in">window</span>.addEventListener(<span class="string">'storage'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">			<span class="built_in">console</span>.log(event.key+<span class="string">"="</span>+event.newValue);</div><div class="line">		&#125;);</div><div class="line">	&#125;)();</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
@@ -520,6 +569,11 @@
 <h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h2 id="JavaScript数据类型"><a href="#JavaScript数据类型" class="headerlink" title="JavaScript数据类型"></a>JavaScript数据类型</h2><p>六种基本类型：String,Boolean,Number,null,undefined,symbol((es6引入)</p>
 <p>七种数据类型：String,Boolean,Number,null,undefined,Object,Array</p>
 <p>typeof返回六种情况：String,Boolean,Number,undefined,Object,function</p>
+<h2 id="text转化成json"><a href="#text转化成json" class="headerlink" title="text转化成json"></a>text转化成json</h2><ol>
+<li>responseText = eval(‘(‘ + responseText + ‘)’);</li>
+<li>responseText = JSON.parse(responseText);</li>
+<li>responseText = (new Function(“return “ + responseText))();</li>
+</ol>
 <h2 id="JavaScript的基本规范"><a href="#JavaScript的基本规范" class="headerlink" title="JavaScript的基本规范"></a>JavaScript的基本规范</h2><ol>
 <li><p>文件编码统一为utf-8</p>
 </li>
@@ -726,6 +780,7 @@
 <p> (1)<strong>skew</strong>：倾斜（角度）<br> (2)<strong>scale</strong>：缩放（横向缩放，纵向缩放）<br> (3)<strong>rotate</strong>：旋转（角度）<br> (4)<strong>translate</strong>：平移（水平距离，纵向距离）</p>
 <h3 id="Animation"><a href="#Animation" class="headerlink" title="Animation"></a>Animation</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">@-<span class="keyword">webkit</span>-<span class="keyword">keyframes</span> anim1 &#123;</div><div class="line">	0% &#123;</div><div class="line">		<span class="attribute">Opacity</span>: <span class="number">0</span>;</div><div class="line">		<span class="attribute">Font-size</span>: <span class="number">12px</span>;</div><div class="line">	&#125;</div><div class="line">	100% &#123;</div><div class="line">		<span class="attribute">Opacity</span>: <span class="number">1</span>;</div><div class="line">		<span class="attribute">Font-size</span>: <span class="number">24px</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.anim1Div</span> &#123;</div><div class="line">	<span class="attribute">-webkit-animation-name</span>: anim1;</div><div class="line">	<span class="attribute">-webkit-animation-duration</span>: <span class="number">1.5s</span>;</div><div class="line">	<span class="attribute">-webkit-animation-iteration-count</span>: <span class="number">4</span>;</div><div class="line">	<span class="attribute">-webkit-animation-direction</span>: alternate;</div><div class="line">	<span class="attribute">-webkit-animation-timing-function</span>: ease-in-out;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"anim1Div"</span>&gt;</span>123<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p> (1)<strong>animation-name</strong>：定义动画名字<br> (2)<strong>animation-duration</strong>：定义动画时间<br> (3)<strong>animation-iteration-count</strong>：定义动画次数<br> (4)<strong>animation-direction</strong>：动画执行完一次后方向的变化方式（如第一次从右到左，第二次从左到右）<br> (5)<strong>animation-function</strong>：变化的模式</p>
+<hr>
 <h1 id="异步编程"><a href="#异步编程" class="headerlink" title="异步编程"></a>异步编程</h1><h2 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">f1();</div><div class="line">f2();</div></pre></td></tr></table></figure>
 <p>以上代码表示执行完f1()再执行f2()。<br>将f2()写成f1()的回调函数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params">callback</span>)</span>&#123;</div><div class="line">	setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="comment">//f1的任务代码</span></div><div class="line">		callback();</div><div class="line">	&#125;,<span class="number">1000</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">f1(f2); <span class="comment">// 将f2()写成f1()的回调函数</span></div></pre></td></tr></table></figure></p>
 <p>优点：简单、容易理解和部署。<br>缺点：不利于代码的阅读与维护，各个部分之间高度耦合，流程混乱，并且每个函数只能指定一个回调函数。</p>
@@ -743,17 +798,20 @@
 <p>优点：回调函数编程了链式写法，程序的流程可以看得很清楚，可以实现许多强大的功能。<br>比如：指定多个回调函数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">f1().then(f2).then(f3);</div></pre></td></tr></table></figure></p>
 <p>指定发生错误时的回调函数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">f1().then(f2).fail(f3);</div></pre></td></tr></table></figure></p>
 <p>而且还有一个前面三种方法都没有的好处，如果一个任务已经完成，再添加回调函数，该回调函数会立即执行，所以不用担心是否错过了某个事件或信号。<br>缺点：对编写和理解相对比较难。</p>
+<hr>
 <h1 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h1><h2 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h2><p>原理：利用js不受跨域限制，利用script标签引入不同域上的文件。<br>注意：资源来源是否支持jsonp。<br>优点：不像Ajax受同源策略的限制，兼容性更好，不需要XMLHttpRequest或ActiveX的支持。<br>缺点：只支持GET请求而不支持POST等其它类型的HTTP请求，它只支持跨域HTTP请求这种情况，不能解决不同域的两个页面之间如何进行JavaScript调用的问题。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(data);</div><div class="line">&#125;</div><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">	script.setAttribute(<span class="string">'type'</span>, <span class="string">'text/javascript'</span>);</div><div class="line">	script.src = <span class="string">'http://s.music.163.com/search/get/?type=1&amp;filterDj=true&amp;s=%E8%96%9B%E4%B9%8B%E8%B0%A6&amp;limit=100&amp;offset=0&amp;callback=callback'</span>;</div><div class="line">	<span class="built_in">document</span>.body.appendChild(script);</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
 <h2 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h2><p>CORS(Cross-Origin Resource Sharing)跨域资源共享，定义了必须在访问跨域资源时，浏览器与服务器应该如何沟通。CORS背后的基本思想就是使用自定义的HTTP头部让浏览器与服务器进行沟通，从而决定请求或响应是应该成功还是失败。<br>优点：支持所有类型的HTTP请求，可以使用普通的XMLHttpRequest发起请求和获得数据，比JSONP有更好的错误处理。<br>缺点：不支持老的浏览器。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 前端用普通的Ajax方式即可</span></div><div class="line"><span class="comment">// 后端</span></div><div class="line">response.setHeader(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);</div></pre></td></tr></table></figure></p>
 <h2 id="document-domain"><a href="#document-domain" class="headerlink" title="document.domain"></a>document.domain</h2><p>相同基础域名页面之间的调用。</p>
 <h2 id="window-name"><a href="#window-name" class="headerlink" title="window.name"></a>window.name</h2><p>window对象有个name属性，该属性有个特征：即在一个窗口(window)的生命周期内,窗口载入的所有的页面都是共享一个window.name的，每个页面对window.name都有读写的权限，window.name是持久存在一个窗口载入过的所有页面中的</p>
 <h2 id="window-postMessage"><a href="#window-postMessage" class="headerlink" title="window.postMessage()"></a>window.postMessage()</h2><p>window.postMessage(message,targetOrigin) 方法是html5新引进的特性，可以使用它来向其它的window对象发送消息，无论这个window对象是属于同源或不同源，目前IE8+、FireFox、Chrome、Opera等浏览器都已经支持window.postMessage方法。</p>
+<hr>
 <h1 id="ready和onload的区别"><a href="#ready和onload的区别" class="headerlink" title="ready和onload的区别"></a>ready和onload的区别</h1><p>jQuery中 $(document).ready()和window.onload的区别</p>
 <h2 id="执行时间"><a href="#执行时间" class="headerlink" title="执行时间"></a>执行时间</h2><p>$(document).ready()是DOM结构绘制完毕后就执行，不必等到加载完毕。<br>window.onload必须等到页面内包括图片的所有元素加载完毕才能执行。</p>
 <h2 id="编写个数"><a href="#编写个数" class="headerlink" title="编写个数"></a>编写个数</h2><p>$(document).ready()可以同时编写多个，并且都可以得到执行。<br>window.onload不能同时编写多个，如有多个只会执行一个。</p>
 <h2 id="简化写法"><a href="#简化写法" class="headerlink" title="简化写法"></a>简化写法</h2><p>$(document).ready(function(){});可以简写成$(function(){});。<br>window.onload没有简化写法。</p>
-<h1 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h1><h2 id="W3C标准盒子模型"><a href="#W3C标准盒子模型" class="headerlink" title="W3C标准盒子模型"></a>W3C标准盒子模型</h2><p>W3C定义的盒子模型包括 内容（content）、内边距（padding）、边框（border）、外边距（margin）。</p>
-<h2 id="IE盒子模型"><a href="#IE盒子模型" class="headerlink" title="IE盒子模型"></a>IE盒子模型</h2><p>IE盒子模型包括 内容（content）、内边距（padding）、边框（border）。</p>
+<hr>
+<h1 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h1><h2 id="W3C标准盒子模型"><a href="#W3C标准盒子模型" class="headerlink" title="W3C标准盒子模型"></a>W3C标准盒子模型</h2><p>W3C定义的盒子模型包括 内容（content）、内边距（padding）、边框（border）、外边距（margin）。<br>其中内容（content）部分不包含其它部分。</p>
+<h2 id="IE盒子模型"><a href="#IE盒子模型" class="headerlink" title="IE盒子模型"></a>IE盒子模型</h2><p>IE盒子模型包括 内容（content）、内边距（padding）、边框（border）、外边距（margin）。<br>其中内容（content）包括内边距（padding）和边框（border）。</p>
 <h1 id="CSS优先级"><a href="#CSS优先级" class="headerlink" title="CSS优先级"></a>CSS优先级</h1><table>
 <thead>
 <tr>
@@ -800,7 +858,22 @@
 </tr>
 </tbody>
 </table>
-<h1 id="页面加载过程"><a href="#页面加载过程" class="headerlink" title="页面加载过程"></a>页面加载过程</h1><h2 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h2><ol>
+<hr>
+<h1 id="页面加载过程"><a href="#页面加载过程" class="headerlink" title="页面加载过程"></a>页面加载过程</h1><h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><ol>
+<li>查找浏览器缓存；</li>
+<li>DNS解析、查找该域名对应的IP地址、重定向（301）、发出第二个GET请求</li>
+<li>进行HTTP协议会话</li>
+<li>客户端发送请求报头</li>
+<li>文档开始下载</li>
+<li>文档树建立，根据标记请求所需执行MIME类型的文件</li>
+<li>文件显示</li>
+</ol>
+<p>浏览器这边的工作大致分为：</p>
+<ol>
+<li>加载：根据请求的URL进行域名解析，向服务器发起请求，接受文件（HTML,JS,CSS,图像等）；</li>
+<li>解析：对加载到的资源（HTML,JS,CSS等）进行语法解析。</li>
+</ol>
+<h2 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h2><ol>
 <li>主机向服务器发送一个建立连接的请求（ 您好，我想认识您 ）；</li>
 <li>服务器接到请求后发送同意连接的信号（ 好的，很高兴认识您 ）；</li>
 <li>主机接到同意连接的信号后，再次向服务器发送了确认信号（ 我也很高兴认识您），自此，主机与服务器两者建立了连接。</li>
@@ -811,6 +884,7 @@
 <li>服务器向主机发送断开通知（ 我也该走了 ）；</li>
 <li>主机接到断开通知后断开连接并反馈一个确认信号（ 嗯，好的 ），服务器收到确认信号后断开连接。</li>
 </ol>
+<hr>
 <h1 id="清除元素浮动"><a href="#清除元素浮动" class="headerlink" title="清除元素浮动"></a>清除元素浮动</h1><h2 id="clear属性"><a href="#clear属性" class="headerlink" title="clear属性"></a>clear属性</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"clear"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-class">.wrapper</span> &#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</div><div class="line">	<span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#000</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.div</span> &#123;</div><div class="line">	<span class="attribute">float</span>: left;</div><div class="line">	<span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">background</span>: red;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.clear</span> &#123;</div><div class="line">	<span class="attribute">clear</span>: both;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper clear"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-class">.wrapper</span> &#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</div><div class="line">	<span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#000</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.clear</span> &#123;</div><div class="line">	<span class="comment">/*兼容IE*/</span></div><div class="line">	<span class="attribute">zoom</span>:<span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.clear</span><span class="selector-pseudo">:after</span>&#123;</div><div class="line">	<span class="attribute">display</span>:block;</div><div class="line">	<span class="attribute">content</span>:<span class="string">""</span>;</div><div class="line">	<span class="attribute">clear</span>:both;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.div</span> &#123;</div><div class="line">	<span class="attribute">float</span>: left;</div><div class="line">	<span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">background</span>: red;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">br</span> <span class="attr">clear</span>=<span class="string">"all"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-class">.wrapper</span> &#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</div><div class="line">	<span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#000</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.div</span> &#123;</div><div class="line">	<span class="attribute">float</span>: left;</div><div class="line">	<span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">background</span>: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
