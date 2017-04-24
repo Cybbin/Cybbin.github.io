@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="git,language," />
+  <meta name="keywords" content="HTTP," />
 
 
 
@@ -86,16 +86,18 @@
 
 
 
-<meta name="description" content="学习Git">
+<meta name="description" content="HTTP协议">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Github">
-<meta property="og:url" content="http://yoursite.com/2017/02/17/github/index.html">
+<meta property="og:title" content="HTTP">
+<meta property="og:url" content="http://yoursite.com/2017/04/24/http/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="学习Git">
-<meta property="og:updated_time" content="2017-02-26T12:48:22.416Z">
+<meta property="og:description" content="HTTP协议">
+<meta property="og:image" content="http://yoursite.com/uploads/http.gif">
+<meta property="og:updated_time" content="2017-04-24T12:49:11.251Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Github">
-<meta name="twitter:description" content="学习Git">
+<meta name="twitter:title" content="HTTP">
+<meta name="twitter:description" content="HTTP协议">
+<meta name="twitter:image" content="http://yoursite.com/uploads/http.gif">
 
 
 
@@ -123,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/17/github/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/24/http/"/>
 
 
 
 
 
-  <title> Github | Blog </title>
+  <title> HTTP | Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -265,7 +267,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/17/github/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/http/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Cyb">
@@ -289,7 +291,7 @@
             
             
               
-                Github
+                HTTP
               
             
           </h1>
@@ -304,8 +306,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-17T17:24:33+08:00">
-                2017-02-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T20:26:39+08:00">
+                2017-04-24
               </time>
             
 
@@ -327,8 +329,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/" itemprop="url" rel="index">
-                    <span itemprop="name">教程</span>
+                  <a href="/categories/面试/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
                   </a>
                 </span>
 
@@ -345,8 +347,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/17/github/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/17/github/" itemprop="commentCount"></span>
+                <a href="/2017/04/24/http/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/24/http/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -356,7 +358,7 @@
 
           
           
-             <span id="/2017/02/17/github/" class="leancloud_visitors" data-flag-title="Github">
+             <span id="/2017/04/24/http/" class="leancloud_visitors" data-flag-title="HTTP">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -383,238 +385,21 @@
       
 
       
-        <p>学习Git<a id="more"></a></p>
-<h1 id="一、windows安装git"><a href="#一、windows安装git" class="headerlink" title="一、windows安装git"></a>一、windows安装git</h1><p><a href="https://git-for-windows.github.io/" target="_blank" rel="external">下载链接</a></p>
-<h1 id="二、建立远程仓库"><a href="#二、建立远程仓库" class="headerlink" title="二、建立远程仓库"></a>二、建立远程仓库</h1><h2 id="1-创建SSH-Key"><a href="#1-创建SSH-Key" class="headerlink" title="1.创建SSH Key"></a>1.创建SSH Key</h2><blockquote>
-<p>$ ssh-keygen -t rsa -C “Cybbin@Cybbin.com”</p>
-</blockquote>
-<p>创建ssh key,一路回车默认即可<br>创建.ssh目录,在该目录(我的是在C:\Users\Administrator目录下)下会有id_rsa,和id_rsa.pub文件<br>id_rsa是私钥,不能泄露<br>id_rsa.pub是公钥</p>
-<h2 id="2-登陆Github"><a href="#2-登陆Github" class="headerlink" title="2.登陆Github"></a>2.登陆Github</h2><p>点击头像，打开Setting,点击左边的SSH and GPG keys,点击News SSH key<br>填上任意Title,把id_rsa.pub的内容粘贴到Key文本框里<br>然后点击Add SSH key</p>
-<h1 id="三、git指令"><a href="#三、git指令" class="headerlink" title="三、git指令"></a>三、git指令</h1><h2 id="提交仓库"><a href="#提交仓库" class="headerlink" title="提交仓库"></a>提交仓库</h2><hr>
-<blockquote>
-<p>git init</p>
-</blockquote>
-<p>git目录初始化</p>
+        <p>HTTP协议<br><a id="more"></a></p>
+<h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><p>HTTP协议（Hyper Text Transfer Protocol，超文本传输协议）,<br>是用于从万维网（WWW:World Wide Web ）服务器传输超文本到本地浏览器的传送协议。<br>HTTP基于TCP/IP通信协议来传递数据。HTTP基于客户端/服务端（C/S）架构模型，通过一个可靠的链接来交换信息，是一个<strong>无状态</strong>的请求/响应协议。</p>
 <hr>
-<blockquote>
-<p>git add .</p>
-</blockquote>
-<p>添加该目录下所有文件到暂存区</p>
+<h1 id="2-特点"><a href="#2-特点" class="headerlink" title="2.特点"></a>2.特点</h1><p>（1）HTTP是无连接：无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。<br>（2）HTTP是媒体独立的：只要客户端和服务器知道如何处理的数据内容，任何类型的数据都可以通过HTTP发送。客户端以及服务器指定使用适合的MIME-type内容类型。<br>（3）HTTP是无状态：无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。</p>
 <hr>
-<blockquote>
-<p>git commit -m ‘m’</p>
-</blockquote>
-<p>把文件提交到仓库,引号为提交的说明</p>
+<h1 id="3-通信流程"><a href="#3-通信流程" class="headerlink" title="3.通信流程"></a>3.通信流程</h1><p><img src="/uploads/http.gif" alt="Alt text"></p>
 <hr>
-<blockquote>
-<p>git remote add origin git@github.com:Cybbin/jd.git</p>
-</blockquote>
-<p>将本地仓库与Github仓库关联</p>
+<h1 id="4-消息结构"><a href="#4-消息结构" class="headerlink" title="4.消息结构"></a>4.消息结构</h1><p>HTTP使用统一资源标识符（Uniform Resource Identifiers, URI）来传输数据和建立连接。一旦建立连接后，数据消息就通过类似Internet邮件所使用的格式[RFC5322]和多用途Internet邮件扩展（MIME）[RFC2045]来传送。</p>
+<p>客户端请求消息：请求行、请求头部、空行和请求数据。（requset）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">GET /hello.txt HTTP/1.1          </div><div class="line">User-Agent: curl/7.16.3 libcurl/7.16.3          </div><div class="line">OpenSSL/0.9.7l zlib/1.2.3          </div><div class="line">Host: www.example.com Accept-Language: en, mi</div></pre></td></tr></table></figure>
+<p>服务端响应消息：状态行、消息报头、空行和响应正文。（response）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">HTTP/1.1 200 OK         </div><div class="line">Date: Mon, 27 Jul 2009 12:28:53 GMT         </div><div class="line">Server: Apache</div><div class="line">Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT         </div><div class="line">ETag: "34aa387-d-1568eb00"         </div><div class="line">Accept-Ranges: bytes         </div><div class="line">Content-Length: 51         </div><div class="line">Vary: Accept-Encoding         </div><div class="line">Content-Type: text/plain</div></pre></td></tr></table></figure>
 <hr>
-<blockquote>
-<p>git push -u origin master</p>
-</blockquote>
-<p>将本地仓库推送到远程(Github)库的master主分支上<br>-u是第一次提交时,把本地的master分支与远程的master分支关联起来<br>在以后的推送就可以简化命令</p>
-<blockquote>
-<p>git push origin master</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>git clone git@github.com:Cybbin/jd.git</p>
-</blockquote>
-<p>克隆远程库到本地,克隆在gitskills文件夹中</p>
-<hr>
-<h2 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h2><hr>
-<blockquote>
-<p>git log</p>
-</blockquote>
-<p>查看版本控制器的历史记录<br>commit后面为版本id</p>
-<hr>
-<blockquote>
-<p>git log --pretty=oneline</p>
-</blockquote>
-<p>前面为版本commit id,后面的数字为在commit的时候后面引号内的内容</p>
-<blockquote>
-<p>git log --pretty=oneline --abbrev-commit</p>
-</blockquote>
-<p>只显示前几位commit id</p>
-<hr>
-<blockquote>
-<p>git reset --hard HEAD^</p>
-</blockquote>
-<p>回到上个版本<br>上上个版本是 Head^^<br>上100个版本是 Head~100<br>回到第id个版本,id为git log出现的commit id</p>
-<blockquote>
-<p>git reset --hard id</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>git reflog</p>
-</blockquote>
-<p>记录每一次命令的id<br>回退时找不到新版本的id时用(重返未来)</p>
-<hr>
-<blockquote>
-<p>git status</p>
-</blockquote>
-<p>查看当前仓库的状态</p>
-<hr>
-<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><hr>
-<blockquote>
-<p>git branch dev</p>
-</blockquote>
-<p>创建dev分支</p>
-<hr>
-<blockquote>
-<p>git checkout dev</p>
-</blockquote>
-<p>切换到dev分支上</p>
-<hr>
-<blockquote>
-<p>git checkout -b dev</p>
-</blockquote>
-<p>相当于这两句</p>
-<blockquote>
-<p>git branch dev<br>git checkout dev</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>git branch</p>
-</blockquote>
-<p>列出所有分支,当前分支前有*号</p>
-<hr>
-<blockquote>
-<p>git merge dev</p>
-</blockquote>
-<p>将dev分支合并到master主分支上,Fast forward模式</p>
-<hr>
-<blockquote>
-<p>git merge dev --no-ff -m ‘’ dev</p>
-</blockquote>
-<p>禁用Fast forward模式，并提交备注信息</p>
-<hr>
-<blockquote>
-<p>git branch -d dev</p>
-</blockquote>
-<p>删除dev分支,没有被合并时,如果有修改,无法删除</p>
-<hr>
-<blockquote>
-<p>git branch -D dev</p>
-</blockquote>
-<p>强力删除dev分支</p>
-<hr>
-<blockquote>
-<p>git log --graph</p>
-</blockquote>
-<p>列出分支合并图</p>
-<hr>
-<blockquote>
-<p>git stash</p>
-</blockquote>
-<p>将当前工作现场隐藏</p>
-<hr>
-<blockquote>
-<p>git stash list</p>
-</blockquote>
-<p>列出当前分支所有被隐藏的工作区</p>
-<hr>
-<blockquote>
-<p>git stash pop</p>
-</blockquote>
-<p>恢复工作区,并删除stash内容</p>
-<hr>
-<blockquote>
-<p>git stash apply stash@{0}</p>
-</blockquote>
-<p>恢复工作区,但没有删除stash内容<br>需要再用 git stash drop 来删除</p>
-<hr>
-<blockquote>
-<p>git pull</p>
-</blockquote>
-<p>将最新的提交从origin抓下来</p>
-<hr>
-<h2 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h2><hr>
-<blockquote>
-<p>git tag v1.0</p>
-</blockquote>
-<p>设置当前标签为v1.0</p>
-<hr>
-<blockquote>
-<p>git tag</p>
-</blockquote>
-<p>查看当前分支的所有标签(不是按时间顺序排列,按字母顺序排列)</p>
-<hr>
-<blockquote>
-<p>git tab v1.0 id</p>
-</blockquote>
-<p>对当前分支的过去版本打标签,id为commit id(版本回退里有)</p>
-<hr>
-<blockquote>
-<p>git show v1.0</p>
-</blockquote>
-<p>查看v1.0标签信息</p>
-<hr>
-<blockquote>
-<p>git tag -d v1.0</p>
-</blockquote>
-<p>删除本地的标签</p>
-<blockquote>
-<p>git push origin :ref/tags/v1.0</p>
-</blockquote>
-<p>删除推送到远程的标签</p>
-<hr>
-<blockquote>
-<p>git push origin v1.0</p>
-</blockquote>
-<p>推送标签到远程</p>
-<blockquote>
-<p>git push origin --tags</p>
-</blockquote>
-<p>一次性推送全部未推送到远程的标签</p>
-<hr>
-<h2 id="其它小命令"><a href="#其它小命令" class="headerlink" title="其它小命令"></a>其它小命令</h2><hr>
-<blockquote>
-<p>git remote -v</p>
-</blockquote>
-<p>查看远程库的信息</p>
-<hr>
-<blockquote>
-<p>ls</p>
-</blockquote>
-<p>查看当前目录所有文件</p>
-<hr>
-<blockquote>
-<p>touch README.md</p>
-</blockquote>
-<p>创建 README.md 文件</p>
-<hr>
-<blockquote>
-<p>rm README.md</p>
-</blockquote>
-<p>删除 README.md 文件</p>
-<hr>
-<h1 id="四、踩过的坑"><a href="#四、踩过的坑" class="headerlink" title="四、踩过的坑"></a>四、踩过的坑</h1><hr>
-<p>错误：<br>git commit 后运行 git status<br>出现  git commit On branch master nothing to commit, working tree clean<br>解决办法:<br>当前分支没有修改内容,可能是切换错分支了<br>查看分支</p>
-<blockquote>
-<p>git branch</p>
-</blockquote>
-<hr>
-<p>错误：</p>
-<blockquote>
-<p>git push origin master<br>To git@github.com:Cybbin/jd.git<br> ! [rejected]        master -&gt; master (non-fast-forward)<br>error: failed to push some refs to ‘git@github.com:Cybbin/jd.git’<br>hint: Updates were rejected because the tip of your current branch is behind<br>hint: its remote counterpart. Integrate the remote changes (e.g.<br>hint: ‘git pull …’) before pushing again.<br>hint: See the ‘Note about fast-forwards’ in ‘git push --help’ for details.</p>
-</blockquote>
-<p>解决办法：</p>
-<blockquote>
-<p>git push -f origin master</p>
-</blockquote>
-<hr>
-<p>错误：</p>
-<blockquote>
-<p>$ git push -u origin master<br>To git@github.com:yangchao0718/cocos2d.git<br> ! [rejected]        master -&gt; master (non-fast-forward)<br>error: failed to push some refs to ‘git@github.com:yangchao0718/cocos2d.git<br>hint: Updates were rejected because the tip of your current branch is behin<br>hint: its remote counterpart. Integrate the remote changes (e.g.<br>hint: ‘git pull …’) before pushing again.<br>hint: See the ‘Note about fast-forwards’ in ‘git push --help’ for details.</p>
-</blockquote>
-<p>解决办法：<br>github上的README.md文件不在本地代码目录中</p>
-<blockquote>
-<p>git pull --rebase origin master</p>
-</blockquote>
-<hr>
+<h1 id="5-请求方法"><a href="#5-请求方法" class="headerlink" title="5.请求方法"></a>5.请求方法</h1><p>GET 请求指定的页面信息，并返回实体主体。<br>HEAD    类似于get请求，只不过返回的响应中没有具体的内容，用于获取报头<br>POST  向指定资源提交数据进行处理请求（例如提交表单或者上传文件）。数据被包含在请求体中。POST请求可能会导致新的资源的建立和/或已有资源的修改。<br>PUT 从客户端向服务器传送的数据取代指定的文档的内容。<br>DELETE  请求服务器删除指定的页面。<br>CONNECT HTTP/1.1协议中预留给能够将连接改为管道方式的代理服务器。<br>OPTIONS 允许客户端查看服务器的性能。<br>TRACE   回显服务器收到的请求，主要用于测试或诊断。</p>
+<h1 id="6-状态码"><a href="#6-状态码" class="headerlink" title="6.状态码"></a>6.状态码</h1><p>HTTP状态码分类<br>1** 信息，服务器收到请求，需要请求者继续执行操作<br>2** 成功，操作被成功接收并处理<br>3** 重定向，需要进一步的操作以完成请求<br>4** 客户端错误，请求包含语法错误或无法完成请求<br>5** 服务器错误，服务器在处理请求的过程中发生了错<br>HTTP状态码列表<br>100 Continue    继续。客户端应继续其请求<br>101 Switching Protocols 切换协议。服务器根据客户端的请求切换协议。只能切换到更高级的协议，例如，切换到HTTP的新版本协议<br>200 OK  请求成功。一般用于GET与POST请求<br>201 Created 已创建。成功请求并创建了新的资源<br>202 Accepted    已接受。已经接受请求，但未处理完成<br>203 Non-Authoritative Information   非授权信息。请求成功。但返回的meta信息不在原始的服务器，而是一个副本<br>204 No Content  无内容。服务器成功处理，但未返回内容。在未更新网页的情况下，可确保浏览器继续显示当前文档<br>205 Reset Content   重置内容。服务器处理成功，用户终端（例如：浏览器）应重置文档视图。可通过此返回码清除浏览器的表单域<br>206 Partial Content 部分内容。服务器成功处理了部分GET请求<br>300 Multiple Choices    多种选择。请求的资源可包括多个位置，相应可返回一个资源特征与地址的列表用于用户终端（例如：浏览器）选择<br>301 Moved Permanently   永久移动。请求的资源已被永久的移动到新URI，返回信息会包括新的URI，浏览器会自动定向到新URI。今后任何新的请求都应使用新的URI代替<br>302 Found   临时移动。与301类似。但资源只是临时被移动。客户端应继续使用原有URI<br>303 See Other   查看其它地址。与301类似。使用GET和POST请求查看<br>304 Not Modified    未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在指定日期之后修改的资源<br>305 Use Proxy   使用代理。所请求的资源必须通过代理访问<br>306 Unused  已经被废弃的HTTP状态码<br>307 Temporary Redirect  临时重定向。与302类似。使用GET请求重定向<br>400 Bad Request 客户端请求的语法错误，服务器无法理解<br>401 Unauthorized    请求要求用户的身份认证<br>402 Payment Required    保留，将来使用<br>403 Forbidden   服务器理解请求客户端的请求，但是拒绝执行此请求<br>404 Not Found   服务器无法根据客户端的请求找到资源（网页）。通过此代码，网站设计人员可设置”您所请求的资源无法找到”的个性页面<br>405 Method Not Allowed  客户端请求中的方法被禁止<br>406 Not Acceptable  服务器无法根据客户端请求的内容特性完成请求<br>407 Proxy Authentication Required   请求要求代理的身份认证，与401类似，但请求者应当使用代理进行授权<br>408 Request Time-out    服务器等待客户端发送的请求时间过长，超时<br>409 Conflict    服务器完成客户端的PUT请求是可能返回此代码，服务器处理请求时发生了冲突<br>410 Gone    客户端请求的资源已经不存在。410不同于404，如果资源以前有现在被永久删除了可使用410代码，网站设计人员可通过301代码指定资源的新位置<br>411 Length Required 服务器无法处理客户端发送的不带Content-Length的请求信息<br>412 Precondition Failed 客户端请求信息的先决条件错误<br>413 Request Entity Too Large    由于请求的实体过大，服务器无法处理，因此拒绝请求。为防止客户端的连续请求，服务器可能会关闭连接。如果只是服务器暂时无法处理，则会包含一个Retry-After的响应信息<br>414 Request-URI Too Large   请求的URI过长（URI通常为网址），服务器无法处理<br>415 Unsupported Media Type  服务器无法处理请求附带的媒体格式<br>416 Requested range not satisfiable 客户端请求的范围无效<br>417 Expectation Failed  服务器无法满足Expect的请求头信息<br>500 Internal Server Error   服务器内部错误，无法完成请求<br>501 Not Implemented 服务器不支持请求的功能，无法完成请求<br>502 Bad Gateway 充当网关或代理的服务器，从远端服务器接收到了一个无效的请求<br>503 Service Unavailable 由于超载或系统维护，服务器暂时的无法处理客户端的请求。延时的长度可包含在服务器的Retry-After头信息中<br>504 Gateway Time-out    充当网关或代理的服务器，未及时从远端服务器获取请求<br>505 HTTP Version not supported  服务器不支持请求的HTTP协议的版本，无法完成处理</p>
 
       
     </div>
@@ -659,9 +444,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag"># git</a>
-          
-            <a href="/tags/language/" rel="tag"># language</a>
+            <a href="/tags/HTTP/" rel="tag"># HTTP</a>
           
         </div>
       
@@ -670,8 +453,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/01/ajax/" rel="next" title="js学习之ajax">
-                <i class="fa fa-chevron-left"></i> js学习之ajax
+              <a href="/2017/04/23/two-column-layout/" rel="next" title="两栏布局">
+                <i class="fa fa-chevron-left"></i> 两栏布局
               </a>
             
           </div>
@@ -680,8 +463,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/19/this/" rel="prev" title="js学习之this">
-                js学习之this <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/24/html5/" rel="prev" title="HTML5">
+                HTML5 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -697,10 +480,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/02/17/github/"
-     data-title="Github"
+        <div class="ds-share flat" data-thread-key="2017/04/24/http/"
+     data-title="HTTP"
      data-content=""
-     data-url="http://yoursite.com/2017/02/17/github/">
+     data-url="http://yoursite.com/2017/04/24/http/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -727,8 +510,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/17/github/"
-           data-title="Github" data-url="http://yoursite.com/2017/02/17/github/">
+      <div class="ds-thread" data-thread-key="2017/04/24/http/"
+           data-title="HTTP" data-url="http://yoursite.com/2017/04/24/http/">
       </div>
     
   </div>
@@ -846,7 +629,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、windows安装git"><span class="nav-number">1.</span> <span class="nav-text">一、windows安装git</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、建立远程仓库"><span class="nav-number">2.</span> <span class="nav-text">二、建立远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-创建SSH-Key"><span class="nav-number">2.1.</span> <span class="nav-text">1.创建SSH Key</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-登陆Github"><span class="nav-number">2.2.</span> <span class="nav-text">2.登陆Github</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、git指令"><span class="nav-number">3.</span> <span class="nav-text">三、git指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#提交仓库"><span class="nav-number">3.1.</span> <span class="nav-text">提交仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本回退"><span class="nav-number">3.2.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支管理"><span class="nav-number">3.3.</span> <span class="nav-text">分支管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标签管理"><span class="nav-number">3.4.</span> <span class="nav-text">标签管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其它小命令"><span class="nav-number">3.5.</span> <span class="nav-text">其它小命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、踩过的坑"><span class="nav-number">4.</span> <span class="nav-text">四、踩过的坑</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-简介"><span class="nav-number">1.</span> <span class="nav-text">1.简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-特点"><span class="nav-number">2.</span> <span class="nav-text">2.特点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-通信流程"><span class="nav-number">3.</span> <span class="nav-text">3.通信流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-消息结构"><span class="nav-number">4.</span> <span class="nav-text">4.消息结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-请求方法"><span class="nav-number">5.</span> <span class="nav-text">5.请求方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-状态码"><span class="nav-number">6.</span> <span class="nav-text">6.状态码</span></a></li></ol></div>
             
 
           </div>
