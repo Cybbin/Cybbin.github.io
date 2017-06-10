@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/24/asyn/index.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="JavaScript异步编程的四种方法">
-<meta property="og:updated_time" content="2017-04-24T12:47:20.734Z">
+<meta property="og:updated_time" content="2017-05-02T08:17:18.866Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="异步编程">
 <meta name="twitter:description" content="JavaScript异步编程的四种方法">
@@ -400,7 +400,7 @@
 <p>与事件监听类似，但明显发布/订阅模式更优，因为我们可以通过查看“消息中心”，了解存在多少信号、每个信号有多少订阅者，从而监控程序的运行。</p>
 <hr>
 <h1 id="Promises对象"><a href="#Promises对象" class="headerlink" title="Promises对象"></a>Promises对象</h1><p>每个异步任务返回一个Promise对象，该对象有一个then方法，允许指定回调函数。<br>比如，f1的回调函数f2，可以写成<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">f1().then(f2);</div></pre></td></tr></table></figure></p>
-<p>改写f1（jQuery的写法）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> dfd = $.Deferred();</div><div class="line">	setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="comment">//f1的任务代码</span></div><div class="line">		dfd.resolve();</div><div class="line">	&#125;,<span class="number">1000</span>);</div><div class="line">	<span class="comment">//返回promise对象</span></div><div class="line">	<span class="keyword">return</span> dfd;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>改写f1<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve,reject</span>)</span>&#123;</div><div class="line">		<span class="comment">// f1的任务代码</span></div><div class="line">		resolve();</div><div class="line">	&#125;);</div><div class="line">&#125;</div><div class="line">f1.then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	f2();</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
 <p>优点：回调函数编程了链式写法，程序的流程可以看得很清楚，可以实现许多强大的功能。<br>比如：指定多个回调函数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">f1().then(f2).then(f3);</div></pre></td></tr></table></figure></p>
 <p>指定发生错误时的回调函数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">f1().then(f2).fail(f3);</div></pre></td></tr></table></figure></p>
 <p>而且还有一个前面三种方法都没有的好处，如果一个任务已经完成，再添加回调函数，该回调函数会立即执行，所以不用担心是否错过了某个事件或信号。<br>缺点：对编写和理解相对比较难。</p>
@@ -562,7 +562,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -571,7 +571,7 @@
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
@@ -580,7 +580,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
