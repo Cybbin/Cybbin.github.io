@@ -778,7 +778,7 @@
     <link href="http://yoursite.com/2017/04/24/dom/"/>
     <id>http://yoursite.com/2017/04/24/dom/</id>
     <published>2017-04-24T12:34:34.000Z</published>
-    <updated>2017-04-24T12:48:38.333Z</updated>
+    <updated>2017-06-13T16:35:53.085Z</updated>
     
     <content type="html"><![CDATA[<p>DOM节点操作<br><a id="more"></a></p>
 <h1 id="创建节点"><a href="#创建节点" class="headerlink" title="创建节点"></a>创建节点</h1><h2 id="document-createElement"><a href="#document-createElement" class="headerlink" title="document.createElement()"></a>document.createElement()</h2><p>document.createElement()方法可以创建新元素，接收一个参数，即要创建元素的标签名，不区分大小写。<br>所有节点都有一个ownerDocument的属性，指向整个文档节点document，使用createElement()方法创建新元素的同时，也为新元素设置了ownerDocument属性。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> newDiv = <span class="built_in">document</span>.createElement(<span class="string">"div"</span>);</div><div class="line"><span class="built_in">console</span>.log(newDiv); <span class="comment">// &lt;div&gt;</span></div><div class="line"><span class="built_in">console</span>.log(newDiv.ownerDocument); <span class="comment">// document</span></div></pre></td></tr></table></figure></p>
@@ -1358,7 +1358,7 @@
     <link href="http://yoursite.com/2017/03/12/interview/"/>
     <id>http://yoursite.com/2017/03/12/interview/</id>
     <published>2017-03-12T02:56:42.000Z</published>
-    <updated>2017-04-25T10:57:49.048Z</updated>
+    <updated>2017-06-15T13:22:04.444Z</updated>
     
     <content type="html"><![CDATA[<p><em>记录面试题</em><br><a id="more"></a></p>
 <h1 id="XHTML和HTML的区别"><a href="#XHTML和HTML的区别" class="headerlink" title="XHTML和HTML的区别"></a>XHTML和HTML的区别</h1><ol>
@@ -1524,6 +1524,48 @@
 <li>主机接到断开通知后断开连接并反馈一个确认信号（ 嗯，好的 ），服务器收到确认信号后断开连接。</li>
 </ol>
 <hr>
+<h1 id="网站性能优化"><a href="#网站性能优化" class="headerlink" title="网站性能优化"></a>网站性能优化</h1><h2 id="content方面"><a href="#content方面" class="headerlink" title="content方面"></a>content方面</h2><ol>
+<li>减少HTTP请求：合并文件（js，css）、CSS精灵、inline image；</li>
+<li>减少DNS查询：DNS查询完成之前浏览器不能从这个主机下载任何文件。方法：DNS缓存、将资源分布到恰当数量的主机上，平衡并行下载和DNS查询；</li>
+<li>避免重定向：多余的中间访问；</li>
+<li>使Ajax可缓存；</li>
+<li>非必须组件延迟加载；</li>
+<li>未来所需组件预加载；</li>
+<li>减少DOM元素数量；</li>
+<li>将资源放到不同的域下：浏览器同时从一个域下载资源的数目有限，增加域可以提高并行下载量；</li>
+<li>减少iframe数量；</li>
+<li>不要404。</li>
+</ol>
+<h2 id="Server方面"><a href="#Server方面" class="headerlink" title="Server方面"></a>Server方面</h2><ol>
+<li>使用CDN;</li>
+<li>添加Expires或者Cache-Control相应头；</li>
+<li>对组件使用Gzip压缩；</li>
+<li>配置ETag；</li>
+<li>Flush Buffer Early；</li>
+<li>Ajax使用GET进行请求；</li>
+<li>避免空src的img标签。</li>
+</ol>
+<h2 id="Cookie方面"><a href="#Cookie方面" class="headerlink" title="Cookie方面"></a>Cookie方面</h2><ol>
+<li>减小cookie的大小；</li>
+<li>引入资源的域名不要包含cookie。</li>
+</ol>
+<h2 id="CSS方面"><a href="#CSS方面" class="headerlink" title="CSS方面"></a>CSS方面</h2><ol>
+<li>将样式表放到页面顶部；</li>
+<li>不使用CSS表达式；</li>
+<li>尽量不使用@import；</li>
+<li>不使用IE的Filter。</li>
+</ol>
+<h2 id="图片方面"><a href="#图片方面" class="headerlink" title="图片方面"></a>图片方面</h2><ol>
+<li>优化图片：根据实际颜色需要选择色深、压缩；</li>
+<li>优化CSS精灵；</li>
+<li>不要在HTML中拉伸图片；</li>
+<li>保证favicon.ico小并且可缓存。</li>
+</ol>
+<h2 id="移动方面"><a href="#移动方面" class="headerlink" title="移动方面"></a>移动方面</h2><ol>
+<li>保证组件小于25k；</li>
+<li>Pack Components into a Multipart Document。</li>
+</ol>
+<hr>
 <h1 id="ready和onload的区别"><a href="#ready和onload的区别" class="headerlink" title="ready和onload的区别"></a>ready和onload的区别</h1><p>jQuery中 $(document).ready()和window.onload的区别</p>
 <h2 id="执行时间"><a href="#执行时间" class="headerlink" title="执行时间"></a>执行时间</h2><p>$(document).ready()是DOM结构绘制完毕后就执行，不必等到加载完毕。<br>window.onload必须等到页面内包括图片的所有元素加载完毕才能执行。</p>
 <h2 id="编写个数"><a href="#编写个数" class="headerlink" title="编写个数"></a>编写个数</h2><p>$(document).ready()可以同时编写多个，并且都可以得到执行。<br>window.onload不能同时编写多个，如有多个只会执行一个。</p>
@@ -1559,7 +1601,7 @@
     <link href="http://yoursite.com/2017/03/10/js-dom/"/>
     <id>http://yoursite.com/2017/03/10/js-dom/</id>
     <published>2017-03-10T14:15:18.000Z</published>
-    <updated>2017-04-22T04:55:00.387Z</updated>
+    <updated>2017-06-13T16:26:07.020Z</updated>
     
     <content type="html"><![CDATA[<p><em>一直对JavaScript中的事件模型不是很清楚，特此记录学习笔记</em><br><a id="more"></a></p>
 <hr>
@@ -1587,15 +1629,15 @@
 <h1 id="事件对象引用"><a href="#事件对象引用" class="headerlink" title="事件对象引用"></a>事件对象引用</h1><p>为了可以更好地处理事件，可以根据所发生的事件的特定属性来采取不同的操作。<br>与事件模型类似，IE使用一个event的全局事件对象来处理对象（可以在全局变量window.event来访问），其它浏览器采用的W3C推荐的方式，使用独立的包含事件对象的参数传递。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> EventUtil=&#123;</div><div class="line">	<span class="attr">getEvent</span>:<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">		<span class="keyword">return</span> event?event:<span class="built_in">window</span>.event;</div><div class="line">	&#125;,</div><div class="line">	<span class="attr">getTarget</span>:<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">		<span class="keyword">return</span> event.target || event.srcElement;</div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <hr>
-<h1 id="停止事件冒泡和阻止事件的默认行为"><a href="#停止事件冒泡和阻止事件的默认行为" class="headerlink" title="停止事件冒泡和阻止事件的默认行为"></a>停止事件冒泡和阻止事件的默认行为</h1><p>停止事件冒泡和阻止事件的默认行为这两个概念非常重要吗，它们对复杂的应用程序处理非常有用。</p>
-<h2 id="停止事件冒泡"><a href="#停止事件冒泡" class="headerlink" title="停止事件冒泡"></a>停止事件冒泡</h2><p>停止事件冒泡，指停止冒泡型事件的进一步传递。在冒泡型时间传递中，如果在body处理停止事件传递后，位于上层的document的事件监听器就不再收到通知，不再被处理。</p>
+<h1 id="停止事件冒泡和阻止事件的默认行为"><a href="#停止事件冒泡和阻止事件的默认行为" class="headerlink" title="停止事件冒泡和阻止事件的默认行为"></a>停止事件冒泡和阻止事件的默认行为</h1><p>停止事件冒泡和阻止事件的默认行为这两个概念非常重要，它们对复杂的应用程序处理非常有用。</p>
+<h2 id="停止事件冒泡"><a href="#停止事件冒泡" class="headerlink" title="停止事件冒泡"></a>停止事件冒泡</h2><p>停止事件冒泡，指停止冒泡型事件的进一步传递。在冒泡型事件传递中，如果在body处理停止事件传递后，位于上层的document的事件监听器就不再收到通知，不再被处理。</p>
 <h3 id="IE下的停止事件冒泡"><a href="#IE下的停止事件冒泡" class="headerlink" title="IE下的停止事件冒泡"></a>IE下的停止事件冒泡</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">someHandle</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">window</span>.event.cancelBubble = <span class="literal">true</span>; <span class="comment">// 取消冒泡</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="DOM标准下的停止事件冒泡"><a href="#DOM标准下的停止事件冒泡" class="headerlink" title="DOM标准下的停止事件冒泡"></a>DOM标准下的停止事件冒泡</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">someHandle</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">	event.stopPropagation();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="跨浏览器的事件事件冒泡"><a href="#跨浏览器的事件事件冒泡" class="headerlink" title="跨浏览器的事件事件冒泡"></a>跨浏览器的事件事件冒泡</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">someHandle</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">	event=event || <span class="built_in">window</span>.event;</div><div class="line">	<span class="keyword">if</span>(event.stopPropagation)&#123;</div><div class="line">		event.stopPropagation();</div><div class="line">	&#125;<span class="keyword">else</span>&#123;</div><div class="line">		event.cancelBubble = <span class="literal">true</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="停止事件的默认行为"><a href="#停止事件的默认行为" class="headerlink" title="停止事件的默认行为"></a>停止事件的默认行为</h2><p>停止事件的默认行为，指通常浏览器在事件传递并处理完后会执行与该事件相关联的默认动作。<br>例如，表单中input type的属性是”submit”，点击后在事件传播完后，浏览器就自动提交表单。<br>又例如，input元素的keydown事件发生并树立后，浏览器默认会将用户键入的字符自动追加到input元素中。</p>
 <h3 id="IE下的停止事件的默认行为"><a href="#IE下的停止事件的默认行为" class="headerlink" title="IE下的停止事件的默认行为"></a>IE下的停止事件的默认行为</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">someHandle</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">window</span>.event.returnValue = <span class="literal">false</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="DOM标准下的停止事件的默认行为"><a href="#DOM标准下的停止事件的默认行为" class="headerlink" title="DOM标准下的停止事件的默认行为"></a>DOM标准下的停止事件的默认行为</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">someHandle</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">	event.preventDefault();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="跨浏览器的停止时间的默认行为"><a href="#跨浏览器的停止时间的默认行为" class="headerlink" title="跨浏览器的停止时间的默认行为"></a>跨浏览器的停止时间的默认行为</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">someHandle</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">	event = event || <span class="built_in">window</span>.event;</div><div class="line">	<span class="keyword">if</span>(event.preventDefault)&#123;</div><div class="line">		event.preventDefault();</div><div class="line">	&#125;<span class="keyword">else</span>&#123;</div><div class="line">		event.returnValue = <span class="literal">false</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="跨浏览器的停止事件的默认行为"><a href="#跨浏览器的停止事件的默认行为" class="headerlink" title="跨浏览器的停止事件的默认行为"></a>跨浏览器的停止事件的默认行为</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">someHandle</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">	event = event || <span class="built_in">window</span>.event;</div><div class="line">	<span class="keyword">if</span>(event.preventDefault)&#123;</div><div class="line">		event.preventDefault();</div><div class="line">	&#125;<span class="keyword">else</span>&#123;</div><div class="line">		event.returnValue = <span class="literal">false</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h1 id="完整的事件处理兼容性函数"><a href="#完整的事件处理兼容性函数" class="headerlink" title="完整的事件处理兼容性函数"></a>完整的事件处理兼容性函数</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> EventUtil=&#123;</div><div class="line">	<span class="comment">//添加事件</span></div><div class="line">	addHandler:<span class="function"><span class="keyword">function</span>(<span class="params">element,type,handle</span>)</span>&#123;</div><div class="line">		<span class="keyword">if</span>(element.addEventListener)&#123;</div><div class="line">			element.addEventListener(type,handle.false);</div><div class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(element.attachEvent)&#123;</div><div class="line">			element.attachEvent(<span class="string">"on"</span>+type,handle);</div><div class="line">		&#125;<span class="keyword">else</span> &#123;</div><div class="line">			element[<span class="string">"on"</span>+type]=handle;</div><div class="line">		&#125;</div><div class="line">	&#125;,</div><div class="line">	<span class="comment">//移除事件</span></div><div class="line">	removeHandler:<span class="function"><span class="keyword">function</span>(<span class="params">element,type,handle</span>)</span>&#123;</div><div class="line">		<span class="keyword">if</span>(element.removeEventListener)&#123;</div><div class="line">			element.removeEventListener(type,handle,<span class="literal">false</span>);</div><div class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(element.detachEvent)&#123;</div><div class="line">			element.detachEvent(<span class="string">"on"</span>+type,handle);</div><div class="line">		&#125;<span class="keyword">else</span> &#123;</div><div class="line">			element[<span class="string">"on"</span>+type]=<span class="literal">null</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;,</div><div class="line">	<span class="comment">//获取事件对象</span></div><div class="line">	getEvent:<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">		<span class="keyword">return</span> event?event:<span class="built_in">window</span>.event;</div><div class="line">	&#125;,</div><div class="line">	<span class="attr">getTarget</span>:<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">		<span class="keyword">return</span> event.target || event.srcElement;</div><div class="line">	&#125;,</div><div class="line">	<span class="comment">//停止冒泡</span></div><div class="line">	stopPropagation:<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">		event=event||<span class="built_in">window</span>.event;</div><div class="line">		<span class="keyword">if</span>(event.stopPropagation)&#123;</div><div class="line">			event.stopPropagation();</div><div class="line">		&#125;<span class="keyword">else</span> &#123;</div><div class="line">			event.cancelBubble=<span class="literal">true</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;,</div><div class="line">	<span class="comment">//停止事件的默认行为</span></div><div class="line">	preventDefault:<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">		event=event||<span class="built_in">window</span>.event;</div><div class="line">		<span class="keyword">if</span>(event.preventDefault)&#123;</div><div class="line">			event.preventDefault();</div><div class="line">		&#125;<span class="keyword">else</span> &#123;</div><div class="line">			event.returnValue=<span class="literal">false</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <hr>
 <h1 id="捕获型事件模型与冒泡型事件模型的应用场合"><a href="#捕获型事件模型与冒泡型事件模型的应用场合" class="headerlink" title="捕获型事件模型与冒泡型事件模型的应用场合"></a>捕获型事件模型与冒泡型事件模型的应用场合</h1><h2 id="捕获型事件模型的应用场合"><a href="#捕获型事件模型的应用场合" class="headerlink" title="捕获型事件模型的应用场合"></a>捕获型事件模型的应用场合</h2><p>捕获型事件传递由最不精确的祖先元素一直到最精确的事件源元素，传递方式与操作系统中的全局快捷键与应用程序快捷键相似。<br>当一个系统组合键发生时，如果注册了系统全局快捷键监听器，该事件就先被操作系统层捕获，全局监听器就先于应用程序快捷键监听器得到通知，也就是全局的先获得控制权，它有权阻止事件的进一步传递。<br>所以捕获型事件模型适用于作<strong>全局范围</strong>内的监听，这里的全局是相对的全局，相对于某个顶层结点与该结点所有子孙结点形成的集合范围。<br>例如你想作全局的点击事件监听，相对于document结点与document下所有的子结点，在某个条件下要求所有的子结点点击无效，这种情况下冒泡模型就解决不了了，而捕获型却非常适合，可以在最顶层结点添加捕获型事件监听器。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">globalClickListener</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">	<span class="keyword">if</span>(canEventPass == <span class="literal">false</span>)&#123;</div><div class="line">		<span class="comment">//取消事件的进一步向子节点传递和冒泡传递</span></div><div class="line">		event.stopPropagation();</div><div class="line">		<span class="comment">//取消浏览器事件后的默认行为</span></div><div class="line">		event.preventDefault();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -2051,9 +2093,9 @@
       <category term="教程" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="git" scheme="http://yoursite.com/tags/git/"/>
-    
       <category term="language" scheme="http://yoursite.com/tags/language/"/>
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
     
   </entry>
   
