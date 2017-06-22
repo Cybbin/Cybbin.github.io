@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux,nodejs," />
+  <meta name="keywords" content="js," />
 
 
 
@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="服务器从Windows换到Linux， = =！！！，所有环境全部重装。">
+<meta name="description" content="如何用JS区分Array和Object">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux安装Nodejs">
-<meta property="og:url" content="http://yoursite.com/2017/03/28/linux-nodejs/index.html">
+<meta property="og:title" content="区分Array和Object">
+<meta property="og:url" content="http://yoursite.com/2017/06/22/isArray/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="服务器从Windows换到Linux， = =！！！，所有环境全部重装。">
-<meta property="og:updated_time" content="2017-03-28T14:10:28.603Z">
+<meta property="og:description" content="如何用JS区分Array和Object">
+<meta property="og:updated_time" content="2017-06-22T07:58:17.699Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux安装Nodejs">
-<meta name="twitter:description" content="服务器从Windows换到Linux， = =！！！，所有环境全部重装。">
+<meta name="twitter:title" content="区分Array和Object">
+<meta name="twitter:description" content="如何用JS区分Array和Object">
 
 
 
@@ -123,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/28/linux-nodejs/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/22/isArray/"/>
 
 
 
 
 
-  <title> Linux安装Nodejs | Blog </title>
+  <title> 区分Array和Object | Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -265,7 +265,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/28/linux-nodejs/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/22/isArray/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Cyb">
@@ -289,7 +289,7 @@
             
             
               
-                Linux安装Nodejs
+                区分Array和Object
               
             
           </h1>
@@ -304,8 +304,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-28T22:00:07+08:00">
-                2017-03-28
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-22T14:10:51+08:00">
+                2017-06-22
               </time>
             
 
@@ -327,8 +327,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/" itemprop="url" rel="index">
-                    <span itemprop="name">教程</span>
+                  <a href="/categories/代码/" itemprop="url" rel="index">
+                    <span itemprop="name">代码</span>
                   </a>
                 </span>
 
@@ -345,8 +345,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/28/linux-nodejs/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/28/linux-nodejs/" itemprop="commentCount"></span>
+                <a href="/2017/06/22/isArray/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/22/isArray/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -356,7 +356,7 @@
 
           
           
-             <span id="/2017/03/28/linux-nodejs/" class="leancloud_visitors" data-flag-title="Linux安装Nodejs">
+             <span id="/2017/06/22/isArray/" class="leancloud_visitors" data-flag-title="区分Array和Object">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -383,11 +383,25 @@
       
 
       
-        <p>服务器从Windows换到Linux， = =！！！，所有环境全部重装。<br><a id="more"></a></p>
-<p>先在本机到<a href="http://nodejs.cn/download/" target="_blank" rel="external">Node.js官网</a>下载Linux版的Node.js，32位、64位看清楚下载。</p>
-<p>这里借助<a href="https://filezilla-project.org/" target="_blank" rel="external">FileZilla</a>工具，把下载好的压缩包上传到Linux服务器上。<br>（PS：具体怎么传自行百度哈）</p>
-<p>Linux服务器上，在命令行输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">tar -xvf nodejs.tar.gz // 解压。</div><div class="line">cd nodejs // 进入nodejs文件夹</div><div class="line">node -v // 查看版本</div></pre></td></tr></table></figure></p>
-
+        <p>如何用JS区分Array和Object</p>
+<a id="more"></a>
+<h1 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h1><p>利用 <strong>toString()</strong> 函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">isArray</span>(<span class="params">a</span>)</span>&#123;</div><div class="line">	<span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(a)===<span class="string">'[object Array]'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="keyword">var</span> o = &#123;<span class="string">'key'</span>:<span class="string">'value'</span>&#125;;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(isArray(a)); <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(isArray(o)); <span class="comment">// false</span></div></pre></td></tr></table></figure>
+<hr>
+<h1 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h1><p>利用Array对象的isArray()函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="keyword">var</span> o = &#123;<span class="string">'key'</span>:<span class="string">'value'</span>&#125;;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.isArray(a)); <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.isArray(o)); <span class="comment">// false</span></div></pre></td></tr></table></figure>
+<hr>
+<h1 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h1><p>利用 <strong>instanceof</strong> 关键字</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line"><span class="keyword">var</span> o = &#123;</div><div class="line">	<span class="string">'key'</span>: <span class="string">'value'</span></div><div class="line">&#125;;</div><div class="line"><span class="built_in">console</span>.log(a <span class="keyword">instanceof</span> <span class="built_in">Array</span>); <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(o <span class="keyword">instanceof</span> <span class="built_in">Array</span>); <span class="comment">// false</span></div></pre></td></tr></table></figure>
+<hr>
+<h1 id="方法四"><a href="#方法四" class="headerlink" title="方法四"></a>方法四</h1><p>利用 <strong>isPrototypeOf</strong> 函数检测是否是Array的原型</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line"><span class="keyword">var</span> o = &#123;</div><div class="line">	<span class="string">'key'</span>: <span class="string">'value'</span></div><div class="line">&#125;;</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.prototype.isPrototypeOf(a)); <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.prototype.isPrototypeOf(o)); <span class="comment">// false</span></div></pre></td></tr></table></figure>
+<hr>
+<h1 id="方法五"><a href="#方法五" class="headerlink" title="方法五"></a>方法五</h1><p>利用 <strong>constructor</strong> 构造函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line"><span class="keyword">var</span> o = &#123;</div><div class="line">	<span class="string">'key'</span>: <span class="string">'value'</span></div><div class="line">&#125;;</div><div class="line"><span class="built_in">console</span>.log(a.constructor===<span class="built_in">Array</span>); <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(o.constructor===<span class="built_in">Array</span>); <span class="comment">// false</span></div></pre></td></tr></table></figure>
+<hr>
+<h1 id="方法六"><a href="#方法六" class="headerlink" title="方法六"></a>方法六</h1><p>利用 <strong>typeof + 类型名</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">isArray</span>(<span class="params">a</span>)</span>&#123;</div><div class="line">	<span class="keyword">if</span>(<span class="keyword">typeof</span> a === <span class="string">'object'</span>)&#123;</div><div class="line">		<span class="keyword">if</span>(a.concat)&#123;</div><div class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line"><span class="keyword">var</span> o = &#123;</div><div class="line">	<span class="string">'key'</span>: <span class="string">'value'</span></div><div class="line">&#125;;</div><div class="line"><span class="built_in">console</span>.log(isArray(a)); <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(isArray(o)); <span class="comment">// false</span></div></pre></td></tr></table></figure>
       
     </div>
 
@@ -431,9 +445,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/linux/" rel="tag"># linux</a>
-          
-            <a href="/tags/nodejs/" rel="tag"># nodejs</a>
+            <a href="/tags/js/" rel="tag"># js</a>
           
         </div>
       
@@ -442,8 +454,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/17/spider/" rel="next" title="Node.js 爬虫小程序">
-                <i class="fa fa-chevron-left"></i> Node.js 爬虫小程序
+              <a href="/2017/06/10/string/" rel="next" title="js学习之字符串">
+                <i class="fa fa-chevron-left"></i> js学习之字符串
               </a>
             
           </div>
@@ -451,10 +463,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/03/sort/" rel="prev" title="排序算法">
-                排序算法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -469,10 +477,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/03/28/linux-nodejs/"
-     data-title="Linux安装Nodejs"
+        <div class="ds-share flat" data-thread-key="2017/06/22/isArray/"
+     data-title="区分Array和Object"
      data-content=""
-     data-url="http://yoursite.com/2017/03/28/linux-nodejs/">
+     data-url="http://yoursite.com/2017/06/22/isArray/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -499,8 +507,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/28/linux-nodejs/"
-           data-title="Linux安装Nodejs" data-url="http://yoursite.com/2017/03/28/linux-nodejs/">
+      <div class="ds-thread" data-thread-key="2017/06/22/isArray/"
+           data-title="区分Array和Object" data-url="http://yoursite.com/2017/06/22/isArray/">
       </div>
     
   </div>
@@ -524,8 +532,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/1.jpg"
@@ -599,6 +616,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#方法一"><span class="nav-number">1.</span> <span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法二"><span class="nav-number">2.</span> <span class="nav-text">方法二</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法三"><span class="nav-number">3.</span> <span class="nav-text">方法三</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法四"><span class="nav-number">4.</span> <span class="nav-text">方法四</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法五"><span class="nav-number">5.</span> <span class="nav-text">方法五</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法六"><span class="nav-number">6.</span> <span class="nav-text">方法六</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
