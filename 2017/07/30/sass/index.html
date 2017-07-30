@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="js," />
+  <meta name="keywords" content="sass," />
 
 
 
@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="JavaScript跨域的五种方法">
+<meta name="description" content="自己在学习在webpack配置sass踩过的坑。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="跨域">
-<meta property="og:url" content="http://yoursite.com/2017/04/24/cross-domain/index.html">
+<meta property="og:title" content="webpack配置sass">
+<meta property="og:url" content="http://yoursite.com/2017/07/30/sass/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="JavaScript跨域的五种方法">
-<meta property="og:updated_time" content="2017-04-24T12:45:16.406Z">
+<meta property="og:description" content="自己在学习在webpack配置sass踩过的坑。">
+<meta property="og:updated_time" content="2017-07-30T08:41:16.316Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跨域">
-<meta name="twitter:description" content="JavaScript跨域的五种方法">
+<meta name="twitter:title" content="webpack配置sass">
+<meta name="twitter:description" content="自己在学习在webpack配置sass踩过的坑。">
 
 
 
@@ -123,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/24/cross-domain/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/30/sass/"/>
 
 
 
 
 
-  <title> 跨域 | Blog </title>
+  <title> webpack配置sass | Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -265,7 +265,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/cross-domain/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/30/sass/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Cyb">
@@ -289,7 +289,7 @@
             
             
               
-                跨域
+                webpack配置sass
               
             
           </h1>
@@ -304,8 +304,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-24T20:42:45+08:00">
-                2017-04-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-30T15:39:04+08:00">
+                2017-07-30
               </time>
             
 
@@ -327,8 +327,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/面试/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
                   </a>
                 </span>
 
@@ -345,8 +345,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/04/24/cross-domain/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/04/24/cross-domain/" itemprop="commentCount"></span>
+                <a href="/2017/07/30/sass/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/07/30/sass/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -356,7 +356,7 @@
 
           
           
-             <span id="/2017/04/24/cross-domain/" class="leancloud_visitors" data-flag-title="跨域">
+             <span id="/2017/07/30/sass/" class="leancloud_visitors" data-flag-title="webpack配置sass">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -383,16 +383,33 @@
       
 
       
-        <p>JavaScript跨域的五种方法<br><a id="more"></a></p>
-<h1 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h1><p>原理：利用js不受跨域限制，利用script标签引入不同域上的文件。<br>注意：资源来源是否支持jsonp。<br>优点：不像Ajax受同源策略的限制，兼容性更好，不需要XMLHttpRequest或ActiveX的支持。<br>缺点：只支持GET请求而不支持POST等其它类型的HTTP请求，它只支持跨域HTTP请求这种情况，不能解决不同域的两个页面之间如何进行JavaScript调用的问题。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">callback</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(data);</div><div class="line">&#125;</div><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">	script.setAttribute(<span class="string">'type'</span>, <span class="string">'text/javascript'</span>);</div><div class="line">	script.src = <span class="string">'http://s.music.163.com/search/get/?type=1&amp;filterDj=true&amp;s=%E8%96%9B%E4%B9%8B%E8%B0%A6&amp;limit=100&amp;offset=0&amp;callback=callback'</span>;</div><div class="line">	<span class="built_in">document</span>.body.appendChild(script);</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
-<hr>
-<h1 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h1><p>CORS(Cross-Origin Resource Sharing)跨域资源共享，定义了必须在访问跨域资源时，浏览器与服务器应该如何沟通。CORS背后的基本思想就是使用自定义的HTTP头部让浏览器与服务器进行沟通，从而决定请求或响应是应该成功还是失败。<br>优点：支持所有类型的HTTP请求，可以使用普通的XMLHttpRequest发起请求和获得数据，比JSONP有更好的错误处理。<br>缺点：不支持老的浏览器。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 前端用普通的Ajax方式即可</span></div><div class="line"><span class="comment">// 后端</span></div><div class="line">response.setHeader(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);</div></pre></td></tr></table></figure></p>
-<hr>
-<h1 id="document-domain"><a href="#document-domain" class="headerlink" title="document.domain"></a>document.domain</h1><p>相同基础域名页面之间的调用。</p>
-<hr>
-<h1 id="window-name"><a href="#window-name" class="headerlink" title="window.name"></a>window.name</h1><p>window对象有个name属性，该属性有个特征：即在一个窗口(window)的生命周期内,窗口载入的所有的页面都是共享一个window.name的，每个页面对window.name都有读写的权限，window.name是持久存在一个窗口载入过的所有页面中的</p>
-<hr>
-<h1 id="window-postMessage"><a href="#window-postMessage" class="headerlink" title="window.postMessage()"></a>window.postMessage()</h1><p>window.postMessage(message,targetOrigin) 方法是html5新引进的特性，可以使用它来向其它的window对象发送消息，无论这个window对象是属于同源或不同源，目前IE8+、FireFox、Chrome、Opera等浏览器都已经支持window.postMessage方法。</p>
+        <p>自己在学习在webpack配置sass踩过的坑。<br><a id="more"></a></p>
+<h1 id="安装-node-js"><a href="#安装-node-js" class="headerlink" title="安装 node.js"></a>安装 node.js</h1><p><a href="http://nodejs.cn/download/" target="_blank" rel="external">下载地址</a></p>
+<h1 id="安装webpack"><a href="#安装webpack" class="headerlink" title="安装webpack"></a>安装webpack</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g webpack</div></pre></td></tr></table></figure>
+<h1 id="建立项目文件夹"><a href="#建立项目文件夹" class="headerlink" title="建立项目文件夹"></a>建立项目文件夹</h1><p>在本地建立项目文件夹，并进入该目录</p>
+<h2 id="初始化package-json"><a href="#初始化package-json" class="headerlink" title="初始化package.json"></a>初始化package.json</h2><p>输入npm init，生成package.json文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init</div></pre></td></tr></table></figure></p>
+<h2 id="安装webpack作为依赖包"><a href="#安装webpack作为依赖包" class="headerlink" title="安装webpack作为依赖包"></a>安装webpack作为依赖包</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install webpack --save-dev</div></pre></td></tr></table></figure>
+<h2 id="新建webpack-config-js配置文件"><a href="#新建webpack-config-js配置文件" class="headerlink" title="新建webpack.config.js配置文件"></a>新建webpack.config.js配置文件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">	<span class="comment">// 配置入口</span></div><div class="line">	entry: &#123;&#125;,</div><div class="line">	<span class="comment">// 编译后的文件路径</span></div><div class="line">	output: &#123;</div><div class="line">		<span class="attr">path</span>: <span class="string">''</span>, <span class="comment">// 文件路径</span></div><div class="line">		filename: <span class="string">''</span> <span class="comment">// 文件名称</span></div><div class="line">	&#125;,</div><div class="line">	<span class="attr">module</span>: &#123;</div><div class="line">		<span class="comment">// 编译规则</span></div><div class="line">		loaders: []</div><div class="line">	&#125;,</div><div class="line">	<span class="comment">// 辅助的插件</span></div><div class="line">	plugins: []</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="新建dist文件夹，存放html和打包后的css，js文件"><a href="#新建dist文件夹，存放html和打包后的css，js文件" class="headerlink" title="新建dist文件夹，存放html和打包后的css，js文件"></a>新建dist文件夹，存放html和打包后的css，js文件</h2><ol>
+<li><p>进入该目录，新建index.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./css/index.css"</span> /&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello world!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"./js/index.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>index.css和index.js在打包后都会自动生成。</p>
+</li>
+</ol>
+<h2 id="建立源码文件夹src，存放打包前的sass和js文件"><a href="#建立源码文件夹src，存放打包前的sass和js文件" class="headerlink" title="建立源码文件夹src，存放打包前的sass和js文件"></a>建立源码文件夹src，存放打包前的sass和js文件</h2><ol>
+<li>进入该目录，并新建js和sass文件夹；</li>
+<li>分别在这两个目录新建index.js和index.scss文件。</li>
+</ol>
+<h1 id="安装项目所需依赖包"><a href="#安装项目所需依赖包" class="headerlink" title="安装项目所需依赖包"></a>安装项目所需依赖包</h1><h2 id="安装browser-sync、browser-sync-webpack-plugin，配置本地server"><a href="#安装browser-sync、browser-sync-webpack-plugin，配置本地server" class="headerlink" title="安装browser-sync、browser-sync-webpack-plugin，配置本地server"></a>安装browser-sync、browser-sync-webpack-plugin，配置本地server</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save-dev browser-sync browser-sync-webpack-plugin</div></pre></td></tr></table></figure>
+<p>browser-sync的作用是监听文件修改变化，实时更新</p>
+<h2 id="安装sass转换为css所需的依赖包"><a href="#安装sass转换为css所需的依赖包" class="headerlink" title="安装sass转换为css所需的依赖包"></a>安装sass转换为css所需的依赖包</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save-dev sass-loader style-loader css-loader</div></pre></td></tr></table></figure>
+<h2 id="安装extract-text-webpack-plugin，让webpack可以输出css格式的文件"><a href="#安装extract-text-webpack-plugin，让webpack可以输出css格式的文件" class="headerlink" title="安装extract-text-webpack-plugin，让webpack可以输出css格式的文件"></a>安装extract-text-webpack-plugin，让webpack可以输出css格式的文件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save-dev extract-text-webpack-plugin</div></pre></td></tr></table></figure>
+<h2 id="安装node-sass"><a href="#安装node-sass" class="headerlink" title="安装node-sass"></a>安装node-sass</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save-dev node-sass</div></pre></td></tr></table></figure>
+<p>这里如果安装出错可以试试淘宝的镜像<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save-dev node-sass --SASS_BINARY_SITE=https:<span class="comment">//npm.taobao.org/mirrors/node-sass/</span></div></pre></td></tr></table></figure></p>
+<h1 id="更新webpack-config-js配置信息"><a href="#更新webpack-config-js配置信息" class="headerlink" title="更新webpack.config.js配置信息"></a>更新webpack.config.js配置信息</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> BrowserSyncPlugin = <span class="built_in">require</span>(<span class="string">'browser-sync-webpack-plugin'</span>);</div><div class="line"><span class="keyword">var</span> ExtractPlugin = <span class="built_in">require</span>(<span class="string">'extract-text-webpack-plugin'</span>);</div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">	<span class="comment">// 配置入口</span></div><div class="line">	entry: &#123;</div><div class="line">		<span class="string">'/js/index'</span>: __dirname + <span class="string">'/src/js/index.js'</span>,</div><div class="line">		<span class="string">'/css/index'</span>: __dirname + <span class="string">'/src/sass/index.scss'</span></div><div class="line">	&#125;,</div><div class="line">	<span class="comment">// 编译后的文件路径</span></div><div class="line">	output: &#123;</div><div class="line">		<span class="attr">path</span>: __dirname + <span class="string">'/dist'</span>, <span class="comment">// 文件路径</span></div><div class="line">		filename: <span class="string">'[name].js'</span> <span class="comment">// 文件名称</span></div><div class="line">	&#125;,</div><div class="line">	<span class="attr">module</span>: &#123;</div><div class="line">		<span class="comment">// 编译规则</span></div><div class="line">		loaders: [</div><div class="line">			<span class="comment">// 配置sass编译规则</span></div><div class="line">			&#123;</div><div class="line">				<span class="attr">test</span>: <span class="regexp">/\.scss$/</span>,</div><div class="line">				<span class="attr">loader</span>: ExtractPlugin.extract(&#123;</div><div class="line">					<span class="attr">fallback</span>: <span class="string">'style-loader'</span>,</div><div class="line">					<span class="attr">use</span>: <span class="string">'css-loader!sass-loader'</span></div><div class="line">				&#125;)</div><div class="line">			&#125;</div><div class="line">		]</div><div class="line">	&#125;,</div><div class="line">	<span class="comment">// 辅助的插件</span></div><div class="line">	plugins: [</div><div class="line">		<span class="keyword">new</span> BrowserSyncPlugin(&#123;</div><div class="line">			<span class="attr">host</span>: <span class="string">'localhost'</span>, <span class="comment">// 实时监听，webpack -w 可以实时更新硬盘中的文件js，css</span></div><div class="line">			port: <span class="number">8080</span>,</div><div class="line">			<span class="attr">file</span>: <span class="string">''</span>,</div><div class="line">			<span class="attr">server</span>: &#123;</div><div class="line">				<span class="attr">baseDir</span>: <span class="string">'./dist'</span></div><div class="line">			&#125;</div><div class="line">		&#125;),</div><div class="line">		<span class="keyword">new</span> ExtractPlugin(<span class="string">'[name].css'</span>)</div><div class="line">	]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="代码打包"><a href="#代码打包" class="headerlink" title="代码打包"></a>代码打包</h1><p>运行webpack -w，打包代码并监听8080端口打开index.html<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack -w</div></pre></td></tr></table></figure></p>
+<p>到此sass和js文件的代码打包结束。</p>
 
       
     </div>
@@ -437,7 +454,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/js/" rel="tag"># js</a>
+            <a href="/tags/sass/" rel="tag"># sass</a>
           
         </div>
       
@@ -446,8 +463,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/24/asyn/" rel="next" title="异步编程">
-                <i class="fa fa-chevron-left"></i> 异步编程
+              <a href="/2017/06/22/isArray/" rel="next" title="区分Array和Object">
+                <i class="fa fa-chevron-left"></i> 区分Array和Object
               </a>
             
           </div>
@@ -455,10 +472,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/04/bootstrap/" rel="prev" title="bootstrap源码分析">
-                bootstrap源码分析 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -473,10 +486,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/04/24/cross-domain/"
-     data-title="跨域"
+        <div class="ds-share flat" data-thread-key="2017/07/30/sass/"
+     data-title="webpack配置sass"
      data-content=""
-     data-url="http://yoursite.com/2017/04/24/cross-domain/">
+     data-url="http://yoursite.com/2017/07/30/sass/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -503,8 +516,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/04/24/cross-domain/"
-           data-title="跨域" data-url="http://yoursite.com/2017/04/24/cross-domain/">
+      <div class="ds-thread" data-thread-key="2017/07/30/sass/"
+           data-title="webpack配置sass" data-url="http://yoursite.com/2017/07/30/sass/">
       </div>
     
   </div>
@@ -622,7 +635,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JSONP"><span class="nav-number">1.</span> <span class="nav-text">JSONP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CORS"><span class="nav-number">2.</span> <span class="nav-text">CORS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#document-domain"><span class="nav-number">3.</span> <span class="nav-text">document.domain</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#window-name"><span class="nav-number">4.</span> <span class="nav-text">window.name</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#window-postMessage"><span class="nav-number">5.</span> <span class="nav-text">window.postMessage()</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装-node-js"><span class="nav-number">1.</span> <span class="nav-text">安装 node.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装webpack"><span class="nav-number">2.</span> <span class="nav-text">安装webpack</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#建立项目文件夹"><span class="nav-number">3.</span> <span class="nav-text">建立项目文件夹</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化package-json"><span class="nav-number">3.1.</span> <span class="nav-text">初始化package.json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装webpack作为依赖包"><span class="nav-number">3.2.</span> <span class="nav-text">安装webpack作为依赖包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新建webpack-config-js配置文件"><span class="nav-number">3.3.</span> <span class="nav-text">新建webpack.config.js配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新建dist文件夹，存放html和打包后的css，js文件"><span class="nav-number">3.4.</span> <span class="nav-text">新建dist文件夹，存放html和打包后的css，js文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立源码文件夹src，存放打包前的sass和js文件"><span class="nav-number">3.5.</span> <span class="nav-text">建立源码文件夹src，存放打包前的sass和js文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装项目所需依赖包"><span class="nav-number">4.</span> <span class="nav-text">安装项目所需依赖包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装browser-sync、browser-sync-webpack-plugin，配置本地server"><span class="nav-number">4.1.</span> <span class="nav-text">安装browser-sync、browser-sync-webpack-plugin，配置本地server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装sass转换为css所需的依赖包"><span class="nav-number">4.2.</span> <span class="nav-text">安装sass转换为css所需的依赖包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装extract-text-webpack-plugin，让webpack可以输出css格式的文件"><span class="nav-number">4.3.</span> <span class="nav-text">安装extract-text-webpack-plugin，让webpack可以输出css格式的文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装node-sass"><span class="nav-number">4.4.</span> <span class="nav-text">安装node-sass</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更新webpack-config-js配置信息"><span class="nav-number">5.</span> <span class="nav-text">更新webpack.config.js配置信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码打包"><span class="nav-number">6.</span> <span class="nav-text">代码打包</span></a></li></ol></div>
             
 
           </div>
