@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/09/13/router/</loc>
+    
+    <lastmod>2017-09-13T14:22:02.425Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/08/13/interview/</loc>
+    
+    <lastmod>2017-08-13T15:32:54.764Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/07/30/sass/</loc>
     
     <lastmod>2017-07-30T08:41:16.316Z</lastmod>
@@ -9,7 +23,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/03/12/interview/</loc>
+    <loc>http://yoursite.com/2017/03/12/knowledge/</loc>
     
     <lastmod>2017-06-26T12:37:41.642Z</lastmod>
     

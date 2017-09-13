@@ -1,0 +1,1403 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="css,js,html," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="记录面试题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试知识点">
+<meta property="og:url" content="http://yoursite.com/2017/03/12/knowledge/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="记录面试题">
+<meta property="og:updated_time" content="2017-06-26T12:37:41.642Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面试知识点">
+<meta name="twitter:description" content="记录面试题">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/03/12/knowledge/"/>
+
+
+
+
+
+  <title> 面试知识点 | Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <h1 class="site-subtitle" itemprop="description">未来的你,一定会感谢现在奋斗的你</h1>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/12/knowledge/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Cyb">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/uploads/1.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                面试知识点
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-12T10:56:42+08:00">
+                2017-03-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/面试/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/12/knowledge/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/12/knowledge/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/03/12/knowledge/" class="leancloud_visitors" data-flag-title="面试知识点">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><em>记录面试题</em><br><a id="more"></a></p>
+<h1 id="XHTML和HTML的区别"><a href="#XHTML和HTML的区别" class="headerlink" title="XHTML和HTML的区别"></a>XHTML和HTML的区别</h1><ol>
+<li>HTML是一种基本的WEB网页设计语言，XHTML是一个基于XML的置标语言；</li>
+<li>XHTML元素必须被正确的嵌套；</li>
+<li>XHTML元素必须被关闭；</li>
+<li>XHTML标签名必须用大写；</li>
+<li>XHTML文档必须拥有根元素。</li>
+</ol>
+<hr>
+<h1 id="浏览器内核"><a href="#浏览器内核" class="headerlink" title="浏览器内核"></a>浏览器内核</h1><p>IE（Trident）、火狐（Gecko）、谷歌（Webkit）、Opera（Presto）、Safari（Webkit）。</p>
+<hr>
+<h1 id="语义话的HTML"><a href="#语义话的HTML" class="headerlink" title="语义话的HTML"></a>语义话的HTML</h1><ol>
+<li>直观地认识标签，对于搜索引擎的抓取有好处，用正确的标签做正确的事；</li>
+<li>HTML与异化就是让页面的内容结构化，便于浏览器、搜索引擎解析（利于SEO）；</li>
+<li>使阅读源代码的人更容易将网站分块，便于阅读维护理解。</li>
+</ol>
+<p>header,nav,article,section,aside,footer,hgroup,h1-h6,address</p>
+<hr>
+<h1 id="Doctype的作用"><a href="#Doctype的作用" class="headerlink" title="Doctype的作用"></a>Doctype的作用</h1><p>!Doctype声明位于HTML文档的第一行，处于html标签之前，告知浏览器的解析器用什么文档标准解析该文档。</p>
+<p>严格模式：又称标准模式，指浏览器按照 W3C 标准解析文档</p>
+<p>混杂模式：又称怪异模式或兼容模式，指浏览器用自己的方式解析代码</p>
+<p>如何区分：浏览器解析时使用严格模式还是混杂模式，取决于网页中的DTD。</p>
+<ol>
+<li>如果文档包含严格的DOCTYPE，那么它一般以严格模式呈现</li>
+<li>如果过渡DTD和URI的DOCTYPE，也以严格模式呈现，但有过渡DTD而没有URI会导致页面以混杂模式呈现。</li>
+<li>DOCTYPE不存在或形式不正确会导致混杂模式呈现</li>
+<li>HTML5没有DTD，因此也就没有严格模式和混杂模式的区别，HTML5有相对宽松的语法，实现时，已经尽可能大的实现向后兼容。</li>
+</ol>
+<p>意义：严格模式与混杂模式存在的意义与其来源密切相关，如果只存在严格模式，那么许多旧网站必然受影响，如果只存在混杂模式，那么会回到当时浏览器大战时的混乱，每个浏览器都有自己的解析模式。</p>
+<hr>
+<h1 id="CSS元素分类"><a href="#CSS元素分类" class="headerlink" title="CSS元素分类"></a>CSS元素分类</h1><ol>
+<li>块状元素：div,p,form,ul,li,h1,h2…</li>
+<li>行内元素：span,a,label,input,img,strong,em…</li>
+</ol>
+<hr>
+<h1 id="CSS隐藏元素的方法"><a href="#CSS隐藏元素的方法" class="headerlink" title="CSS隐藏元素的方法"></a>CSS隐藏元素的方法</h1><ol>
+<li>opacity:0<br>不会改变页面布局，如果绑定事件如click事件，那么点击该区域，也能触发点击事件</li>
+<li>display:none<br>不会改变页面布局，但是不会触发该元素已经绑定的事件</li>
+<li>visibility:hidden<br>会改变页面布局，可以理解成在页面中把该元素删除掉一样</li>
+<li>position:absolute;top:-9999px;left:-9999px<br>将元素移除可使区域</li>
+<li>clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px)<br>裁剪元素</li>
+</ol>
+<hr>
+<h1 id="link和-import的区别"><a href="#link和-import的区别" class="headerlink" title="link和@import的区别"></a>link和@import的区别</h1><ol>
+<li>link属于XHTML标签，除了加载css外，还成用于定义RSS,定义rel连接属性等作用；而@import是CSS提供的，只能用于加载CSS；</li>
+<li>页面被加载时，link会同时加载，而@import引用的CSS会等到页面被加载完毕后再加载；</li>
+<li>link无兼容问题，@import是CSS2.1提出的，只在IE5以上才能被识别。</li>
+</ol>
+<hr>
+<h1 id="title和alt属性的区别"><a href="#title和alt属性的区别" class="headerlink" title="title和alt属性的区别"></a>title和alt属性的区别</h1><p>alt 当图片不显示时用文字代替<br>title 为该属性提供信息</p>
+<hr>
+<h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><p>onabort：图像加载被中断<br>onblur：元素失去焦点<br>onchange：用户改变域的内容<br>onclick：鼠标点击某个对象<br>ondblclick：鼠标双击某个对象<br>onerror：当加载文档或图像时发生某个错误<br>onfocus：元素获得焦点<br>onkeydown：某个键盘的键被按下<br>onkeyprerss：某个键盘的键被按下或按住<br>onkeyup：某个键盘的键被松开<br>onload：某个页面或图像被完成加载<br>onmousedown：某个鼠标按键被按下<br>onmousemove：鼠标被移动<br>onmouseout：鼠标从某元素移开<br>onmouseover：鼠标被移到某元素之上<br>onmouseup：某个鼠标按键被松开<br>onreset：重置按钮被点击<br>onresize：窗口或框架被调整尺寸<br>onselect：文本被选定<br>onsubmit：提交按钮被点击<br>onunload：用户退出页面</p>
+<hr>
+<h1 id="Cookies-和-Session"><a href="#Cookies-和-Session" class="headerlink" title="Cookies 和 Session"></a>Cookies 和 Session</h1><ol>
+<li>Cookie 是一种发送到客户浏览器的文本串句柄，并保存在客户机硬盘上，可以用来在某个WEB站点会话间持久的保持数据。</li>
+<li>Session其实指的就是访问者从到达某个特定主页到离开为止的那段时间。 Session其实是利用Cookie进行信息处理的，当用户首先进行了请求后，服务端就在用户浏览器上创建了一个Cookie，当这个Session结束时，其实就是意味着这个Cookie就过期了。<br>注：为这个用户创建的Cookie的名称是aspsessionid。这个Cookie的唯一目的就是为每一个用户提供不同的身份认证。</li>
+<li>Cookie和Session的共同之处在于：Cookie和Session都是用来跟踪浏览器用户身份的会话方式。</li>
+<li>Cookie和Session的区别是：Cookie数据保存在客户端，Session数据保存在服务器端。<br>简单的说，当你登录一个网站的时候，如果web服务器端使用的是Session，那么所有的数据都保存在服务器上，客户端每次请求服务器的时候会发送当前会话的sessionid，服务器根据当前sessionid判断相应的用户数据标志，以确定用户是否登录或具有某种权限。由于数据是存储在服务器上面，所以你不能伪造，但是如果你能够获取某个登录用户的 sessionid，用特殊的浏览器伪造该用户的请求也是能够成功的。sessionid是服务器和客户端链接时候随机分配的，一般来说是不会有重复，但如果有大量的并发请求，也不是没有重复的可能性。<br>如果浏览器使用的是cookie，那么所有的数据都保存在浏览器端，比如你登录以后，服务器设置了cookie用户名，那么当你再次请求服务器的时候，浏览器会将用户名一块发送给服务器，这些变量有一定的特殊标记。服务器会解释为cookie变量，所以只要不关闭浏览器，那么cookie变量一直是有效的，所以能够保证长时间不掉线。如果你能够截获某个用户的 cookie变量，然后伪造一个数据包发送过去，那么服务器还是认为你是合法的。<br>所以，使用 cookie被攻击的可能性比较大。如果设置了的有效时间，那么它会将 cookie保存在客户端的硬盘上，下次再访问该网站的时候，浏览器先检查有没有 cookie，如果有的话，就读取该 cookie，然后发送给服务器。如果你在机器上面保存了某个论坛 cookie，有效期是一年，如果有人入侵你的机器，将你的  cookie拷走，然后放在他的浏览器的目录下面，那么他登录该网站的时候就是用你的的身份登录的。所以 cookie是可以伪造的。当然，伪造的时候需要主意，直接copy cookie文件到 cookie目录，浏览器是不认的，他有一个index.dat文件，存储了 cookie文件的建立时间，以及是否有修改，所以你必须先要有该网站的 cookie文件，并且要从保证时间上骗过浏览器。</li>
+<li>两个都可以用来存私密的东西，同样也都有有效期的说法,区别在于session是放在服务器上的，过期与否取决于服务期的设定，cookie是存在客户端的，过去与否可以在cookie生成的时候设置进去。<br>(1) cookie数据存放在客户的浏览器上，session数据放在服务器上<br>(2) cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗,如果主要考虑到安全应当使用session<br>(3) session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能，如果主要考虑到减轻服务器性能方面，应当使用COOKIE<br>(4) 单个cookie在客户端的限制是3K，就是说一个站点在客户端存放的COOKIE不能3K。<br>(5) 所以：将登陆信息等重要信息存放为SESSION;其他信息如果需要保留，可以放在COOKIE中</li>
+</ol>
+<hr>
+<h1 id="Localstorage-、-Sessionstorage-和-Cookies"><a href="#Localstorage-、-Sessionstorage-和-Cookies" class="headerlink" title="Localstorage 、 Sessionstorage 和 Cookies"></a>Localstorage 、 Sessionstorage 和 Cookies</h1><p>共同点：都是保存在浏览器端，且同源。<br>区别:</p>
+<ol>
+<li>cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递。而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下。</li>
+<li>存储大小限制也不同，cookie数据不能超过4k，同时因为每次http请求都会携带cookie，所以cookie只适合保存很小的数据，如会话标识。sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。</li>
+<li>数据有效期不同，sessionStorage：仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；localStorage：始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据；cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。</li>
+<li>作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的。</li>
+<li>Web Storage 支持事件通知机制，可以将数据更新的通知发送给监听者。</li>
+<li>Web Storage 的 api 接口使用更方便。</li>
+</ol>
+<hr>
+<h1 id="浏览器内多个标签页之间的通信"><a href="#浏览器内多个标签页之间的通信" class="headerlink" title="浏览器内多个标签页之间的通信"></a>浏览器内多个标签页之间的通信</h1><h2 id="方法一：localstorage"><a href="#方法一：localstorage" class="headerlink" title="方法一：localstorage"></a>方法一：localstorage</h2><p>localstorage在一个标签页里被添加、修改或删除时，都会触发一个storage事件，通过在另一个标签页里监听storage事件，即可得到localstorage存储的值，实现不同标签页之间的通信。</p>
+<p>标签页1<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"inp"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">	(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">		<span class="keyword">var</span> inp = <span class="built_in">document</span>.getElementById(<span class="string">"inp"</span>);</div><div class="line">		btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">			<span class="keyword">var</span> value = inp.value;</div><div class="line">			localStorage.setItem(<span class="string">"name"</span>, value);</div><div class="line">		&#125;;</div><div class="line">	&#125;)();</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>标签页2<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">	(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="built_in">window</span>.addEventListener(<span class="string">'storage'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">			<span class="built_in">console</span>.log(event.key+<span class="string">"="</span>+event.newValue);</div><div class="line">		&#125;);</div><div class="line">	&#125;)();</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="方法二：cookies-setInterval"><a href="#方法二：cookies-setInterval" class="headerlink" title="方法二：cookies+setInterval"></a>方法二：cookies+setInterval</h2><p>将要传递的信息存储在cookie中，每隔一定事件读取cookie信息，即可随时获取要传递的信息</p>
+<p>标签页1<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"inp"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">	(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">		<span class="keyword">var</span> inp = <span class="built_in">document</span>.getElementById(<span class="string">"inp"</span>);</div><div class="line">		btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">			<span class="keyword">var</span> value = inp.value;</div><div class="line">			<span class="built_in">document</span>.cookie=<span class="string">"name="</span>+name;</div><div class="line">		&#125;;</div><div class="line">	&#125;)();</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>标签页2<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">	(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">		<span class="function"><span class="keyword">function</span> <span class="title">getCookie</span>(<span class="params">key</span>) </span>&#123;    </div><div class="line">            <span class="keyword">return</span> <span class="built_in">JSON</span>.parse(<span class="string">"&#123;\""</span> + <span class="built_in">document</span>.cookie.replace(<span class="regexp">/;\s+/gim</span>,<span class="string">"\",\""</span>).replace(<span class="regexp">/=/gim</span>, <span class="string">"\":\""</span>) + <span class="string">"\"&#125;"</span>)[key];    </div><div class="line">        &#125;     </div><div class="line">        setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;    </div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"name="</span> + getCookie(<span class="string">"name"</span>));    </div><div class="line">        &#125;, <span class="number">10000</span>); </div><div class="line">	&#125;)();</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<hr>
+<h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h2 id="JavaScript数据类型"><a href="#JavaScript数据类型" class="headerlink" title="JavaScript数据类型"></a>JavaScript数据类型</h2><p>六种基本类型：String,Boolean,Number,null,undefined,symbol((es6引入)</p>
+<p>七种数据类型：String,Boolean,Number,null,undefined,Object,Array</p>
+<p>typeof返回六种情况：String,Boolean,Number,undefined,Object,function</p>
+<h2 id="text转化成json"><a href="#text转化成json" class="headerlink" title="text转化成json"></a>text转化成json</h2><ol>
+<li>responseText = eval(‘(‘ + responseText + ‘)’);</li>
+<li>responseText = JSON.parse(responseText);</li>
+<li>responseText = (new Function(“return “ + responseText))();</li>
+</ol>
+<hr>
+<h1 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h1><h2 id="W3C标准盒子模型"><a href="#W3C标准盒子模型" class="headerlink" title="W3C标准盒子模型"></a>W3C标准盒子模型</h2><p>W3C定义的盒子模型包括 内容（content）、内边距（padding）、边框（border）、外边距（margin）。<br>其中内容（content）部分不包含其它部分。</p>
+<h2 id="IE盒子模型"><a href="#IE盒子模型" class="headerlink" title="IE盒子模型"></a>IE盒子模型</h2><p>IE盒子模型包括 内容（content）、内边距（padding）、边框（border）、外边距（margin）。<br>其中内容（content）包括内边距（padding）和边框（border）。</p>
+<hr>
+<h1 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h1><h2 id="种类"><a href="#种类" class="headerlink" title="种类"></a>种类</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">选择器</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:center">通用选择器：选择所有元素，不参与计算优先级，兼容性：IE6+</td>
+</tr>
+<tr>
+<td style="text-align:center">#X</td>
+<td style="text-align:center">id选择器：选择id为X的元素，兼容性：IE6+</td>
+</tr>
+<tr>
+<td style="text-align:center">.X</td>
+<td style="text-align:center">类选择器：选择class包含X的元素，兼容性：IE6+</td>
+</tr>
+<tr>
+<td style="text-align:center">X Y</td>
+<td style="text-align:center">后代选择器：选择满足X选择器的后代节点中满足Y选择器的元素，兼容性：IE6+</td>
+</tr>
+<tr>
+<td style="text-align:center">X</td>
+<td style="text-align:center">元素选择器：选择所有标签为X的元素，兼容性：IE6+</td>
+</tr>
+<tr>
+<td style="text-align:center">:link，:visited，:focus，:hover，:active</td>
+<td style="text-align:center">链接状态：选择特定状态的链接元素，顺序 LoVe HAte，兼容性：IE4+</td>
+</tr>
+<tr>
+<td style="text-align:center">X + Y</td>
+<td style="text-align:center">直接兄弟选择器：在X之后第一个兄弟节点中选择满足Y选择器的元素，兼容性：IE7+</td>
+</tr>
+<tr>
+<td style="text-align:center">X &gt; Y</td>
+<td style="text-align:center">选择X的子元素中满足Y选择器的元素，兼容性：IE7+</td>
+</tr>
+<tr>
+<td style="text-align:center">X ~ Y</td>
+<td style="text-align:center">选择X之后所有兄弟节点中满足Y选择器的元素，兼容性：IE7+</td>
+</tr>
+<tr>
+<td style="text-align:center">[attr]</td>
+<td style="text-align:center">选择所有设置了attr属性的元素，兼容性：IE7+</td>
+</tr>
+<tr>
+<td style="text-align:center">[attr=value]</td>
+<td style="text-align:center">选择属性值刚好为value的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">[attr~=value]</td>
+<td style="text-align:center">选择属性值为空白分隔符，其中一个的值刚好是value的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">[attr｜=value]</td>
+<td style="text-align:center">选择属性值刚好为value或以value开头的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">[attr^=value]</td>
+<td style="text-align:center">选择属性值以value开头的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">[attr$=value]</td>
+<td style="text-align:center">选择属性值以value结尾的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">[attr*=value]</td>
+<td style="text-align:center">选择属性值中包含value的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">[:checked]</td>
+<td style="text-align:center">选择单选框，复选框，下拉框中选中状态下的元素，兼容性：IE9+</td>
+</tr>
+<tr>
+<td style="text-align:center">X:after，X::after</td>
+<td style="text-align:center">after伪元素，选择元素虚拟子元素（元素的最后一个子元素），CSS3中::表示伪元素，兼容性 :after为IE8+，::after为IE9+</td>
+</tr>
+<tr>
+<td style="text-align:center">:hover</td>
+<td style="text-align:center">鼠标移入状态的元素，兼容性a标签IE4+，所有元素IE7+</td>
+</tr>
+<tr>
+<td style="text-align:center">:not(selector)</td>
+<td style="text-align:center">选择不符合selector的元素。不参与计算优先级，兼容性：IE9+</td>
+</tr>
+<tr>
+<td style="text-align:center">::first-letter</td>
+<td style="text-align:center">伪元素，选择块元素第一行的第一个字母，兼容性IE5.5+</td>
+</tr>
+<tr>
+<td style="text-align:center">::first-line</td>
+<td style="text-align:center">伪元素，选择块元素的第一行，兼容性IE5.5+</td>
+</tr>
+<tr>
+<td style="text-align:center">:nth-child(an + b)</td>
+<td style="text-align:center">伪类，选择前面有 an+b-1 个兄弟节点的元素，其中n&gt;=0，兼容性：IE9+</td>
+</tr>
+<tr>
+<td style="text-align:center">:nth-last-child(an + b)</td>
+<td style="text-align:center">伪类，选择后面有 an+b-1 个兄弟节点的元素，其中 n&gt;=0，兼容性IE9+</td>
+</tr>
+<tr>
+<td style="text-align:center">X:nth-of-type(an+b)</td>
+<td style="text-align:center">伪类，X为选择器，解析得到元素标签，选择前面有 an+b-1 个相同标签兄弟节点的元素，兼容性：IE9+</td>
+</tr>
+<tr>
+<td style="text-align:center">X:nth-last-of-type(an+b)</td>
+<td style="text-align:center">伪类，X为选择器，解析得到元素标签，选择后面有 an+b-1 个相同标签兄弟节点的元素，兼容性：IE9+</td>
+</tr>
+<tr>
+<td style="text-align:center">X:first-child</td>
+<td style="text-align:center">伪类，选择满需X选择器的元素，且这个元素是其父节点的第一个子元素，兼容性：IE7+</td>
+</tr>
+<tr>
+<td style="text-align:center">X:last-child</td>
+<td style="text-align:center">伪类，选择满足X选择器的元素，且这个元素是其父节点的最后一个子元素，兼容性：IE9+</td>
+</tr>
+<tr>
+<td style="text-align:center">X:only-child</td>
+<td style="text-align:center">伪类，选择满足X选择器的元素，且这个元素是其父元素的唯一子元素，兼容性IE9+</td>
+</tr>
+<tr>
+<td style="text-align:center">X:only-of-type</td>
+<td style="text-align:center">伪类，选择X选择的元素，解析得到元素标签，如果该元素没有相同类型的兄弟节点时选中它，兼容性：IE9+</td>
+</tr>
+<tr>
+<td style="text-align:center">X:first-of-type</td>
+<td style="text-align:center">伪类，选择X选择的元素，解析得到元素标签，如果该元素是此类型元素的第一个兄弟，选中它，兼容性：IE9+</td>
+</tr>
+</tbody>
+</table>
+<h2 id="权重"><a href="#权重" class="headerlink" title="权重"></a>权重</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">选择器</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:center">权重</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">style=””</td>
+<td style="text-align:center">内联样式</td>
+<td style="text-align:center">1000</td>
+</tr>
+<tr>
+<td style="text-align:center">#id</td>
+<td style="text-align:center">id选择器</td>
+<td style="text-align:center">100</td>
+</tr>
+<tr>
+<td style="text-align:center">.class</td>
+<td style="text-align:center">类选择器</td>
+<td style="text-align:center">10</td>
+</tr>
+<tr>
+<td style="text-align:center">p:hover</td>
+<td style="text-align:center">伪类选择器</td>
+<td style="text-align:center">10</td>
+</tr>
+<tr>
+<td style="text-align:center">p[title=””]</td>
+<td style="text-align:center">属性选择器</td>
+<td style="text-align:center">10</td>
+</tr>
+<tr>
+<td style="text-align:center">p</td>
+<td style="text-align:center">标签选择器</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">ul::after</td>
+<td style="text-align:center">伪选择器</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>增加优先级:<strong>!important</strong></p>
+</blockquote>
+<hr>
+<h1 id="页面加载过程"><a href="#页面加载过程" class="headerlink" title="页面加载过程"></a>页面加载过程</h1><h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><ol>
+<li>查找浏览器缓存；</li>
+<li>DNS解析、查找该域名对应的IP地址、重定向（301）、发出第二个GET请求</li>
+<li>进行HTTP协议会话</li>
+<li>客户端发送请求报头</li>
+<li>文档开始下载</li>
+<li>文档树建立，根据标记请求所需执行MIME类型的文件</li>
+<li>文件显示</li>
+</ol>
+<p>浏览器这边的工作大致分为：</p>
+<ol>
+<li>加载：根据请求的URL进行域名解析，向服务器发起请求，接受文件（HTML,JS,CSS,图像等）；</li>
+<li>解析：对加载到的资源（HTML,JS,CSS等）进行语法解析。</li>
+</ol>
+<h2 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h2><ol>
+<li>主机向服务器发送一个建立连接的请求（ 您好，我想认识您 ）；</li>
+<li>服务器接到请求后发送同意连接的信号（ 好的，很高兴认识您 ）；</li>
+<li>主机接到同意连接的信号后，再次向服务器发送了确认信号（ 我也很高兴认识您），自此，主机与服务器两者建立了连接。</li>
+</ol>
+<h2 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h2><ol>
+<li>主机向服务器发送一个断开连接的请求（ 不早了，我该走了 ）；</li>
+<li>服务器接到请求后发送确认收到请求的信号（ 知道了 ）；</li>
+<li>服务器向主机发送断开通知（ 我也该走了 ）；</li>
+<li>主机接到断开通知后断开连接并反馈一个确认信号（ 嗯，好的 ），服务器收到确认信号后断开连接。</li>
+</ol>
+<hr>
+<h1 id="网站性能优化"><a href="#网站性能优化" class="headerlink" title="网站性能优化"></a>网站性能优化</h1><h2 id="content方面"><a href="#content方面" class="headerlink" title="content方面"></a>content方面</h2><ol>
+<li>减少HTTP请求：合并文件（js，css）、CSS精灵、inline image；</li>
+<li>减少DNS查询：DNS查询完成之前浏览器不能从这个主机下载任何文件。方法：DNS缓存、将资源分布到恰当数量的主机上，平衡并行下载和DNS查询；</li>
+<li>避免重定向：多余的中间访问；</li>
+<li>使Ajax可缓存；</li>
+<li>非必须组件延迟加载；</li>
+<li>未来所需组件预加载；</li>
+<li>减少DOM元素数量；</li>
+<li>将资源放到不同的域下：浏览器同时从一个域下载资源的数目有限，增加域可以提高并行下载量；</li>
+<li>减少iframe数量；</li>
+<li>不要404。</li>
+</ol>
+<h2 id="Server方面"><a href="#Server方面" class="headerlink" title="Server方面"></a>Server方面</h2><ol>
+<li>使用CDN;</li>
+<li>添加Expires或者Cache-Control相应头；</li>
+<li>对组件使用Gzip压缩；</li>
+<li>配置ETag；</li>
+<li>Flush Buffer Early；</li>
+<li>Ajax使用GET进行请求；</li>
+<li>避免空src的img标签。</li>
+</ol>
+<h2 id="Cookie方面"><a href="#Cookie方面" class="headerlink" title="Cookie方面"></a>Cookie方面</h2><ol>
+<li>减小cookie的大小；</li>
+<li>引入资源的域名不要包含cookie。</li>
+</ol>
+<h2 id="CSS方面"><a href="#CSS方面" class="headerlink" title="CSS方面"></a>CSS方面</h2><ol>
+<li>将样式表放到页面顶部；</li>
+<li>不使用CSS表达式；</li>
+<li>尽量不使用@import；</li>
+<li>不使用IE的Filter。</li>
+</ol>
+<h2 id="图片方面"><a href="#图片方面" class="headerlink" title="图片方面"></a>图片方面</h2><ol>
+<li>优化图片：根据实际颜色需要选择色深、压缩；</li>
+<li>优化CSS精灵；</li>
+<li>不要在HTML中拉伸图片；</li>
+<li>保证favicon.ico小并且可缓存。</li>
+</ol>
+<h2 id="移动方面"><a href="#移动方面" class="headerlink" title="移动方面"></a>移动方面</h2><ol>
+<li>保证组件小于25k；</li>
+<li>Pack Components into a Multipart Document。</li>
+</ol>
+<hr>
+<h1 id="ready和onload的区别"><a href="#ready和onload的区别" class="headerlink" title="ready和onload的区别"></a>ready和onload的区别</h1><p>jQuery中 $(document).ready()和window.onload的区别</p>
+<h2 id="执行时间"><a href="#执行时间" class="headerlink" title="执行时间"></a>执行时间</h2><p>$(document).ready()是DOM结构绘制完毕后就执行，不必等到加载完毕。<br>window.onload必须等到页面内包括图片的所有元素加载完毕才能执行。</p>
+<h2 id="编写个数"><a href="#编写个数" class="headerlink" title="编写个数"></a>编写个数</h2><p>$(document).ready()可以同时编写多个，并且都可以得到执行。<br>window.onload不能同时编写多个，如有多个只会执行一个。</p>
+<h2 id="简化写法"><a href="#简化写法" class="headerlink" title="简化写法"></a>简化写法</h2><p>$(document).ready(function(){});可以简写成$(function(){});。<br>window.onload没有简化写法。</p>
+<hr>
+<h1 id="清除元素浮动"><a href="#清除元素浮动" class="headerlink" title="清除元素浮动"></a>清除元素浮动</h1><h2 id="clear属性"><a href="#clear属性" class="headerlink" title="clear属性"></a>clear属性</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"clear"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-class">.wrapper</span> &#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</div><div class="line">	<span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#000</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.div</span> &#123;</div><div class="line">	<span class="attribute">float</span>: left;</div><div class="line">	<span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">background</span>: red;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.clear</span> &#123;</div><div class="line">	<span class="attribute">clear</span>: both;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper clear"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-class">.wrapper</span> &#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</div><div class="line">	<span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#000</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.clear</span> &#123;</div><div class="line">	<span class="comment">/*兼容IE*/</span></div><div class="line">	<span class="attribute">zoom</span>:<span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.clear</span><span class="selector-pseudo">:after</span>&#123;</div><div class="line">	<span class="attribute">display</span>:block;</div><div class="line">	<span class="attribute">content</span>:<span class="string">""</span>;</div><div class="line">	<span class="attribute">clear</span>:both;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.div</span> &#123;</div><div class="line">	<span class="attribute">float</span>: left;</div><div class="line">	<span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">background</span>: red;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">br</span> <span class="attr">clear</span>=<span class="string">"all"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-class">.wrapper</span> &#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</div><div class="line">	<span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#000</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.div</span> &#123;</div><div class="line">	<span class="attribute">float</span>: left;</div><div class="line">	<span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">background</span>: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="overflow属性"><a href="#overflow属性" class="headerlink" title="overflow属性"></a>overflow属性</h2><p>父元素设置overflow属性为auto或hidden<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-class">.wrapper</span> &#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</div><div class="line">	<span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#000</span>;</div><div class="line">	<span class="attribute">overflow</span>:auto;</div><div class="line">	<span class="comment">/*overflow:hidden;*/</span></div><div class="line">&#125;</div><div class="line"><span class="selector-class">.div</span> &#123;</div><div class="line">	<span class="attribute">float</span>: left;</div><div class="line">	<span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">background</span>: red;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="display属性"><a href="#display属性" class="headerlink" title="display属性"></a>display属性</h2><p>父元素设置display属性为inline-block<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-class">.wrapper</span> &#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</div><div class="line">	<span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#000</span>;</div><div class="line">	<span class="attribute">display</span>:inline-block;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.div</span> &#123;</div><div class="line">	<span class="attribute">float</span>: left;</div><div class="line">	<span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">background</span>: red;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="父级元素浮动"><a href="#父级元素浮动" class="headerlink" title="父级元素浮动"></a>父级元素浮动</h2><p>父元素设置float属性为left或right<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-class">.wrapper</span> &#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</div><div class="line">	<span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#000</span>;</div><div class="line">	<span class="attribute">float</span>:left;</div><div class="line">	<span class="comment">/*float:right;*/</span></div><div class="line">&#125;</div><div class="line"><span class="selector-class">.div</span> &#123;</div><div class="line">	<span class="attribute">float</span>: left;</div><div class="line">	<span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">background</span>: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<hr>
+<h1 id="rem-和-em"><a href="#rem-和-em" class="headerlink" title="rem 和 em"></a>rem 和 em</h1><h2 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h2><p>rem 单位翻译为像素值是由 html 根元素的字体大小决定的，此字体大小会被浏览器中字体大小的设置影响，除非显示重写一个具体单位</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"a"</span>&gt;</span>123<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"b"</span>&gt;</span>123<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">	<span class="selector-tag">html</span>&#123;</div><div class="line">		<span class="attribute">font-size</span>:<span class="number">20px</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="selector-class">.a</span>&#123;</div><div class="line">		<span class="attribute">font-size</span>:<span class="number">3rem</span>;<span class="comment">/*解析为60px*/</span></div><div class="line">	&#125;</div><div class="line">	<span class="selector-class">.b</span>&#123;</div><div class="line">		<span class="attribute">font-size</span>:<span class="number">60px</span>;</div><div class="line">	&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="em"><a href="#em" class="headerlink" title="em"></a>em</h2><p>em 单位转为像素值，取决于他们使用的字体大小，此字体大小受从父元素继承过来的字体大小，除非显示重写一个具体单位</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"a"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"b"</span>&gt;</span>123<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"c"</span>&gt;</span></div><div class="line">	123</div><div class="line"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">	<span class="selector-tag">html</span>&#123;</div><div class="line">		<span class="attribute">font-size</span>:<span class="number">20px</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="selector-class">.a</span>&#123;</div><div class="line">		<span class="attribute">font-size</span>:<span class="number">3rem</span>;<span class="comment">/*解析为60px*/</span></div><div class="line">	&#125;</div><div class="line">	<span class="selector-class">.b</span>&#123;</div><div class="line">		<span class="attribute">font-size</span>:<span class="number">2em</span>;<span class="comment">/*解析为120px*/</span></div><div class="line">	&#125;</div><div class="line">	<span class="selector-class">.c</span>&#123;</div><div class="line">		<span class="attribute">font-size</span>:<span class="number">120px</span>;</div><div class="line">	&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<hr>
+<h1 id="Attribute-和-Properties"><a href="#Attribute-和-Properties" class="headerlink" title="Attribute 和 Properties"></a>Attribute 和 Properties</h1><ol>
+<li>properties 是DOM中的属性，是JavaScript里的对象；</li>
+<li>attribute 是HTML标签上的特性，它的值只能是字符串。</li>
+</ol>
+<hr>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享,您的支持将鼓励我继续创作!</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wxpay.jpg" alt="Cyb WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="Cyb Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag"># css</a>
+          
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+            <a href="/tags/html/" rel="tag"># html</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/10/js-dom/" rel="next" title="js学习之事件模型">
+                <i class="fa fa-chevron-left"></i> js学习之事件模型
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/12/nodejs/" rel="prev" title="Node.js">
+                Node.js <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2017/03/12/knowledge/"
+     data-title="面试知识点"
+     data-content=""
+     data-url="http://yoursite.com/2017/03/12/knowledge/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/12/knowledge/"
+           data-title="面试知识点" data-url="http://yoursite.com/2017/03/12/knowledge/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/1.jpg"
+               alt="Cyb" />
+          <p class="site-author-name" itemprop="name">Cyb</p>
+          <p class="site-description motion-element" itemprop="description">studing.....</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Cybbin" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#XHTML和HTML的区别"><span class="nav-number">1.</span> <span class="nav-text">XHTML和HTML的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#浏览器内核"><span class="nav-number">2.</span> <span class="nav-text">浏览器内核</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#语义话的HTML"><span class="nav-number">3.</span> <span class="nav-text">语义话的HTML</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Doctype的作用"><span class="nav-number">4.</span> <span class="nav-text">Doctype的作用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS元素分类"><span class="nav-number">5.</span> <span class="nav-text">CSS元素分类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS隐藏元素的方法"><span class="nav-number">6.</span> <span class="nav-text">CSS隐藏元素的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#link和-import的区别"><span class="nav-number">7.</span> <span class="nav-text">link和@import的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#title和alt属性的区别"><span class="nav-number">8.</span> <span class="nav-text">title和alt属性的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#事件"><span class="nav-number">9.</span> <span class="nav-text">事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cookies-和-Session"><span class="nav-number">10.</span> <span class="nav-text">Cookies 和 Session</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Localstorage-、-Sessionstorage-和-Cookies"><span class="nav-number">11.</span> <span class="nav-text">Localstorage 、 Sessionstorage 和 Cookies</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#浏览器内多个标签页之间的通信"><span class="nav-number">12.</span> <span class="nav-text">浏览器内多个标签页之间的通信</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法一：localstorage"><span class="nav-number">12.1.</span> <span class="nav-text">方法一：localstorage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法二：cookies-setInterval"><span class="nav-number">12.2.</span> <span class="nav-text">方法二：cookies+setInterval</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript"><span class="nav-number">13.</span> <span class="nav-text">JavaScript</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript数据类型"><span class="nav-number">13.1.</span> <span class="nav-text">JavaScript数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#text转化成json"><span class="nav-number">13.2.</span> <span class="nav-text">text转化成json</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#盒子模型"><span class="nav-number">14.</span> <span class="nav-text">盒子模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#W3C标准盒子模型"><span class="nav-number">14.1.</span> <span class="nav-text">W3C标准盒子模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IE盒子模型"><span class="nav-number">14.2.</span> <span class="nav-text">IE盒子模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS选择器"><span class="nav-number">15.</span> <span class="nav-text">CSS选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#种类"><span class="nav-number">15.1.</span> <span class="nav-text">种类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#权重"><span class="nav-number">15.2.</span> <span class="nav-text">权重</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#页面加载过程"><span class="nav-number">16.</span> <span class="nav-text">页面加载过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#过程"><span class="nav-number">16.1.</span> <span class="nav-text">过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三次握手"><span class="nav-number">16.2.</span> <span class="nav-text">三次握手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四次挥手"><span class="nav-number">16.3.</span> <span class="nav-text">四次挥手</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网站性能优化"><span class="nav-number">17.</span> <span class="nav-text">网站性能优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#content方面"><span class="nav-number">17.1.</span> <span class="nav-text">content方面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Server方面"><span class="nav-number">17.2.</span> <span class="nav-text">Server方面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie方面"><span class="nav-number">17.3.</span> <span class="nav-text">Cookie方面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS方面"><span class="nav-number">17.4.</span> <span class="nav-text">CSS方面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片方面"><span class="nav-number">17.5.</span> <span class="nav-text">图片方面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#移动方面"><span class="nav-number">17.6.</span> <span class="nav-text">移动方面</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ready和onload的区别"><span class="nav-number">18.</span> <span class="nav-text">ready和onload的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#执行时间"><span class="nav-number">18.1.</span> <span class="nav-text">执行时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写个数"><span class="nav-number">18.2.</span> <span class="nav-text">编写个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简化写法"><span class="nav-number">18.3.</span> <span class="nav-text">简化写法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#清除元素浮动"><span class="nav-number">19.</span> <span class="nav-text">清除元素浮动</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#clear属性"><span class="nav-number">19.1.</span> <span class="nav-text">clear属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一"><span class="nav-number">19.1.1.</span> <span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法二"><span class="nav-number">19.1.2.</span> <span class="nav-text">方法二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法三"><span class="nav-number">19.1.3.</span> <span class="nav-text">方法三</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#overflow属性"><span class="nav-number">19.2.</span> <span class="nav-text">overflow属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#display属性"><span class="nav-number">19.3.</span> <span class="nav-text">display属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#父级元素浮动"><span class="nav-number">19.4.</span> <span class="nav-text">父级元素浮动</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rem-和-em"><span class="nav-number">20.</span> <span class="nav-text">rem 和 em</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#rem"><span class="nav-number">20.1.</span> <span class="nav-text">rem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#em"><span class="nav-number">20.2.</span> <span class="nav-text">em</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Attribute-和-Properties"><span class="nav-number">21.</span> <span class="nav-text">Attribute 和 Properties</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Cyb</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"cybbin"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("7rR1j5KHy5hrIPJA0Mi0uIge-gzGzoHsz", "g9jkV9rdYIQXIyc1jLIF0xMc");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>
