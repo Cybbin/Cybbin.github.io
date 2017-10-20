@@ -86,25 +86,16 @@
 
 
 
-<meta name="description" content="网易笔试前端相关
-伪元素选择器下列哪个不是伪元素选择器A. first-letter B. first-line C. before D. behind答案：D。A. first-letter：选择块元素第一行的第一个字母B. first-line：选择块元素的第一行C. before：选择元素虚拟子元素（元素的第一个子元素）
-
-setTimeout下面代码依次输出什么？考察异步答案：3 1 2">
+<meta name="description" content="记录2017年秋招面试。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试">
 <meta property="og:url" content="http://yoursite.com/2017/08/13/interview/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="网易笔试前端相关
-伪元素选择器下列哪个不是伪元素选择器A. first-letter B. first-line C. before D. behind答案：D。A. first-letter：选择块元素第一行的第一个字母B. first-line：选择块元素的第一行C. before：选择元素虚拟子元素（元素的第一个子元素）
-
-setTimeout下面代码依次输出什么？考察异步答案：3 1 2">
-<meta property="og:updated_time" content="2017-08-13T15:32:54.764Z">
+<meta property="og:description" content="记录2017年秋招面试。">
+<meta property="og:updated_time" content="2017-10-20T16:11:06.808Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试">
-<meta name="twitter:description" content="网易笔试前端相关
-伪元素选择器下列哪个不是伪元素选择器A. first-letter B. first-line C. before D. behind答案：D。A. first-letter：选择块元素第一行的第一个字母B. first-line：选择块元素的第一行C. before：选择元素虚拟子元素（元素的第一个子元素）
-
-setTimeout下面代码依次输出什么？考察异步答案：3 1 2">
+<meta name="twitter:description" content="记录2017年秋招面试。">
 
 
 
@@ -392,7 +383,8 @@ setTimeout下面代码依次输出什么？考察异步答案：3 1 2">
       
 
       
-        <h1 id="网易"><a href="#网易" class="headerlink" title="网易"></a>网易</h1><h2 id="笔试"><a href="#笔试" class="headerlink" title="笔试"></a>笔试</h2><h3 id="前端相关"><a href="#前端相关" class="headerlink" title="前端相关"></a>前端相关</h3><ol>
+        <p>记录2017年秋招面试。<br><a id="more"></a></p>
+<h1 id="网易"><a href="#网易" class="headerlink" title="网易"></a>网易</h1><h2 id="笔试"><a href="#笔试" class="headerlink" title="笔试"></a>笔试</h2><h3 id="前端相关"><a href="#前端相关" class="headerlink" title="前端相关"></a>前端相关</h3><ol>
 <li><p>伪元素选择器<br>下列哪个不是伪元素选择器<br>A. first-letter B. first-line C. before D. behind<br>答案：D。<br>A. first-letter：选择块元素第一行的第一个字母<br>B. first-line：选择块元素的第一行<br>C. before：选择元素虚拟子元素（元素的第一个子元素）</p>
 </li>
 <li><p>setTimeout<br>下面代码依次输出什么？考察异步<br>答案：3 1 2</p>
@@ -410,6 +402,24 @@ setTimeout下面代码依次输出什么？考察异步答案：3 1 2">
 </li>
 </ol>
 <h3 id="计算机相关"><a href="#计算机相关" class="headerlink" title="计算机相关"></a>计算机相关</h3><p>完全二叉树<br>线程、进程<br>TCP协议拥塞控制<br>链表头尾指针<br>排序算法（插入 快排 堆排 归并）<br>死锁、进程<br>栈<br>正则<br>数据结构（linked binary linear pointer sorted）<br>适配器<br>空间复杂度</p>
+<h1 id="京东"><a href="#京东" class="headerlink" title="京东"></a>京东</h1><h2 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h2><p>1.自我介绍<br>2.问简历中的项目<br>3.项目用到什么技术栈<br>4.移动端touch事件，怎么取消延迟0.3s延迟？</p>
+<ol>
+<li><p>禁用缩放（chrome和firefox） </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"user-scalable=no"</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>设置viewport的 device-width（chrome32+）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,minimum-scale=1,maximum-scale=1"</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>使用touchend事件处理</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">div.ontouchend=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用指针事件</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">a</span>,<span class="selector-tag">button</span>,<span class="selector-tag">div</span>&#123;</div><div class="line"><span class="attribute">-ms-touch-action</span>:manipulation; <span class="comment">/*IE10+*/</span></div><div class="line"><span class="attribute">touch-action</span>:manipulation; <span class="comment">/*IE11+*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>FastClick</p>
+</li>
+</ol>
+<p>5.H5滑动事件怎么实现，还是touch<br>6.cdn为什么会比较快的原理<br>7.用rem单位时有没有遇到坑？答：没有<br>8.position有哪些值？答出4种。还有其他吗？<br>9.性能优化？会问还有没有别的<br>10.原生ajax流程，5个状态码<br>11.http有哪些状态码<br>12.es6的异步发送请求方式<br>13.http缓存<br>14.前端的缓存手段<br>15.设计模式，问到观察者模式<br>16.以前的项目有没有考虑ie兼容？答：没有<br>17.现场写洗牌算法<br>18.vue双向绑定原理<br>19.fetch api<br>20.跨域？细节？其它方式？<br>21.不知宽高的元素垂直水平居中，答出4种<br>22.闭包可以用来干什么<br>23.事件的机制是怎样的？事件委托怎么实现？用了什么原理？<br>24.call apply bind<br>25.get post 区别<br>26.js相对于其它语言有什么优点<br>27.重绘和重排<br>28.a标签如何不实用js实现点击没反映<br>29.自动化测试</p>
 
       
     </div>
@@ -572,7 +582,7 @@ setTimeout下面代码依次输出什么？考察异步答案：3 1 2">
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -643,7 +653,7 @@ setTimeout下面代码依次输出什么？考察异步答案：3 1 2">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#网易"><span class="nav-number">1.</span> <span class="nav-text">网易</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#笔试"><span class="nav-number">1.1.</span> <span class="nav-text">笔试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前端相关"><span class="nav-number">1.1.1.</span> <span class="nav-text">前端相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机相关"><span class="nav-number">1.1.2.</span> <span class="nav-text">计算机相关</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#网易"><span class="nav-number">1.</span> <span class="nav-text">网易</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#笔试"><span class="nav-number">1.1.</span> <span class="nav-text">笔试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前端相关"><span class="nav-number">1.1.1.</span> <span class="nav-text">前端相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机相关"><span class="nav-number">1.1.2.</span> <span class="nav-text">计算机相关</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#京东"><span class="nav-number">2.</span> <span class="nav-text">京东</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一面"><span class="nav-number">2.1.</span> <span class="nav-text">一面</span></a></li></ol></li></ol></div>
             
 
           </div>
