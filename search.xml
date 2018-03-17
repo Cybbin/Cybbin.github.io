@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[requestAnimationFrame]]></title>
+      <url>%2F2018%2F03%2F17%2FrequestAnimationFrame%2F</url>
+      <content type="text"><![CDATA[window.requestAnimationFrame() 方法告诉浏览器您希望执行动画并请求浏览器在下一次重绘之前调用指定的函数来更新动画。该方法使用一个回调函数作为参数，这个回调函数会在浏览器重绘之前调用。回调的次数常是每秒60次，但大多数浏览器通常匹配 W3C 所建议的刷新率。 语法1window.requestAnimationFrame(callback); 实例123456789101112131415161718192021222324252627282930313233&lt;!doctype html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="UTF-8"&gt; &lt;title&gt;requestAnimationFrame&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;style&gt; #app &#123; width:100px; height:100px; background-color:blue; &#125; &lt;/style&gt; &lt;div id="app"&gt;&lt;/div&gt; &lt;script&gt; var start = null; var duration = 2000; // 动画时间 var result = 200; // 动画结束状态(px) var ele = document.getElementById('app'); // 动画元素 function step(timestamp)&#123; if(!start)start = timestamp; var progress = timestamp-start; ele.style.width = (progress/duration*result)+'px'; // 宽度 if(progress&lt;duration)&#123; window.requestAnimationFrame(step); &#125; &#125; window.requestAnimationFrame(step); &lt;/script&gt; &lt;/body&gt;&lt;/html&gt;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[前端路由原理]]></title>
       <url>%2F2017%2F09%2F13%2Frouter%2F</url>
       <content type="text"><![CDATA[解密前端框架路由原理~~~~ 原理就是利用hashchange事件进行处理，MDN上的解释：当URL的片段标识符更改时，将触发hashchange事件 (跟在＃符号后面的URL部分，包括＃符号)。 html代码12345678910111213141516&lt;!Doctype html&gt;&lt;html&gt; &lt;head&gt; &lt;style&gt; #wrapper&#123; width:500px; height:500px; &#125; &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;a href="#/red"&gt;red&lt;/a&gt; &lt;a href="#/blue"&gt;blue&lt;/a&gt; &lt;div id="wrapper"&gt;&lt;/div&gt; &lt;/body&gt;&lt;/html&gt; 以上代码有两个哈希链接，#/1和#/2，下面处理路由。1234567891011121314151617181920212223242526272829303132function Router()&#123; this.routes=&#123;&#125;; this.currentUrl='';&#125;// 添加路由函数Router.prototype.route=function(path,callback)&#123; this.routes[path]=callback||function()&#123;&#125;;&#125;// 刷新函数Router.prototype.refresh=function()&#123; this.currentUrl=location.hash.slice(2); // 跳过 #/ this.routes[this.currentUrl]();&#125;// 初始化Router.prototype.init=function()&#123; window.addEventListener('load',this.refresh.bind(this),false); window.addEventListener('hashchange',this.refresh.bind(this),false); // 核心&#125;window.Router = new Router();Router.init(); var wrapper = document.getElementById('wrapper');Router.route('',function()&#123; wrapper.style.background='green';&#125;);Router.route('red',function()&#123; wrapper.style.background='red';&#125;);Router.route('blue',function()&#123; wrapper.style.background='blue';&#125;);]]></content>

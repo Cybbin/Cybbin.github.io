@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/03/17/requestAnimationFrame/</loc>
+    <lastmod>2018-03-17T02:40:49.103Z</lastmod>
+    <data>
+        <display>
+        <title>requestAnimationFrame</title>
+        <pubTime>2018-03-17T02:36:30.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+         
+           
+             
+              <breadCrumb title="代码" url="http://yoursite.com/categories/%E4%BB%A3%E7%A0%81/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/08/13/interview/</loc>
     <lastmod>2017-10-20T16:11:06.808Z</lastmod>
     <data>
@@ -11,9 +31,9 @@
         <title>面试</title>
         <pubTime>2017-08-13T13:57:11.000Z</pubTime>
         
-        <tag>css</tag>
-         
         <tag>js</tag>
+         
+        <tag>css</tag>
          
         <tag>html</tag>
          
@@ -72,9 +92,9 @@
         <title>面试知识点</title>
         <pubTime>2017-03-12T02:56:42.000Z</pubTime>
         
-        <tag>css</tag>
-         
         <tag>js</tag>
+         
+        <tag>css</tag>
          
         <tag>html</tag>
          

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-13T14:22:02.425Z</updated>
+  <updated>2018-03-17T02:40:49.103Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>requestAnimationFrame</title>
+    <link href="http://yoursite.com/2018/03/17/requestAnimationFrame/"/>
+    <id>http://yoursite.com/2018/03/17/requestAnimationFrame/</id>
+    <published>2018-03-17T02:36:30.000Z</published>
+    <updated>2018-03-17T02:40:49.103Z</updated>
+    
+    <content type="html"><![CDATA[<p>window.requestAnimationFrame() 方法告诉浏览器您希望执行动画并请求浏览器在下一次重绘之前调用指定的函数来更新动画。该方法使用一个回调函数作为参数，这个回调函数会在浏览器重绘之前调用。回调的次数常是每秒60次，但大多数浏览器通常匹配 W3C 所建议的刷新率。</p>
+<a id="more"></a>
+<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.requestAnimationFrame(callback);</div></pre></td></tr></table></figure>
+<h1 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span>requestAnimationFrame<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">			<span class="selector-id">#app</span> &#123;</div><div class="line">				<span class="attribute">width</span>:<span class="number">100px</span>;</div><div class="line">				<span class="attribute">height</span>:<span class="number">100px</span>;</div><div class="line">				<span class="attribute">background-color</span>:blue;</div><div class="line">			&#125;</div><div class="line">		<span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">		</div><div class="line">		<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">			<span class="keyword">var</span> start = <span class="literal">null</span>;</div><div class="line">			<span class="keyword">var</span> duration = <span class="number">2000</span>; <span class="comment">// 动画时间</span></div><div class="line">			<span class="keyword">var</span> result = <span class="number">200</span>; <span class="comment">// 动画结束状态(px)</span></div><div class="line">			<span class="keyword">var</span> ele = <span class="built_in">document</span>.getElementById(<span class="string">'app'</span>); <span class="comment">// 动画元素</span></div><div class="line">			<span class="function"><span class="keyword">function</span> <span class="title">step</span>(<span class="params">timestamp</span>)</span>&#123;</div><div class="line">				<span class="keyword">if</span>(!start)start = timestamp;</div><div class="line">				<span class="keyword">var</span> progress = timestamp-start;</div><div class="line">				ele.style.width = (progress/duration*result)+<span class="string">'px'</span>; <span class="comment">// 宽度</span></div><div class="line">				<span class="keyword">if</span>(progress&lt;duration)&#123;</div><div class="line">					<span class="built_in">window</span>.requestAnimationFrame(step);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			<span class="built_in">window</span>.requestAnimationFrame(step);</div><div class="line">		<span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;window.requestAnimationFrame() 方法告诉浏览器您希望执行动画并请求浏览器在下一次重绘之前调用指定的函数来更新动画。该方法使用一个回调函数作为参数，这个回调函数会在浏览器重绘之前调用。回调的次数常是每秒60次，但大多数浏览器通常匹配 W3C 所建议的刷新率。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="代码" scheme="http://yoursite.com/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>前端路由原理</title>
@@ -95,9 +121,9 @@
       <category term="面试" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="css" scheme="http://yoursite.com/tags/css/"/>
-    
       <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
     
       <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
@@ -2219,9 +2245,9 @@
       <category term="面试" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="css" scheme="http://yoursite.com/tags/css/"/>
-    
       <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
     
       <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
@@ -2300,35 +2326,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;em&gt;一直对JavaScript中的事件模型不是很清楚，特此记录学习笔记&lt;/em&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="代码" scheme="http://yoursite.com/categories/%E4%BB%A3%E7%A0%81/"/>
-    
-    
-      <category term="js" scheme="http://yoursite.com/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js学习之(原型)继承</title>
-    <link href="http://yoursite.com/2017/02/21/entend/"/>
-    <id>http://yoursite.com/2017/02/21/entend/</id>
-    <published>2017-02-21T13:11:35.000Z</published>
-    <updated>2017-03-31T13:28:03.172Z</updated>
-    
-    <content type="html"><![CDATA[<p>参考《你不知道的JavaScript》<a id="more"></a><br>继承意味着复制操作，JavaScript(默认)不会复制对象属性。<br>JavaScript会在两个对象之间创建一个关联，这样一个对象就可以通过委托访问另一个对象的属性和函数。<br>函数不是构造函数，但是当且仅当使用 new 时，函数调用会变成“构造函数调用”。</p>
-<h1 id="创建一个关联对象"><a href="#创建一个关联对象" class="headerlink" title="创建一个关联对象"></a>创建一个关联对象</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Bar</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"></div><div class="line"><span class="comment">//ES6之前</span></div><div class="line">Bar.prototype = <span class="built_in">Object</span>.create(Foo.prototype);</div><div class="line"></div><div class="line"><span class="comment">//ES6</span></div><div class="line"><span class="built_in">Object</span>.setPrototypeOf(Bar.prototype,Foo.prototype);</div></pre></td></tr></table></figure>
-<p>Object.create()会创建一个新对象(这里指Bar.prototype)并把新对象内部的[[Prototype]]关联到指定的对象中(这里指Foo)。</p>
-<p>[[Prototype]]机制就是存在于对象中的一个内部链接，它会引用其它对象。</p>
-<p>构造函数、原型、实例的关系：<br>每个构造对象都有一个原型对象，原型对象包含一个指向构造函数的指针（prototype），而实例则包含一个指向原型对象的指针（<strong>proto</strong>）。</p>
-<hr>
-<h1 id="原型继承实现方式"><a href="#原型继承实现方式" class="headerlink" title="原型继承实现方式"></a>原型继承实现方式</h1><p>1.定义新的构造函数，并在内部用<strong>call()</strong>调用希望继承的构造函数，并绑定this；<br>2.借助中间函数<strong>F</strong>实现原型继承，最好通过封装的Object.create()函数实现；<br>3.继续在新的构造函数的原型上定义新方法。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 父</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">props</span>)</span>&#123;</div><div class="line">	<span class="keyword">this</span>.name=props.name||<span class="string">'Unnamed'</span>;</div><div class="line">&#125;</div><div class="line">Student.prototype.hello=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">'Hello,'</span>+<span class="keyword">this</span>.name+<span class="string">'!'</span>);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">// 子</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">PrimaryStudent</span>(<span class="params">props</span>)</span>&#123;</div><div class="line">	Student.call(<span class="keyword">this</span>,props);</div><div class="line">	<span class="keyword">this</span>.grade=props.grade || <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line">			</div><div class="line"><span class="comment">// 定义空函数，作桥接作用</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"><span class="comment">// 把F的原型指向Student.prototype</span></div><div class="line">F.prototype=Student.prototype;</div><div class="line"></div><div class="line"><span class="comment">// 把PrimaryStudent的原型指向一个新的F对象，F对象的原型正好指向Student.prototype</span></div><div class="line">PrimaryStudent.prototype=<span class="keyword">new</span> F();</div><div class="line"></div><div class="line"><span class="comment">// 把PrimaryStudent原型的构造函数修复为PrimaryStudent</span></div><div class="line">PrimaryStudent.prototype.constructor=PrimaryStudent;</div><div class="line">			</div><div class="line"><span class="keyword">var</span> xiaoming = <span class="keyword">new</span> PrimaryStudent(&#123;</div><div class="line">	<span class="attr">name</span>:<span class="string">'小明'</span>,</div><div class="line">	<span class="attr">grade</span>:<span class="number">2</span></div><div class="line">&#125;);</div><div class="line">			</div><div class="line"><span class="built_in">console</span>.log(xiaoming.name);</div><div class="line"><span class="built_in">console</span>.log(xiaoming.grade);</div><div class="line"></div><div class="line"><span class="comment">// 验证原型</span></div><div class="line"><span class="built_in">console</span>.log(xiaoming.__proto__===PrimaryStudent.prototype); <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(xiaoming.__proto__.__proto__===Student.prototype); <span class="comment">// true</span></div><div class="line">			</div><div class="line"><span class="comment">// 验证继承关系</span></div><div class="line"><span class="built_in">console</span>.log(xiaoming <span class="keyword">instanceof</span> PrimaryStudent); <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(xiaoming <span class="keyword">instanceof</span> Student); <span class="comment">// true</span></div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;参考《你不知道的JavaScript》
     
     </summary>
     
